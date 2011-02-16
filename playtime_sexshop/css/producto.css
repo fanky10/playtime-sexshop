@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+#contenido_central div.detalleProducto{overflow:auto; margin-right:20px; text-align:justify; }
+#contenido_central img.prodImagen{float:left; }
+#contenido_central div.detalleProducto h4.prodTitulo{font-size:22px; margin-bottom:15px; }
+#contenido_central div.detalleProducto span.prodPrecio{font-size:18px; font-weight:bold; }
+#contenido_central div.detalleProducto p.prodInfo{margin-top:15px;}
+#contenido_central form{text-align:left;}
+#contenido_central form div input#cantidad{text-align:center;}
+#contenido_central form div label a.agregar{background: url(../images/agregar.png) 0 0 no-repeat; height:14px; width:14px;}
+#contenido_central form div label a.quitar{background: url(../images/quitar.png) 0 0 no-repeat; height:14px; width:14px;}
+
+#contenido_central form#producto div label.error{color:#F00; font-size:10px; display:block;}
+
