@@ -78,7 +78,7 @@
     include_once 'datos/productos.php';
     include_once 'datos/categorias.php';
     try{
-        $id_producto = (int) $_GET["id"];//id_producto jaja
+        $id_producto = (int) $_GET["id_prod"];//id_producto jaja
         if($id_producto <1){
             $id_producto = 1;
         }
