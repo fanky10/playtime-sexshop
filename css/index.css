@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+#contenido_central div.destacado h2.tituloDestacado{font-size:20px;}
+
+#contenido_central.arrows div#masVendidos.coda-slider div.panel-container div.panel div.panel-wrapper .productoMV{overflow:hidden; margin-right:20px;}
+#contenido_central.arrows div#masVendidos.coda-slider div.panel-container div.panel div.panel-wrapper .productoMV img.prodImagen{float:left;}
+#contenido_central.arrows div#masVendidos.coda-slider div.panel-container div.panel div.panel-wrapper .productoMV div.detalleDestacado h4.prodTitulo{font-size:16px; margin-bottom:10px;}
+#contenido_central.arrows div#masVendidos.coda-slider div.panel-container div.panel div.panel-wrapper .productoMV div.detalleDestacado p.prodInfo{font-size:14px; color:#666; margin-bottom:15px;}
+#contenido_central.arrows div#masVendidos.coda-slider div.panel-container div.panel div.panel-wrapper .productoMV div.detalleDestacado{overflow:auto;}
+#contenido_central.arrows div#masVendidos.coda-slider div.panel-container div.panel div.panel-wrapper div#producto_NOMBRE1.productoMV div.detalleDestacado a.facebook img.facebook_btn,
+#contenido_central.arrows div#masVendidos.coda-slider div.panel-container div.panel div.panel-wrapper div#producto_NOMBRE1.productoMV div.detalleDestacado a.twitter img.twitter_btn{margin-left:10px;}

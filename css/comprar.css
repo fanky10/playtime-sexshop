@@ -1,0 +1,8 @@
+@charset "utf-8";
+/* CSS Document */
+#contenido_central p.envio{margin:30px 20px 30px 0; text-align:justify;}
+	#contenido_central p.envio span.tituloCompra{font-weight:bold; font-size:14px;}
+	#contenido_central p.envio strong{font-weight:bold;}
+	#contenido_central p.envio i{font-style:italic;}
+	#contenido_central ul{list-style-type:square;}
+	#contenido_central ul li{margin-left:30px;}
