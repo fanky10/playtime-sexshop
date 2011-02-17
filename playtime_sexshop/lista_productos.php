@@ -51,13 +51,13 @@ de la lista de productos con footer de paginas
                 echo "<h4 class=\"prodTitulo\">".$oProducto->getNombre()."</h4>";
                 //chequear que el id imagen sea mayor a 0 de otro modo imagen por defecto
                 $img_id = $oProducto->getImagen();
-                $img_source="images/productos/lubricantes/lubricante1.jpg";
+                $img_source="images/img_unavailable.jpg";
                 if($img_id>0){
                     $img_source="scripts/image_script.php?id_img=$img_id";
                 }
                 echo "<img class=\"prodImagen\" src=\"$img_source\" alt=\"Play Time Sex Shop\" height=\"90\" width=\"90\"/>";
                 echo "<p class=\"prodInfo\">".$oProducto->getInformacion();//substr($oProducto->getInformacion(), 0, 100);;
-                echo "<span class=\"prodPrecio\">$".$oProducto->getPrecio()."<a href=\"#\">Ver Detalles</a></span>";
+                echo "<span class=\"prodPrecio\">$".$oProducto->getPrecio()."<a href=\"producto_test.php?id_prod=".$oProducto->getId_Producto()."\">Ver Detalles</a></span>";
                 echo "</p>";
                 echo "</div>\n";
             }
