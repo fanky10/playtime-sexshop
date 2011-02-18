@@ -64,59 +64,18 @@
         	        </form>
         	        
         	        <h3><span>Categor&iacute;as</span></h3>
-        	        <ul>
-        	            <li class="item first" id="lubricantes"><a href="#">Lubricantes</a></li>
-        	            <li class="item" id="anillos"><a href="#">Anillos</a></li>
-        	            <li class="item" id="estimuladores"><a href="#">Estimuladores Clitoreales</a></li>
-        	            <li class="item" id="lubricantes"><a href="#">Lubricantes</a></li>
-        	            <li class="item" id="anillos"><a href="#">Anillos</a></li>
-        	            <li class="item" id="estimuladores"><a href="#">Estimuladores Clitoreales</a></li>
-				    </ul><!--end categorias-->
-				    
-				    <h3><span>Lorem ipsum</span></h3>
-        	        <ul>
-        	            <li class="item first" id="lubricantes"><a href="#">Dolor sit amet consectetur</a></li>
-        	            <li class="item" id="anillos"><a href="#">Anillos</a></li>
-        	            <li class="item" id="estimuladores"><a href="#">Estimuladores Clitoreales</a></li>
-        	            <li class="item" id="lubricantes"><a href="#">Lubricantes</a></li>
-        	            <li class="item" id="anillos"><a href="#">Anillos</a></li>
-				    </ul><!--end categorias-->
+        	        <?php
+	                    include 'menu_categorias.php';
+                    ?>
 				    
 				</div><!--end lateral_izquierdo-->
 			
 				<div class="contenido">
 					
 					<div id="contenido_central">
-        	        	<div class="ruta"><a href="index.php">Inicio</a> / <a href="tienda.php">Tienda</a> / <a href="#">Lubricantes</a> / Producto</div>
-        	            <h1 class="categoria"><span>Anal Lub 50 grs.</span></h1>
-                        
-                        <div class="producto detalleProducto">
-                        	<img class="prodImagen" src="images/productos/lubricantes/lubricante1.jpg" alt="Lubricante - Anal Lub 50 grs." height="270" width="270" />
-                        	<div>
-                        		<p class="prodInfo">Dilatador anal. Crema humectante con f&oacute;rmula desensibilizadora, soluble en agua que act&uacute;a instant&aacute;neamente logrando un coito anal sin dolor. Tiene cualidades desinflamatorias y analg&eacute;sicas.</p>
-                        		<p class="prodInfo">Dilatador anal. Crema humectante con f&oacute;rmula desensibilizadora, soluble en agua que act&uacute;a instant&aacute;neamente logrando un coito anal sin dolor. Tiene cualidades desinflamatorias y analg&eacute;sicas.</p>
-                        		<form action="" method="" id="formProducto">
-                        			<div class="formField">
-                        				<label>Precio:</label>
-                        				<p class="prodPrecio">$ 37</p>
-                        			</div>
-                        			<div class="formField">
-                        				<label>Cantidad:</label>
-                        				<input id="cantidad" name="cantidad" class="inputData required number" maxlength="3" value="1"/>
-                        			</div>
-                        			<div class="formButton">
-                        				<input id="comprar" class="formButton" type="submit" name="comprar" value="comprar" />
-                        			</div>
-                        		</form>
-                        		
-                        		<p class="social">
-                        			<span>Compartir:</span>
-                        			<a href="#" class="socialFacebook">Facebook</a>
-                        			<a href="#" class="socialTwitter">Twitter</a>
-                        			<a href="#" class="socialFeed">RSS</a>
-                        		</p>
-                        	</div>
-                        </div>
+                    <?php
+                    	include("producto_info.php");
+					?>
         	           
 					</div><!--end contenido_central-->
 					

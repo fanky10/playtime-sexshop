@@ -12,7 +12,7 @@
 
                     //escribo el nombre de la categoria
                     //TODO agregar jscript para llamar a productos
-                    echo "<li class\"item\"><a href=\"?id_cat=".$oCategoria->getId_Categoria()."\"> ".$oCategoria->getNombre()."</a></li>";
+                    echo "<li class\"item\"><a href=\"tienda.php?id_cat=".$oCategoria->getId_Categoria()."\"> ".$oCategoria->getNombre()."</a></li>";
                 }
             }catch(Exception $ex){
                 echo 'Ha ocurrido una exception: '.$ex->getMessage();

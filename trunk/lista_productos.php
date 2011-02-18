@@ -4,17 +4,7 @@ de la lista de productos con footer de paginas
 -->
 
 
-<!--TODO implementar esto con un ordenador dentro del metodo getProductosImagen-->
-<form action="" method="" class="ordenar">
-    <label>Ordenar por:</label>
-    <select>
-        <option selected="selected">Seleccionar</option>
-        <option>Nombre</option>
-        <option>Precio</option>
-        <option>Fecha</option>
-        <option>SKU</option>
-    </select>
-</form>
+
 
 <div class="coleccionProductos">
 
@@ -38,6 +28,25 @@ de la lista de productos con footer de paginas
             $oCat = $dCateg->getCategoria($id_categoria);
             echo "<div class=\"ruta\"><a href=\"?\">Inicio</a> / <a href=\"?\">Tienda</a> / ".ucwords(strtolower($oCat->getNombre()))."</div>";
             echo "<h1 class=\"categoria\"><span>".ucwords(strtolower($oCat->getNombre()))."</span></h1>";
+			/*TODO: 
+					*Cortar cantidad de palabras para ver el detalle. Fijarte en el estatico.
+					*Agregar el escript de ordenamiento de los productos.
+			*/
+			
+			?>
+            <!--TODO implementar esto con un ordenador dentro del metodo getProductosImagen-->
+	
+            <form action="" method="" class="ordenar">
+                <label>Ordenar por:</label>
+                <select>
+                    <option selected="selected">Seleccionar</option>
+                    <option>Nombre</option>
+                    <option>Precio</option>
+                    <option>Fecha</option>
+                    <option>SKU</option>
+                </select>
+            </form>
+            <?php
             $offset = ($pag-1) * $limit;//donde empieza a mostrar
             $dProd = new DataProductos();
             $vProds = $dProd->getProductosImagen($offset,$limit,$id_categoria);//traigo los de prueba no mas
@@ -56,7 +65,7 @@ de la lista de productos con footer de paginas
                 }
                 echo "<img class=\"prodImagen\" src=\"$img_source\" alt=\"".$oProducto->getNombre()."\" height=\"90\" width=\"90\"/>";
                 echo "<p class=\"prodInfo\">".$oProducto->getInformacion();//substr($oProducto->getInformacion(), 0, 100);;
-                echo "<span class=\"prodPrecio\">$".$oProducto->getPrecio()."<a href=\"producto_test.php?id_prod=".$oProducto->getId_Producto()."\">Ver Detalles</a></span>";
+                echo "<span class=\"prodPrecio\">$".$oProducto->getPrecio()."<a href=\"producto.php?id_prod=".$oProducto->getId_Producto()."\">Ver Detalles</a></span>";
                 echo "</p>";
                 echo "</div>\n";
             }

@@ -62,23 +62,6 @@
 					<?php
 	                    include 'menu_categorias.php';
                     ?>
-        	        <!--<ul>
-        	            <li class="item first" id="lubricantes"><a href="#">Lubricantes</a></li>
-        	            <li class="item" id="anillos"><a href="#">Anillos</a></li>
-        	            <li class="item" id="estimuladores"><a href="#">Estimuladores Clitoreales</a></li>
-        	            <li class="item" id="lubricantes"><a href="#">Lubricantes</a></li>
-        	            <li class="item" id="anillos"><a href="#">Anillos</a></li>
-        	            <li class="item" id="estimuladores"><a href="#">Estimuladores Clitoreales</a></li>
-				    </ul>
-				    
-				    <h3><span>Lorem ipsum</span></h3>
-        	        <ul>
-        	            <li class="item first" id="lubricantes"><a href="#">Dolor sit amet consectetur</a></li>
-        	            <li class="item" id="anillos"><a href="#">Anillos</a></li>
-        	            <li class="item" id="estimuladores"><a href="#">Estimuladores Clitoreales</a></li>
-        	            <li class="item" id="lubricantes"><a href="#">Lubricantes</a></li>
-        	            <li class="item" id="anillos"><a href="#">Anillos</a></li>
-				    </ul>end categorias-->
 				    
 				</div><!--end lateral_izquierdo-->
 			
