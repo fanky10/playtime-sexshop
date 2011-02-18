@@ -1,0 +1,79 @@
+/*  ==========  RESET  ==========  */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, 
+cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, 
+ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, 
+embed, figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	background: transparent; margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table { border-collapse: collapse; border-spacing: 0; }
+
+body {
+	background:#5A1D17 url('../images/bg-body.png') repeat-x 0 0;
+	font: normal 12px/15px Helvetica, Arial, sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+/*  ==========  TYPOGRAPHY  ==========  */
+	
+	/****  Headings  ****/
+	h1, h2, h3, h4, h5, h6 {
+		color:#000;
+		font-weight:normal;
+		font-family:Helvetica, "Lucida Grande", Arial, sans-serif;
+		line-height:1.1em;
+		}
+		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: #000; }
+		
+	h1 { font-size:22px; color: #85161C; margin:0 10px 5px 0; }
+	h2 { font-size:18px; text-transform: uppercase; color: #000; margin: 20px 0 10px;  }
+	h3 { font-size:16px; }
+	h4 { font-size:15px; }
+	h5 { font-size:14px; font-weight: bold; }
+	h6 { font-size:14px; }
+	
+	/****  Links  *****/
+	a { text-decoration:none; color:#85161C; }
+		a:hover { cursor:pointer; text-decoration:underline; }
+						
+	/****  Text  ****/
+	p { font-size: 12px; margin: 0 0 1em; }
+	
+	small { display: block; font-size:12px; line-height: 14px; margin-bottom: 5px; color: #939598; }
+	strong { font-weight: bold; }
+	em, dfn { font-style: italic; }
+	dfn { font-weight:bold; }
+	sup { font-size: 0.5em; vertical-align:super;}
+	abbr, acronym { border-bottom:1px dotted #666; }
+	address { margin:0 0 1.5em;font-style:italic;}
+	del { text-decoration: line-through; color: #666; }
+	ins { text-decoration: none; color: green; }
+	pre { margin:1.5em 0; white-space:pre;}
+	pre, code, tt { font:1em 'andale mono', 'lucida console', monospace; line-height:1.5;}
+	ul, ol { margin: 0 1em 1em 2em; }
+		ul li, ol li { font-size:12px; line-height: 1.3em; padding-bottom: 5px; }
+	ul { list-style-type: disc; }
+	ol { list-style-type: decimal; }
+	li ul, li ol { margin:0 1.5em; }
+	dl { margin:0 0 1.5em 0;}
+	dl dt { font-weight:bold;}
+	dd { margin-left:1.5em;}
+	table { margin-bottom:1.4em; width:100%;}
+	th { font-weight:bold; color: #fff; }
+	thead th { background: #d93636;}
+	th, td, caption { padding:4px 10px 4px 5px;}
+	tr.even td { background:#e5ecf9;}
+	tfoot { font-style:italic;}
+	caption { background:#eee;}
+	
+	hr { clear: both; border: none; border-top: 1px solid #ccc; margin: 15px 10px 15px 0; }
