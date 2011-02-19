@@ -47,6 +47,7 @@ a { text-decoration:none; color:#85161C; }
     a:hover { cursor:pointer; text-decoration:underline; }
     				
 p { font-size: 12px; margin: 0 0 1em; }
+	p.copy{margin-right:10px;}
 
 small { display: block; font-size:12px; line-height: 14px; margin-bottom: 5px; color: #939598; }
 strong { font-weight: bold; }
@@ -334,7 +335,7 @@ form#formContacto .formField input.inputData, form#formContacto .formField texta
 form#formContacto input.formButton {margin-left: 110px; font-size: 14px; }
 
 p.contactInfo {font-size: 12px; line-height: 21px; }
-	p.contactInfo span { padding-left: 25px; margin-right: 15px; }
+	p.contactInfo span { padding-left: 25px; margin-right: 10px; }
 		p.contactInfo span.contactMail { background: url(../images/icn-mail.png) left top no-repeat; }
-		p.contactInfo span.contactMSN { background: url(../images/icn-MSN.png) left top no-repeat; padding-left: 20px; }
+		p.contactInfo span.contactMSN { background: url(../images/icn-msn.png) left top no-repeat; padding-left: 20px; }
 		p.contactInfo span.contactTel { background: url(../images/icn-tel.png) left top no-repeat; padding-left: 15px;}

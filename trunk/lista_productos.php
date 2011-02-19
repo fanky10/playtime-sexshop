@@ -27,7 +27,7 @@ de la lista de productos con footer de paginas
             $dCateg = new DataCategorias();
             $oCat = $dCateg->getCategoria($id_categoria);
             echo "<div class=\"ruta\"><a href=\"?\">Inicio</a> / <a href=\"?\">Tienda</a> / ".ucwords(strtolower($oCat->getNombre()))."</div>";
-            echo "<h1 class=\"categoria\"><span>".ucwords(strtolower($oCat->getNombre()))."</span></h1>";
+            echo "<h1><span>".ucwords(strtolower($oCat->getNombre()))."</span></h1>";
 			/*TODO: 
 					*Cortar cantidad de palabras para ver el detalle. Fijarte en el estatico.
 					*Agregar el escript de ordenamiento de los productos.
@@ -36,7 +36,7 @@ de la lista de productos con footer de paginas
 			?>
             <!--TODO implementar esto con un ordenador dentro del metodo getProductosImagen-->
 	
-            <form action="" method="" class="ordenar">
+            <form action="" method="" id="formOrdenar">
                 <label>Ordenar por:</label>
                 <select>
                     <option selected="selected">Seleccionar</option>

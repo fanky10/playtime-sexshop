@@ -72,7 +72,6 @@
         	        </form>
         	        
         	        <h3><span>Categor&iacute;as</span></h3>
-        	        <h3><span>Categor&iacute;as</span></h3>
 					<?php
 	                    include 'menu_categorias.php';
                     ?>

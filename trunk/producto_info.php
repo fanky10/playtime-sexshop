@@ -18,7 +18,7 @@
         }
         echo "<div class=\"producto detalleProducto\">
 		<img class=\"prodImagen\" src=\"$img_source\" title=\"".$oProd->getNombre()."\" height=\"270\" width=\"270\"/>
-			</div>";
+			<div>";
         echo"<p class=\"prodInfo\">".$oProd->getDescription()."</p>";
 		?>
         <form action="" method="" id="formProducto">
@@ -42,12 +42,18 @@
             <a href="#" class="socialTwitter">Twitter</a>
             <a href="#" class="socialFeed">RSS</a>
         </p>
+	</div>
+</div>
 <?php
     }catch(Exception $ex){
         echo 'Ha ocurrido una exception: '.$ex->getMessage();
 
     }
  ?>       
+ 
+ 
+ 
+ 
                         
                         		
                         		
