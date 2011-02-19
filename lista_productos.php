@@ -63,7 +63,7 @@ de la lista de productos con footer de paginas
                 if($img_id>0){
                     $img_source="scripts/image_script.php?id_img=$img_id";
                 }
-                echo "<img class=\"prodImagen\" src=\"$img_source\" alt=\"".$oProducto->getNombre()."\" height=\"90\" width=\"90\"/>";
+                echo "<a class=\"grupo_productos\" rel=\"grupoP\" href=\"$img_source\"><img class=\"prodImagen\" src=\"$img_source\" alt=\"".$oProducto->getNombre()."\" height=\"90\" width=\"90\"/></a>";
                 echo "<p class=\"prodInfo\">".$oProducto->getInformacion();//substr($oProducto->getInformacion(), 0, 100);;
                 echo "<span class=\"prodPrecio\">$".$oProducto->getPrecio()."<a href=\"producto.php?id_prod=".$oProducto->getId_Producto()."\">Ver Detalles</a></span>";
                 echo "</p>";

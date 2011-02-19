@@ -26,7 +26,7 @@
         
         <SCRIPT type="text/javascript">
 			$().ready(function() {
-				$("a.grouped_elements").fancybox({
+				$("a.grupo_productos").fancybox({
 				'transitionIn'	:	'elastic',
 				'transitionOut'	:	'elastic',
 				'speedIn'		:	600, 
