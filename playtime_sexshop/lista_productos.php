@@ -24,7 +24,7 @@ de la lista de productos con footer de paginas
         include_once 'datos/categorias.php';
         try{
             //limite por pagina
-            $limit = 6; //TODO sacarlo de la configuracion
+            $limit = 8; //TODO sacarlo de la configuracion
             // pagina pedida
             $pag = (int) $_GET["pag"];
             $id_categoria = (int) $_GET["id_cat"];
