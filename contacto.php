@@ -126,48 +126,7 @@
         	        <li id="top"><a href="#">Arriba</a></li>
 				</ul><!--end menu_acceso-->  
 				
-				<div class="items">
-					<div class="items-block">
-						<h4>Columna 1</h4>
-						<ul>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-						</ul>
-					</div>
-					
-					<div class="items-block">
-						<h4>Columna 2</h4>
-						<ul>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-						</ul>
-					</div>
-					
-					<div class="items-block">
-						<h4>Columna 3</h4>
-						<ul>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-						</ul>
-					</div>
-					
-					<div class="items-block last">
-						<h4>Columna 4</h4>
-						<ul>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-						</ul>
-					</div>
-					
-				</div><!--end items-->
+				<!--ITEMS-->
 					
 				<div class="submenu">
 				    <ul>

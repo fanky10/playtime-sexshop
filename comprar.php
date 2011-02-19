@@ -14,7 +14,6 @@
 		<!--JS FILES-->
         <script src="js/jquery-1.5.js" type="text/javascript"></script>
 		<script src="js/action.js" type="text/javascript"></script><!--PROPIO-->
-        <script src="http://widgets.twimg.com/j/2/widget.js"></script><!--TWITTER-->
         
         <!--[if lte IE 7]>
         <script type="text/javascript" src="js/supersleight-min.js"></script>
@@ -125,71 +124,7 @@
         	        <li id="top"><a href="#">Arriba</a></li>
 				</ul><!--end menu_acceso-->  
 				
-				<div class="items">
-					<div class="items-block">
-						<h4>Columna 1</h4>
-						<ul>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-						</ul>
-					</div>
-					
-					<div class="items-block">
-						<h4>Columna 2</h4>
-						<ul>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-						</ul>
-					</div>
-					
-					<div class="items-block">
-						<script>
-new TWTR.Widget({
-  version: 2,
-  type: 'profile',
-  rpp: 2,
-  interval: 5000,
-  width: 200,
-  height: 140,
-  theme: {
-    shell: {
-      background: '#771116',
-      color: '#ffffff'
-    },
-    tweets: {
-      background: '#7C2F27',
-      color: '#ffffff',
-      links: '#000000'
-    }
-  },
-  features: {
-    scrollbar: false,
-    loop: true,
-    live: true,
-    hashtags: true,
-    timestamp: true,
-    avatars: false,
-    behavior: 'default'
-  }
-}).render().setUser('playtimesexshop').start();
-</script>
-					</div>
-					
-					<div class="items-block last">
-						<h4>Columna 4</h4>
-						<ul>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-						</ul>
-					</div>
-					
-				</div><!--end items-->
+				<!--ITEMS-->
 					
 				<div class="submenu">
 				    <ul>

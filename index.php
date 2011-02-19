@@ -15,6 +15,10 @@
         <script src="js/jquery-1.5.js" type="text/javascript"></script>
 		<script src="js/action.js" type="text/javascript"></script><!--PROPIO-->
         
+        <!-- Anything Slider -->
+        <link rel="stylesheet" href="css/anythingslider.css" type="text/css" media="screen" />
+        <script type="text/javascript" src="js/jquery.anythingslider.js"></script>        
+       
         <!--[if lte IE 7]>
         <script type="text/javascript" src="js/supersleight-min.js"></script>
         <![endif]-->
@@ -70,6 +74,76 @@
 					<div id="contenido_central">
         	        	<div class="ruta"><a href="index.php">Inicio</a></div>
         	            <h1 class="categoria"><span>Inicio</span></h1>
+                        
+                        <h3 class="sliderTittle">M&aacute;s Vendidos</h3>
+                        <ul id="slider1">
+                            <li>
+                                <div class="slide">
+                                    <img height="180" width="180" alt="Lubricante - Anal Lub 50 grs." src="images/productos/lubricantes/lubricante1.jpg" class="sliderImg">
+                                    <div class="detalleDestacado">
+                                        <h3>Anal Lub 50 grs.</h3>
+                                        <p class="prodInfo">Dilatador anal. Crema humectante con f&oacute;rmula desensibilizadora, soluble en agua que act&uacute;a instant&aacute;neamente logrando un coito anal sin dolor. Tiene cualidades desinflamatorias y analg&eacute;sicas.</p>
+                                        <p class="social">
+                                            <span>Compartir:</span>
+                                            <a href="#" class="socialFacebook">Facebook</a>
+                                            <a href="#" class="socialTwitter">Twitter</a>
+                                            <a href="#" class="socialFeed">RSS</a>
+                                        </p>
+                                    </div>
+                                </div><!-- End Slide -->
+                            </li>                            
+                        	<li>
+                                <div class="slide">
+                                    <img height="180" width="180" alt="Lubricante - Anal Lub 50 grs." src="images/productos/lubricantes/lubricante1.jpg" class="sliderImg">
+                                    <div class="detalleDestacado">
+                                        <h3>Anal Lub 50 grs.</h3>
+                                        <p class="prodInfo">Dilatador anal. Crema humectante con f&oacute;rmula desensibilizadora, soluble en agua que act&uacute;a instant&aacute;neamente logrando un coito anal sin dolor. Tiene cualidades desinflamatorias y analg&eacute;sicas.</p>
+                                        <p class="social">
+                                            <span>Compartir:</span>
+                                            <a href="#" class="socialFacebook">Facebook</a>
+                                            <a href="#" class="socialTwitter">Twitter</a>
+                                            <a href="#" class="socialFeed">RSS</a>
+                                        </p>
+                                    </div>
+                                </div><!-- End Slide -->
+                            </li>
+						</ul>
+                        
+                        <h3 class="sliderTittle">&Uacute;ltimos Productos</h3>
+                        <ul id="slider2">
+                            <li>
+                                <div class="slide">
+                                    <img height="180" width="180" alt="Lubricante - Anal Lub 50 grs." src="images/productos/lubricantes/lubricante2.jpg" class="sliderImg">
+                                    <div class="detalleDestacado">
+                                        <h3>Anal Lub 50 grs.</h3>
+                                        <p class="prodInfo">Dilatador anal. Crema humectante con f&oacute;rmula desensibilizadora, soluble en agua que act&uacute;a instant&aacute;neamente logrando un coito anal sin dolor. Tiene cualidades desinflamatorias y analg&eacute;sicas.</p>
+                                        <p class="social">
+                                            <span>Compartir:</span>
+                                            <a href="#" class="socialFacebook">Facebook</a>
+                                            <a href="#" class="socialTwitter">Twitter</a>
+                                            <a href="#" class="socialFeed">RSS</a>
+                                        </p>
+                                    </div>
+                                </div><!-- End Slide -->
+                            </li>                            
+                        	<li>
+                                <div class="slide">
+                                    <img height="180" width="180" alt="Lubricante - Anal Lub 50 grs." src="images/productos/lubricantes/lubricante2.jpg" class="sliderImg">
+                                    <div class="detalleDestacado">
+                                        <h3>Anal Lub 50 grs.</h3>
+                                        <p class="prodInfo">Dilatador anal. Crema humectante con f&oacute;rmula desensibilizadora, soluble en agua que act&uacute;a instant&aacute;neamente logrando un coito anal sin dolor. Tiene cualidades desinflamatorias y analg&eacute;sicas.</p>
+                                        <p class="social">
+                                            <span>Compartir:</span>
+                                            <a href="#" class="socialFacebook">Facebook</a>
+                                            <a href="#" class="socialTwitter">Twitter</a>
+                                            <a href="#" class="socialFeed">RSS</a>
+                                        </p>
+                                    </div>
+                                </div><!-- End Slide -->
+                            </li>
+						</ul>
+                        
+                        
 					</div><!--end contenido_central-->
 					
 					<div class="lateral" id="lateral_derecho">
@@ -91,7 +165,7 @@
         	        <li id="top"><a href="#">Arriba</a></li>
 				</ul><!--end menu_acceso-->  
 				
-				<div class="items">
+				<!--<div class="items">
 					<div class="items-block">
 						<h4>Más Vendidos</h4>
 						<ul>
@@ -135,7 +209,7 @@
 						</ul>
 					</div>
 					
-				</div><!--end items-->
+				</div>end items-->
 					
 				<div class="submenu">
 				    <ul>
