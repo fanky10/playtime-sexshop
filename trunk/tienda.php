@@ -105,51 +105,7 @@
         	        <li id="top"><a href="#">Arriba</a></li>
 				</ul><!--end menu_acceso-->  
 				
-				<div class="items">
-					<div class="items-block">
-						<h4>Más Vendidos</h4>
-						<ul>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-                            <li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-						</ul>
-					</div>
-					
-					<div class="items-block">
-						<h4>Últimos Productos</h4>
-						<ul>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-                            <li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-						</ul>
-					</div>
-					
-					<div class="items-block">
-						<h4>Destacados</h4>
-						<ul>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-                            <li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-						</ul>
-					</div>
-					
-					<div class="items-block last">
-						<h4>Redes Sociales</h4>
-						<ul>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-						</ul>
-					</div>
-					
-				</div><!--end items-->
+				<!--ITEMS-->
 					
 				<div class="submenu">
 				    <ul>
