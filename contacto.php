@@ -64,23 +64,9 @@
         	        </form>
         	        
         	        <h3><span>Categor&iacute;as</span></h3>
-        	        <ul>
-        	            <li class="item first" id="lubricantes"><a href="#">Lubricantes</a></li>
-        	            <li class="item" id="anillos"><a href="#">Anillos</a></li>
-        	            <li class="item" id="estimuladores"><a href="#">Estimuladores Clitoreales</a></li>
-        	            <li class="item" id="lubricantes"><a href="#">Lubricantes</a></li>
-        	            <li class="item" id="anillos"><a href="#">Anillos</a></li>
-        	            <li class="item" id="estimuladores"><a href="#">Estimuladores Clitoreales</a></li>
-				    </ul><!--end categorias-->
-				    
-				    <h3><span>Lorem ipsum</span></h3>
-        	        <ul>
-        	            <li class="item first" id="lubricantes"><a href="#">Dolor sit amet consectetur</a></li>
-        	            <li class="item" id="anillos"><a href="#">Anillos</a></li>
-        	            <li class="item" id="estimuladores"><a href="#">Estimuladores Clitoreales</a></li>
-        	            <li class="item" id="lubricantes"><a href="#">Lubricantes</a></li>
-        	            <li class="item" id="anillos"><a href="#">Anillos</a></li>
-				    </ul><!--end categorias-->
+        	        <?php
+	                    include 'menu_categorias.php';
+                    ?>
 				    
 				</div><!--end lateral_izquierdo-->
 			
@@ -90,7 +76,7 @@
         	        	<div class="ruta"><a href="index.php">Inicio</a> / <a href="contacto.php">Contacto</a></div>
         	            
         	            <h1 class="categoria"><span>Contacto</span></h1>
-        	            <p>Dolor sit amet consectetuer adipiscing elit sed diam nonummy. Lectores legere me lius, quod ii legunt saepius claritas est?Dolor sit amet consectetuer adipiscing elit sed diam nonummy. Lectores legere me lius, quod ii legunt saepius claritas est?</p>
+        	            <p class="copy">Dolor sit amet consectetuer adipiscing elit sed diam nonummy. Lectores legere me lius, quod ii legunt saepius claritas est?Dolor sit amet consectetuer adipiscing elit sed diam nonummy. Lectores legere me lius, quod ii legunt saepius claritas est?</p>
                         
                         <form action="" method="" id="formContacto">
                             <div class="formField">
