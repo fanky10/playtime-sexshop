@@ -1,5 +1,5 @@
 <?php
-$mail = 'qwertydrc@hotmail.com';
+$mail = 'info@playtimesexshop.com';
 $subject= 'Formulario de Contacto desde la Web';
 $msg="
 Nombre: $_GET[nombre]
