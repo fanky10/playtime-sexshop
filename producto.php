@@ -12,32 +12,13 @@
 
 		<!--JS FILES-->
         <script src="js/jquery-1.5.js" type="text/javascript"></script>
-		<!--<script src="js/action.js" type="text/javascript"></script>--><!--PROPIO-->
+		<script src="js/secciones/product.js" type="text/javascript"></script><!--PROPIO-->
         
         <script src="js/jquery.validate.js" type="text/javascript"></script><!--EMAIL-->
         
         <!--[if lte IE 7]>
         <script type="text/javascript" src="js/supersleight-min.js"></script>
         <![endif]-->
-        
-        <script type="text/javascript">
-		// JavaScript Document
-$().ready(function(){
-/*******************************************************
-*					ANCHO COLUMNA					   *
-********************************************************/
-var alturaMax;
-//Obtiene la altura máxima de las 2 columnas y almacena el valor en AlturaMax
-AlturaMax = Math.max( $("#lateral_izquierdo").height(), $("div.contenido").height() );
-//Asigna la propiedad height con el valor de AlturaMax
-$("#lateral_izquierdo").height(AlturaMax);
-//Asigna la propiedad height con el valor de AlturaMax
-$("div.contenido").height(AlturaMax);
-/*******************************************************
-*			VALIDAR FORMULARIO PRODUCTO				   *
-********************************************************/
-	$("#formProducto").validate();
-</script>
 
     </head>
     
