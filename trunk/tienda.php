@@ -12,7 +12,7 @@
 		
 		<!--JS FILES-->
         <script src="js/jquery-1.5.js" type="text/javascript"></script>
-		<!--<script src="js/action.js" type="text/javascript"></script>--><!--PROPIO-->
+		<script src="js/secciones/store.js" type="text/javascript"></script><!--PROPIO-->
         
          <!--PRUEBA IMAGENES - INICIO-->
         <script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
@@ -22,32 +22,7 @@
         <!--[if lte IE 7]>
         <script type="text/javascript" src="js/supersleight-min.js"></script>
         <![endif]-->
-        
-        <script type="text/javascript">
-		// JavaScript Document
-$().ready(function(){
-/*******************************************************
-*					ANCHO COLUMNA					   *
-********************************************************/
-/*var alturaMax;
-//Obtiene la altura máxima de las 2 columnas y almacena el valor en AlturaMax
-AlturaMax = Math.max( $("#lateral_izquierdo").height(), $("div.contenido").height() );
-//Asigna la propiedad height con el valor de AlturaMax
-$("#lateral_izquierdo").height(AlturaMax);
-//Asigna la propiedad height con el valor de AlturaMax
-$("div.contenido").height(AlturaMax);*/
-/*******************************************************
-*					VISUALIZAR IMAGENES				   *
-********************************************************/
-				$("a.grupo_productos").fancybox({
-				'transitionIn'	:	'elastic',
-				'transitionOut'	:	'elastic',
-				'speedIn'		:	600, 
-				'speedOut'		:	300, 
-				'overlayShow'	:	false
-				});
-			});
-</script>
+
     </head>
     
     <body>
