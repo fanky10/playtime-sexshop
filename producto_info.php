@@ -25,7 +25,7 @@
             <div class="formField">
                 <label>Precio:</label>
                 <?php
-                	echo"<p class=\"prodPrecio\">".$oProd->getPrecio()."</p>";
+                	echo"<p class=\"prodPrecio\">$ ".$oProd->getPrecio().".-</p>";
 				?>
             </div>
             <div class="formField">
@@ -38,7 +38,10 @@
         </form>
         <p class="social">
             <span>Compartir:</span>
-            <a href="#" class="socialFacebook">Facebook</a>
+            <?php
+                echo"<a href=\"http://www.facebook.com/sharer.php?s=100&p[url]=http://www.playtimesexshop.com&p[images][0]=http://www.playtimesexshop.com/images/logo_social.jpg&p[title]=".$oProd->getNombre()."&p[summary]=".$oProd->getDescription().".\" target=\"_blank\" class=\"socialFacebook\">Facebook</a>";
+			?>
+            <!--<a href="#" class="socialFacebook">Facebook</a>-->
             <a href="#" class="socialTwitter">Twitter</a>
             <a href="#" class="socialFeed">RSS</a>
         </p>
