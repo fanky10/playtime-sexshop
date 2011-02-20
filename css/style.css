@@ -328,11 +328,15 @@ form#formProducto label.error { color: #85161C; font-size: 11px; line-height: 20
     
 /*  ==============  CONTACTO ================  */
 /****  Form Contacto  ****/
-form#formContacto { margin: 40px; }
-form#formContacto label { font-size: 14px; color: #666; }
-	form#formContacto label.error { color: #85161C; font-size: 11px; line-height: 20px; margin-left: 110px; }
-form#formContacto .formField input.inputData, form#formContacto .formField textarea { width: 300px; }
-form#formContacto input.formButton {margin-left: 110px; font-size: 14px; }
+form#frmContact { margin: 40px; }
+form#frmContact label { font-size: 14px; color: #666; }
+	form#frmContact label.error { color: #85161C; font-size: 11px; line-height: 20px; margin-left: 110px; }
+form#frmContact .formField input.inputData, form#frmContact .formField textarea { width: 300px; }
+form#frmContact input.formButton {margin-left: 110px; font-size: 14px; }
+p#mensaje{margin:15px 0 0 110px; font-size:16px; color: #85161C; }
+/* para controlar el spam en formularios */
+#messageLabel { display: none !important; }
+#message { display: none !important; }
 
 p.contactInfo {font-size: 12px; line-height: 21px; }
 	p.contactInfo span { padding-left: 25px; margin-right: 10px; }

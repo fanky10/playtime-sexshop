@@ -8,12 +8,11 @@
         <meta name="description" content="Este es un sitio donde encontrar&aacute; muchas formas de dar placer a su pareja, formas de jugar y divertirse." />
 		
 		<!--CSS FILES-->
-		<link href="css/reset.css" rel="stylesheet" type="text/css" />
 		<link href="css/style.css" rel="stylesheet" type="text/css" />
 		
 		<!--JS FILES-->
         <script src="js/jquery-1.5.js" type="text/javascript"></script>
-		<script src="js/action.js" type="text/javascript"></script><!--PROPIO-->
+		<!--<script src="js/action.js" type="text/javascript"></script>--><!--PROPIO-->
         
         <!-- Anything Slider -->
         <link rel="stylesheet" href="css/anythingslider.css" type="text/css" media="screen" />
@@ -22,13 +21,72 @@
         <!--[if lte IE 7]>
         <script type="text/javascript" src="js/supersleight-min.js"></script>
         <![endif]-->
+        
+        <script type="text/javascript">
+		// JavaScript Document
+$().ready(function(){
+/*******************************************************
+*					ANCHO COLUMNA					   *
+********************************************************/
+var alturaMax;
+//Obtiene la altura máxima de las 2 columnas y almacena el valor en AlturaMax
+AlturaMax = Math.max( $("#lateral_izquierdo").height(), $("div.contenido").height() );
+//Asigna la propiedad height con el valor de AlturaMax
+$("#lateral_izquierdo").height(AlturaMax);
+//Asigna la propiedad height con el valor de AlturaMax
+$("div.contenido").height(AlturaMax);
+
+/*******************************************************
+*						SLIDERS HOME				   *
+********************************************************/
+
+$('#slider1').anythingSlider({
+			startStopped    : false, // If autoPlay is on, this can force it to start stopped
+			width           : 550,   
+			height          : 200,   
+			theme           : 'metallic',
+			autoPlayLocked  : true,  // If true, user changing slides will not stop the slideshow
+			resumeDelay     : 10000, // Resume slideshow after user interaction, only if autoplayLocked is true (in milliseconds).
+			
+			startPanel          : 1,         // This sets the initial panel
+			hashTags            : true,      // Should links change the hashtag in the URL?
+			
+			startText           : "Comenzar",   // Start button text
+			stopText            : "Frenar",    // Stop button text
+
+			
+			onSlideComplete : function(slider){
+				// alert('Welcome to Slide #' + slider.currentPage);
+			}
+});
+$('#slider2').anythingSlider({
+			startStopped    : false, // If autoPlay is on, this can force it to start stopped
+			width           : 550,   
+			height          : 200,   
+			theme           : 'metallic',
+			autoPlayLocked  : true,  // If true, user changing slides will not stop the slideshow
+			resumeDelay     : 10000, // Resume slideshow after user interaction, only if autoplayLocked is true (in milliseconds).
+			
+			startPanel          : 2,         // This sets the initial panel
+			hashTags            : true,      // Should links change the hashtag in the URL?
+			
+			startText           : "Comenzar",   // Start button text
+			stopText            : "Frenar",    // Stop button text
+
+			
+			onSlideComplete : function(slider){
+				// alert('Welcome to Slide #' + slider.currentPage);
+			}
+});
+});
+		</script>
 
     </head>
     
     <body>
 		<div class="wrapper">
 			<div class="cabecera">
-        		<a href="#" title="Inicio"><img class="logo" src="images/logo-playtime.png" alt="Play Time Sex Shop -  Boutique Er&oacute;tica" title="Play Time Sex Shop -  Boutique Er&oacute;tica" border="0" /></a>
+        		<a href="index.php" title="Inicio"><img class="logo" src="images/logo-playtime.png" alt="Play Time Sex Shop -  Boutique Er&oacute;tica" title="Play Time Sex Shop -  Boutique Er&oacute;tica" border="0" /></a>
 				<ul class="menu">
 					<li><a href="index.php">Inicio</a></li>
         	        <li><a href="tienda.php">Tienda</a></li>
@@ -219,7 +277,7 @@
                         <li><a href="comprar.php">&iquest;C&oacute;mo Comprar?</a></li>
                         <li><a href="contacto.php">Contacto</a></li>
 				    </ul><!-- end menu_inferior -->
-				    <a href="#" title="Inicio"><img class="logo-playtime-chico" src="images/logo-playtime-chico.png" alt="Play Time Sex Shop -  Boutique Er&oacute;tica" title="Play Time Sex Shop -  Boutique Er&oacute;tica" border="0" /></a>
+				    <a href="index.php" title="Inicio"><img class="logo-playtime-chico" src="images/logo-playtime-chico.png" alt="Play Time Sex Shop -  Boutique Er&oacute;tica" title="Play Time Sex Shop -  Boutique Er&oacute;tica" border="0" /></a>
 				</div><!-- end submenu -->
 					
 			</div><!-- end inferior -->

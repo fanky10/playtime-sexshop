@@ -8,7 +8,6 @@
         <meta name="description" content="Este es un sitio donde encontrar&aacute; muchas formas de dar placer a su pareja, formas de jugar y divertirse." />
 		
 		<!--CSS FILES-->
-		<link href="css/reset.css" rel="stylesheet" type="text/css" />
 		<link href="css/style.css" rel="stylesheet" type="text/css" />
 
 		<!--JS FILES-->
@@ -18,12 +17,28 @@
         <!--[if lte IE 7]>
         <script type="text/javascript" src="js/supersleight-min.js"></script>
         <![endif]-->
+        
+         <script type="text/javascript">
+		// JavaScript Document
+$().ready(function(){
+/*******************************************************
+*					ANCHO COLUMNA					   *
+********************************************************/
+var alturaMax;
+//Obtiene la altura máxima de las 2 columnas y almacena el valor en AlturaMax
+AlturaMax = Math.max( $("#lateral_izquierdo").height(), $("div.contenido").height() );
+//Asigna la propiedad height con el valor de AlturaMax
+$("#lateral_izquierdo").height(AlturaMax);
+//Asigna la propiedad height con el valor de AlturaMax
+$("div.contenido").height(AlturaMax);
+				   });
+</script>
     </head>
     
     <body>
 		<div class="wrapper">
 			<div class="cabecera">
-        		<a href="#" title="Inicio"><img class="logo" src="images/logo-playtime.png" alt="Play Time Sex Shop -  Boutique Er&oacute;tica" title="Play Time Sex Shop -  Boutique Er&oacute;tica" border="0" /></a>
+        		<a href="index.php" title="Inicio"><img class="logo" src="images/logo-playtime.png" alt="Play Time Sex Shop -  Boutique Er&oacute;tica" title="Play Time Sex Shop -  Boutique Er&oacute;tica" border="0" /></a>
 				<ul class="menu">
 					<li><a href="index.php">Inicio</a></li>
         	        <li><a href="tienda.php">Tienda</a></li>
@@ -54,23 +69,9 @@
         	        </form>
         	        
         	        <h3><span>Categor&iacute;as</span></h3>
-        	        <ul>
-        	            <li class="item first" id="lubricantes"><a href="#">Lubricantes</a></li>
-        	            <li class="item" id="anillos"><a href="#">Anillos</a></li>
-        	            <li class="item" id="estimuladores"><a href="#">Estimuladores Clitoreales</a></li>
-        	            <li class="item" id="lubricantes"><a href="#">Lubricantes</a></li>
-        	            <li class="item" id="anillos"><a href="#">Anillos</a></li>
-        	            <li class="item" id="estimuladores"><a href="#">Estimuladores Clitoreales</a></li>
-				    </ul><!--end categorias-->
-				    
-				    <h3><span>Lorem ipsum</span></h3>
-        	        <ul>
-        	            <li class="item first" id="lubricantes"><a href="#">Dolor sit amet consectetur</a></li>
-        	            <li class="item" id="anillos"><a href="#">Anillos</a></li>
-        	            <li class="item" id="estimuladores"><a href="#">Estimuladores Clitoreales</a></li>
-        	            <li class="item" id="lubricantes"><a href="#">Lubricantes</a></li>
-        	            <li class="item" id="anillos"><a href="#">Anillos</a></li>
-				    </ul><!--end categorias-->
+        	        <?php
+	                    include 'menu_categorias.php';
+                    ?>
 				    
 				</div><!--end lateral_izquierdo-->
 			
@@ -134,7 +135,7 @@
                         <li><a href="comprar.php">&iquest;C&oacute;mo Comprar?</a></li>
                         <li><a href="contacto.php">Contacto</a></li>
 				    </ul><!-- end menu_inferior -->
-				    <a href="#" title="Inicio"><img class="logo-playtime-chico" src="images/logo-playtime-chico.png" alt="Play Time Sex Shop -  Boutique Er&oacute;tica" title="Play Time Sex Shop -  Boutique Er&oacute;tica" border="0" /></a>
+				    <a href="index.php" title="Inicio"><img class="logo-playtime-chico" src="images/logo-playtime-chico.png" alt="Play Time Sex Shop -  Boutique Er&oacute;tica" title="Play Time Sex Shop -  Boutique Er&oacute;tica" border="0" /></a>
 				</div><!-- end submenu -->
 					
 			</div><!-- end inferior -->
