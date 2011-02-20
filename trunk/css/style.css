@@ -282,7 +282,7 @@ div.producto.detalleProducto { border: none; overflow:hidden; height: auto; widt
 
 form div.formField { clear: both; overflow: hidden; margin: 0 0 10px; }
 form .formField label { float: left; text-align: right; padding-right: 10px; line-height: 25px; width: 100px; }
-form .formField input.inputData, form .formField textarea { background:url(../images/bg-input.jpg) 0 0 repeat-x; color: #666; font-size:12px; font-family: Helvetica, "Lucida Grande", Arial, sans-serf; border:1px solid #d5d5d5; padding:5px 2px; width: 200px; }
+form .formField input.inputData, form .formField textarea { background:url(../images/bg-input.jpg) 0 0 repeat-x; color: #666; font-size:12px; font-family: Helvetica, "Lucida Grande", Arial, sans-serf; border:1px solid #d5d5d5; padding:5px 2px; width: 200px; text-align:center; }
 form .formField textarea { height: 100px;}
 form .formField input.inputData:focus, form .formField textarea:focus { background: #fff; }
 form input.formButton {
