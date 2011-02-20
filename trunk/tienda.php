@@ -8,12 +8,11 @@
         <meta name="description" content="Este es un sitio donde encontrar&aacute; muchas formas de dar placer a su pareja, formas de jugar y divertirse." />
 		
 		<!--CSS FILES-->
-		<link href="css/reset.css" rel="stylesheet" type="text/css" />
 		<link href="css/style.css" rel="stylesheet" type="text/css" />
 		
 		<!--JS FILES-->
         <script src="js/jquery-1.5.js" type="text/javascript"></script>
-		<script src="js/action.js" type="text/javascript"></script><!--PROPIO-->
+		<!--<script src="js/action.js" type="text/javascript"></script>--><!--PROPIO-->
         
          <!--PRUEBA IMAGENES - INICIO-->
         <script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
@@ -24,24 +23,37 @@
         <script type="text/javascript" src="js/supersleight-min.js"></script>
         <![endif]-->
         
-        <SCRIPT type="text/javascript">
-			$().ready(function() {
+        <script type="text/javascript">
+		// JavaScript Document
+$().ready(function(){
+/*******************************************************
+*					ANCHO COLUMNA					   *
+********************************************************/
+/*var alturaMax;
+//Obtiene la altura máxima de las 2 columnas y almacena el valor en AlturaMax
+AlturaMax = Math.max( $("#lateral_izquierdo").height(), $("div.contenido").height() );
+//Asigna la propiedad height con el valor de AlturaMax
+$("#lateral_izquierdo").height(AlturaMax);
+//Asigna la propiedad height con el valor de AlturaMax
+$("div.contenido").height(AlturaMax);*/
+/*******************************************************
+*					VISUALIZAR IMAGENES				   *
+********************************************************/
 				$("a.grupo_productos").fancybox({
 				'transitionIn'	:	'elastic',
 				'transitionOut'	:	'elastic',
 				'speedIn'		:	600, 
-				'speedOut'		:	200, 
+				'speedOut'		:	300, 
 				'overlayShow'	:	false
 				});
 			});
-		</SCRIPT>
-
+</script>
     </head>
     
     <body>
 		<div class="wrapper">
 			<div class="cabecera">
-        		<a href="#" title="Inicio"><img class="logo" src="images/logo-playtime.png" alt="Play Time Sex Shop -  Boutique Er&oacute;tica" title="Play Time Sex Shop -  Boutique Er&oacute;tica" border="0" /></a>
+        		<a href="index.php" title="Inicio"><img class="logo" src="images/logo-playtime.png" alt="Play Time Sex Shop -  Boutique Er&oacute;tica" title="Play Time Sex Shop -  Boutique Er&oacute;tica" border="0" /></a>
 				<ul class="menu">
 					<li><a href="index.php">Inicio</a></li>
         	        <li><a href="tienda.php">Tienda</a></li>
@@ -115,7 +127,7 @@
                         <li><a href="comprar.php">&iquest;C&oacute;mo Comprar?</a></li>
                         <li><a href="contacto.php">Contacto</a></li>
 				    </ul><!-- end menu_inferior -->
-				    <a href="#" title="Inicio"><img class="logo-playtime-chico" src="images/logo-playtime-chico.png" alt="Play Time Sex Shop -  Boutique Er&oacute;tica" title="Play Time Sex Shop -  Boutique Er&oacute;tica" border="0" /></a>
+				    <a href="index.php" title="Inicio"><img class="logo-playtime-chico" src="images/logo-playtime-chico.png" alt="Play Time Sex Shop -  Boutique Er&oacute;tica" title="Play Time Sex Shop -  Boutique Er&oacute;tica" border="0" /></a>
 				</div><!-- end submenu -->
 					
 			</div><!-- end inferior -->

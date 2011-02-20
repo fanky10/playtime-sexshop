@@ -8,32 +8,78 @@
         <meta name="description" content="Este es un sitio donde encontrar&aacute; muchas formas de dar placer a su pareja, formas de jugar y divertirse." />
 		
 		<!--CSS FILES-->
-		<link href="css/reset.css" rel="stylesheet" type="text/css" />
 		<link href="css/style.css" rel="stylesheet" type="text/css" />
-		<link href="css/contacto.css" rel="stylesheet" type="text/css" />
 
 		<!--JS FILES-->
         <script src="js/jquery-1.5.js" type="text/javascript"></script>
-		<script src="js/action.js" type="text/javascript"></script><!--PROPIO-->
-        <script src="js/jquery.validate.js" type="text/javascript"></script><!--EMAIL-->
+		<!--<!--<script src="js/action.js" type="text/javascript"></script>-->--><!--PROPIO-->
+        
+		<script src="js/jquery.validate.js" type="text/javascript"></script><!--EMAIL-->
+        <meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+		<script type="text/javascript" src="js/jquery.metadata.js"></script>
         
         <!--[if lte IE 7]>
         <script type="text/javascript" src="js/supersleight-min.js"></script>
         <![endif]-->
         
-        <SCRIPT type="text/javascript">
-			$().ready(function() {
-				// valida el formulario de CONTACTO
-				$("#formContacto").validate();
-			});
-		</SCRIPT>
+        <script type="text/javascript">
+		// JavaScript Document
+$().ready(function(){
+/*******************************************************
+*					ANCHO COLUMNA					   *
+********************************************************/
+var alturaMax;
+//Obtiene la altura máxima de las 2 columnas y almacena el valor en AlturaMax
+AlturaMax = Math.max( $("#lateral_izquierdo").height(), $("div.contenido").height() );
+//Asigna la propiedad height con el valor de AlturaMax
+$("#lateral_izquierdo").height(AlturaMax);
+//Asigna la propiedad height con el valor de AlturaMax
+$("div.contenido").height(AlturaMax);
+/*******************************************************
+*			VALIDAR FORMULARIO CONTACTO				   *
+********************************************************/
+$("#frmContact").validate({
+	event: "blur",
+	rules: {
+	'data[Contact][name]': "required",
+	'data[Contact][recipient]': { required: true, email: true },
+	'data[Contact][message]': "required"
+	},
+	messages: {
+	'data[Contact][name]': "Por favor ingrese su nombre",
+	'data[Contact][recipient]': "Ingrese una dirección de e-mail válida",
+	'data[Contact][message]': "Por favor, ingrese su mensaje o consulta"
+	},
+	
+	debug: true,
+	errorElement: "label",
+	errorContainer: $("#errores"),
+	submitHandler: function(form){
+	
+	$.ajax({
+	
+		type: "GET",
+		url:"envio.php",
+		contentType: "application/x-www-form-urlencoded",
+		processData: false,
+		data: "nombre="+$('#ContactName').val()+"&email="+$('#ContactRecipient').val()+"&telefono="+$('#ContactPhone').val()+"&comentario="+$('#ContactMessage').val(),
+		success: function(msg){
+		//if(msg==1){
+		$("#mensaje").html("<strong>El mensaje se ha enviado correctamente!</strong>");
+		//}
+		}
+	});
+	}
+});
+});
+</script>
         
     </head>
     
     <body>
 		<div class="wrapper">
 			<div class="cabecera">
-        		<a href="#" title="Inicio"><img class="logo" src="images/logo-playtime.png" alt="Play Time Sex Shop -  Boutique Er&oacute;tica" title="Play Time Sex Shop -  Boutique Er&oacute;tica" border="0" /></a>
+        		<a href="index.php" title="Inicio"><img class="logo" src="images/logo-playtime.png" alt="Play Time Sex Shop -  Boutique Er&oacute;tica" title="Play Time Sex Shop -  Boutique Er&oacute;tica" border="0" /></a>
 				<ul class="menu">
 					<li><a href="index.php">Inicio</a></li>
         	        <li><a href="tienda.php">Tienda</a></li>
@@ -78,27 +124,29 @@
         	            <h1 class="categoria"><span>Contacto</span></h1>
         	            <p class="copy">Dolor sit amet consectetuer adipiscing elit sed diam nonummy. Lectores legere me lius, quod ii legunt saepius claritas est?Dolor sit amet consectetuer adipiscing elit sed diam nonummy. Lectores legere me lius, quod ii legunt saepius claritas est?</p>
                         
-                        <form action="" method="" id="formContacto">
+                        <form id="frmContact">
+							<fieldset style="display:none;"><input type="hidden" name="_method" value="POST" /></fieldset>
                             <div class="formField">
-                                <label>Nombre:</label>
-                                <input id="nombre" name="nombre" class="inputData required" maxlength="255" value="" />
+                                <label for="ContactName">Nombre:</label>
+                                <input name="data[Contact][name]" type="text" class="inputData" maxlength="255" value="" id="ContactName" />                            
+							</div>
+				            <div class="formField">
+                                <label for="ContactPhone">Tel&eacute;fono:</label>
+                                <input name="data[Contact][phone]" type="text" class="inputData" maxlength="255" value="" id="ContactPhone" />
+				            </div>
+                            <div class="formField">
+                                <label for="ContactRecipient">E-mail:</label>
+                                <input name="data[Contact][recipient]" type="text" class="inputData " value="" id="ContactRecipient" />
                             </div>
                             <div class="formField">
-                                <label>Tel&eacute;fono:</label>
-                                <input id="telefono" name="telefono" class="inputData number" maxlength="255" value="" />
-                            </div>
-                            <div class="formField">
-                                <label>E-mail:</label>
-                                <input id="email" name= "email" class="inputData required email" maxlength="255" value="" />
-                            </div>
-                            <div class="formField">
-                                <label>Comentario:</label>
-                                <textarea id="comentario" name="comentario" class="required"></textarea> 
+                                <label for="ContactMessage">Comentario:</label>
+                                <textarea name="data[Contact][message]" cols="5" rows="3" class="textArea" id="ContactMessage" ></textarea>
                             </div>
                             <div class="formButton">
-                            	<input id="enviar" class="formButton" type="submit" name="enviar" value="enviar" />
+	                            <input type="image" src="enviar.png" alt="enviar" class="formButton" />
                             </div>
-        	            </form>
+							<p id="mensaje"></p>
+						</form>
         	            
         	            <p class="contactInfo">
         	            	<span class="contactMail">info@playtimesexshop.com</span>
@@ -136,7 +184,7 @@
                         <li><a href="comprar.php">&iquest;C&oacute;mo Comprar?</a></li>
                         <li><a href="contacto.php">Contacto</a></li>
 				    </ul><!-- end menu_inferior -->
-				    <a href="#" title="Inicio"><img class="logo-playtime-chico" src="images/logo-playtime-chico.png" alt="Play Time Sex Shop -  Boutique Er&oacute;tica" title="Play Time Sex Shop -  Boutique Er&oacute;tica" border="0" /></a>
+				    <a href="index.php" title="Inicio"><img class="logo-playtime-chico" src="images/logo-playtime-chico.png" alt="Play Time Sex Shop -  Boutique Er&oacute;tica" title="Play Time Sex Shop -  Boutique Er&oacute;tica" border="0" /></a>
 				</div><!-- end submenu -->
 					
 			</div><!-- end inferior -->

@@ -26,7 +26,7 @@ de la lista de productos con footer de paginas
             }
             $dCateg = new DataCategorias();
             $oCat = $dCateg->getCategoria($id_categoria);
-            echo "<div class=\"ruta\"><a href=\"?\">Inicio</a> / <a href=\"?\">Tienda</a> / ".ucwords(strtolower($oCat->getNombre()))."</div>";
+            echo "<div class=\"ruta\"><a href=\"index.php\">Inicio</a> / <a href=\"tienda.php\">Tienda</a> / ".ucwords(strtolower($oCat->getNombre()))."</div>";
             echo "<h1><span>".ucwords(strtolower($oCat->getNombre()))."</span></h1>";
 			/*TODO: 
 					*Cortar cantidad de palabras para ver el detalle. Fijarte en el estatico.
