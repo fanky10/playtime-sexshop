@@ -164,9 +164,6 @@
                         	<a href="#" class="socialFeed"></a>
                         </p>
         	        	<a class="banner" href="#" title="Conectate al MSN">
-        	        		<img src="images/banners/bnr-msn02.jpg" alt="Conectate al MSN" />
-        	        	</a>
-        	        	<a class="banner" href="#" title="Conectate al MSN">
         	        		<img src="images/banners/bnr-msn03.jpg" alt="Conectate al MSN" />
         	        	</a>
         	            <a class="banner" href="#" title="Delivery hasta tu casa">
