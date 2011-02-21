@@ -1,4 +1,4 @@
-<!--Muestra la lista de categorías de la DB-->
+<!--Muestra la lista de categorias de la DB-->
     <ul>
         <?php
             include_once ("datos/categorias.php");
