@@ -65,7 +65,8 @@
 					<?php
 	                    include 'menu_categorias.php';
                     ?>
-				    
+                    
+
 				</div><!--end lateral_izquierdo-->
 			
 				<div class="contenido">
@@ -146,12 +147,9 @@
 					</div><!--end contenido_central-->
 					
 					<div class="lateral" id="lateral_derecho">
-        	        	<a class="banner" href="#" title="Conectate al MSN">
-        	        		<img src="images/banners/banner-placeholder.png" alt="Conectate al MSN" />
-        	        	</a>
-        	            <a class="banner" href="#" title="Delivery hasta tu casa">
-        	            	<img src="images/banners/banner-placeholder.png" alt="Delivery hasta tu casa" />
-        	            </a>
+                    	<?php
+	                    	include 'lateral_derecho.php';
+                    	?>
 					</div><!--end lateral_derecho-->
 				
 				</div><!--end contenido -->
