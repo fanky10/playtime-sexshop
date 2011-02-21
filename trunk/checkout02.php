@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>Play Time Sex Shop .::. Botique Er&oacute;tica - &iquest;C&Oacute;MO COMPRAR?</title>
+        <title>Play Time Sex Shop .::. Botique Erótica - PRODUCTO</title>
         <meta name="keywords" content="juguetes, toys, Lubricantes, Anillos, Estimuladores Clitoreales, Placer Anal, Doble Penetraci&oacute;n, Siliconados, Hot Pink, Black Fantasy, Realistic, Funny, Cyberskin, Desarrolladores Peneanos, extensiones, Arneses, Mu&ntilde;ecas, Vaginas, Disfraces" />
         <meta name="description" content="Este es un sitio donde encontrar&aacute; muchas formas de dar placer a su pareja, formas de jugar y divertirse." />
 		
@@ -12,18 +12,27 @@
 
 		<!--JS FILES-->
         <script src="js/jquery-1.5.js" type="text/javascript"></script>
-		<script src="js/secciones/build.js" type="text/javascript"></script><!--PROPIO-->
+		<script src="js/action.js" type="text/javascript"></script><!--PROPIO-->
+        <script src="http://widgets.twimg.com/j/2/widget.js"></script><!--TWITTER-->
+        
+        <script src="js/jquery.validate.js" type="text/javascript"></script><!--EMAIL-->
         
         <!--[if lte IE 7]>
         <script type="text/javascript" src="js/supersleight-min.js"></script>
         <![endif]-->
         
+        <SCRIPT type="text/javascript">
+			$().ready(function() {
+				// valida el formulario de CONTACTO
+				$("#formProducto").validate();
+			});
+		</SCRIPT>
     </head>
     
     <body>
 		<div class="wrapper">
 			<div class="cabecera">
-        		<a href="index.php" title="Inicio"><img class="logo" src="images/logo-playtime.png" alt="Play Time Sex Shop -  Boutique Er&oacute;tica" title="Play Time Sex Shop -  Boutique Er&oacute;tica" border="0" /></a>
+        		<a href="#" title="Inicio"><img class="logo" src="images/logo-playtime.png" alt="Play Time Sex Shop -  Boutique Er&oacute;tica" title="Play Time Sex Shop -  Boutique Er&oacute;tica" border="0" /></a>
 				<ul class="menu">
 					<li><a href="index.php">Inicio</a></li>
         	        <li><a href="tienda.php">Tienda</a></li>
@@ -63,36 +72,73 @@
 				<div class="contenido">
 					
 					<div id="contenido_central">
-        	        	<div class="ruta"><a href="index.php">Inicio</a> / <a href="comprar.php">&iquest;C&oacute;mo Comprar?</a></div>
-        	            
-        	            <h1 class="categoria"><span>&iquest;C&oacute;mo Comprar?</span></h1>
-                        	<h2>FORMA DE ENV&Iacute;O</h3>
-                        	<p>Es muy sencillo, nos contactas por el  MSN Messenger. En ese momento nos podes hacer todas las preguntas que tengas si tenes algunas duda sobre alguno de nuestros productos.</p>
-                            <p>Nos pasas los c&oacute;digos de los productos y despu&eacute;s te tomamos los datos b&aacute;sicos: nombre, tel&eacute;fono, direcci&oacute;n, etc.</p>
-                            <p>Y listo!!! es muy sencillo y f&aacute;cil y en el transcurso del d&iacute;a dentro de un rango horario que combinemos (consultar antes de cada envi&oacute;) tenes el producto en tu casa con la mayor RESERVA y  DISCRECI&Oacute;N.</p>
-                            <p>Nuestros envoltorios y bolsas no llevan logos ni marcas para preservar de esa forma la privacidad del envi&oacute;.</p>
-                            <p>Si estas en el interior de pa&iacute;s con el envi&oacute; r&aacute;pido de Correo Argentino te llega entre 24hs y 72hs aproximadamente.</p>
+        	        	<div class="ruta"><a href="index.php">Inicio</a> / <a href="tienda.php">Tienda</a> / <a href="#">Lubricantes</a> / Producto</div>
+        	            <h1 class="categoria"><span>Confirmaci&oacute;n de compra</span></h1>
+                        
+                		<form id="formCheckout02" action="">
+							<table border="0" width="100%" cellpadding="0" cellspacing="0" class="product-table">
+								<tr>
+									<th class="line-left">Detalle</th>
+									<th class="line-left cartSKU">SKU</th>
+									<th class="line-left cartPrecio">Precio</th>
+									<th class="line-left cartCantidad">Cantidad</th>
+									<th class="line-left cartSubtotal">Total</th>
+								</tr>
+								<tr>
+									<td>Pito de goma</td>
+									<td>096RT</td>
+									<td>$ 158.45</td>
+									<td>1</td>
+									<td>$ 158.45</td>
+								</tr>
+								<tr class="alternate-row">
+									<td>Pito de goma</td>
+									<td>096RT</td>
+									<td>$ 158.45</td>
+									<td>1</td>
+									<td>$ 158.45</td>
+								</tr>
+								<tr>
+									<td colspan="4" class="cartTotal">Subtotal</td>
+									<td>$ 158.45</td>
+								</tr>
+								<tr class="alternate-row">
+									<td colspan="4" class="cartTotal">Manejo y empaque</td>
+									<td>$ 15.00</td>
+								</tr>
+								<tr>
+									<td colspan="4" class="cartTotal">IVA</td>
+									<td>$ 15.80</td>
+								</tr>
+								<tr class="alternate-row">
+									<td colspan="4" class="cartTotal"><strong>Total</strong></td>
+									<td><strong>$ 999.00</strong></td>
+								</tr>
+							</table>
+							<div class="confirmationInfo">
+								<h3>Por favor revise la informaci&oacute;n de envio y confirme la orden:</h3>
+								<dl class="checkoutConfirmData">
+									<dt>Direcci&oacute;n:</dt>
+									<dd><span>Lavalle 2617</span> (<span>2452</span>) <span>San Jorge</span></dd>
+								
+									<dt>Metodo de env&iacute;o:</dt>
+									<dd><span>Correo argentina, contrareembolso</span></dd>
+								
+									<dt>Otro dato:</dt>
+									<dd><span>Lorem ipsum dolor sit amet</span></dd>
+								</dl>
+							</div>
 							
-							<hr />
-							<h2>FORMAS DE PAGO</h2>
-							<p><strong>Tenes varias formas de pago:</strong></p>
-                            <ul>
-                                <li>En efectivo en tu domicilio contra entrega del paquete.</li>
-                                <li>Por correo argentino  contra reembolso al interior del pa&iacute;s.</li>
-                                <li>Por dep&oacute;sito bancario</li>
-                            </ul>
+							<div class="formButton">
+                            	<input id="formConfirmar" class="formButton" type="submit" name="formConfirmar" value="confirmar" />
+                            </div>
                             
-                            <hr />
-                            <h2>&iquest;C&oacute;mo y cu&aacute;ndo recibo los productos?</h2>
-                            <p>Si usted solicita m&aacute;s de un producto se cobrar&aacute; solo un gasto de env&iacute;o.</p>
-                            <p><strong>En las compras de m&aacute;s de $ 350.-</strong> no se le cobrar&aacute; el env&iacute;o en <em>Capital Federal</em>. Para el interior del pa&iacute;s se le bonificar&aacute; el 50% del costo del env&iacute;o.</p>
-                            <p>Los env&iacute;os en el d&iacute;a se realizan dentro de un rango horario en el que usted pueda recibir su compra (consultar el destino del env&iacute;o).</p>
-                            <p>Valor del env&iacute;o desde $25 pesos.</p>
-                            <p><strong>Si el env&iacute;o es al interior del pa&iacute;s o Gran Bs As:</strong><br />Por Correo Argentino dentro de las 24 a 72hs. h&aacute;biles. Valor del env&iacute;o $50 pesos.</p>
+						</form>
+                        
 					</div><!--end contenido_central-->
 					
 					<div class="lateral" id="lateral_derecho">
-                    	<?php
+						<?php
 	                    	include 'lateral_derecho.php';
                     	?>
 					</div><!--end lateral_derecho-->
@@ -117,7 +163,7 @@
                         <li><a href="comprar.php">&iquest;C&oacute;mo Comprar?</a></li>
                         <li><a href="contacto.php">Contacto</a></li>
 				    </ul><!-- end menu_inferior -->
-				    <a href="index.php" title="Inicio"><img class="logo-playtime-chico" src="images/logo-playtime-chico.png" alt="Play Time Sex Shop -  Boutique Er&oacute;tica" title="Play Time Sex Shop -  Boutique Er&oacute;tica" border="0" /></a>
+				    <a href="#" title="Inicio"><img class="logo-playtime-chico" src="images/logo-playtime-chico.png" alt="Play Time Sex Shop -  Boutique Er&oacute;tica" title="Play Time Sex Shop -  Boutique Er&oacute;tica" border="0" /></a>
 				</div><!-- end submenu -->
 					
 			</div><!-- end inferior -->
