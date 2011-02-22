@@ -12,7 +12,7 @@
         echo "<div class=\"ruta\"><a href=\"index.php\">Inicio</a> / <a href=\"tienda.php\">Tienda</a> / ".$oProd->getNombre()."</div>";
         echo "<h1 class=\"categoria\"><span> ".$oProd->getNombre()." </span></h1>";
         $img_id = $oProd->getImagen();
-        $img_source="images/productos/lubricantes/lubricante1.jpg";
+        $img_source="images/img_unavailable.jpg";
         if($img_id>0){
             $img_source="scripts/image_script.php?id_img=$img_id";
         }
