@@ -331,7 +331,7 @@ form label.error { clear: both; width: auto; text-align: left; }
 form#formProducto  { border-top: 1px solid #ccc; margin-top: 15px; padding: 15px 0 20px;}
 form#formProducto label { width: 60px; }
 form#formProducto p.prodPrecio { overflow: hidden; margin: 0; line-height:25px; }
-form#formProducto input.inputData { width: 30px; }
+form#formProducto input.inputData { width: 30px; text-align:center; }
 form#formProducto input.formButton { margin-left: 70px; }
 form#formProducto label.error { color: #85161C; font-size: 11px; line-height: 20px; margin-left: 70px; width: auto; }
     
