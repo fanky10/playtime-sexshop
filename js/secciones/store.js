@@ -20,4 +20,11 @@ $("div.contenido").height(AlturaMax);
 	'speedOut'		:	300, 
 	'overlayShow'	:	false
 	});
+/*******************************************************
+*					VISUALIZAR IMAGENES				   *
+********************************************************/
+$("select").change(function () {
+		alert($( 'select#order option:selected' ).val());
+		$('#formOrdenar').submit(); //ACA TE ARREGLAS VOS PARA VER COMO ENVIAS EL VALUE
+							 });
 });
