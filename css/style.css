@@ -242,10 +242,10 @@ ul.menu_acceso{
 			
 /*  =============  LATERAL DERECHO  ================  */
 .lateral#lateral_derecho { margin-top: 15px; }
-	.lateral#lateral_derecho a.banner { display: block; margin-bottom: 15px; }
-/*		.lateral#lateral_derecho a.banner img { display: block; }*/
+	.lateral#lateral_derecho a.banner { clear: both; display: block; margin: 0 10px 15px 0; }
+		.lateral#lateral_derecho a.banner img { display: block; }
 	
-	#lateral_derecho .social { margin: 0 10px 15px 0; float: left; width: 170px; }
+	#lateral_derecho .social { margin: 0 10px 15px 0; float: left; width: 168px; }
 		#lateral_derecho .social span { margin-right: 0; }
 		#lateral_derecho .social a { height: 16px; margin: 0 0 0 15px; padding: 5px 0; width: 16px; }
 
