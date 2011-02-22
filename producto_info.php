@@ -38,19 +38,16 @@
             </div>
         </form>
         <p class="social">
-            <span>Compartir:</span>
+            <span>Compartir:</span>           
             <?php
-                echo"<a href=\"javascript:popUp('http://www.facebook.com/sharer.php?s=100&p[url]=http://www.playtimesexshop.com&p[images][0]=http://www.playtimesexshop.com/images/logo_social.jpg&p[title]=".$oProd->getNombre()."&p[summary]=".$oProd->getDescription().".')\" class=\"socialFacebook\">Facebook</a>";
-			?><!--FACEBOOK-->
-            <?php
-                echo"<a href=\"javascript:popUp('http://twitter.com/home?status=Me ha gustado mucho el articulo ".$oProd->getNombre()." que he visto en http://www.playtimesexshop.com/')\" class=\"socialTwitter\">Twitter</a>";
-			?><!--FACEBOOK-->
-            
-            <a href="#" class="socialFeed">RSS</a>
-            
-            <!--<a href="http://twitter.com/home?status=<?php echo urlencode("Me ha gustado mucho el articulo ".$oProd->getNombre()." que he visto en http://www.playtimesexshop.com/");?>" target="_blank" class="socialTwitter">Twitter</a>-->
-			   
-        </p>
+                echo"<a href=\"javascript:popUp('http://www.facebook.com/sharer.php?s=100&p[url]=http://www.playtimesexshop.com&p[images][0]=http://www.playtimesexshop.com/images/logo_social.jpg&p[title]=".$oProd->getNombre()."&p[summary]=".$oProd->getDescription().".')\" class=\"socialFacebook\"></a>"/*FACEBOOK*/
+			?>
+            <?php				
+                echo"<a href=\"javascript:popUp('http://twitter.com/home?status=Me ha gustado mucho el articulo ".$oProd->getNombre()." que he visto en http://www.playtimesexshop.com/')\" class=\"socialTwitter\"></a>";/*TWITTER*/
+            ?>
+            <span class="socialRecomendar">Recomendar:</span>
+            <a href="#" class="socialMail"></a>
+   		</p>
 	</div>
 </div>
 <?php
