@@ -126,8 +126,7 @@ class DataProductos extends Data {
             $oProducto->setId_Producto($id_prod);
             $oProducto->setImagen($img);
             $oProducto->setNombre($nombre);
-            $formato_numero = number_format($precio, 2, ',', '.');
-            $oProducto->setPrecio($formato_numero);
+            $oProducto->setPrecio($precio);
             $oProducto->setDescripcion($descripcion);
             $oProducto->setInformacion($informacion);
 
