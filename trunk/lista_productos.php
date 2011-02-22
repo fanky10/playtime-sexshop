@@ -16,11 +16,12 @@ de la lista de productos con footer de paginas
             $limit = 8; //TODO sacarlo de la configuracion
             // pagina pedida
             $pag = (int) $_GET["pag"];
-            $id_categoria = (int) $_GET["id_cat"];
+            
             if ($pag < 1)
             {
                $pag = 1;
             }
+            $id_categoria = (int) $_GET["id_cat"];
             if($id_categoria <1){
                 $id_categoria = 1;
             }
@@ -35,21 +36,27 @@ de la lista de productos con footer de paginas
 			
 			?>
             <!--TODO implementar esto con un ordenador dentro del metodo getProductosImagen-->
-	
-            <form action="" method="" id="formOrdenar">
-                <label>Ordenar por:</label>
-                <select>
-                    <option selected="selected">Seleccionar</option>
-                    <option>Nombre</option>
-                    <option>Precio</option>
-                    <option>Fecha</option>
-                    <option>SKU</option>
-                </select>
-            </form>
             <?php
+            echo "<form action=\"?id_cat=$id_categoria&pag=1\" method=\"GET\" id=\"formOrdenar\">";
+            ?>
+                <label>Ordenar por:</label>
+                <select name="order">
+                    <option selected="selected">Seleccionar</option>
+                    <option value="1">Nombre</option>
+                    <option value="2">Precio</option>
+                </select>
+            <?php
+            echo "</form>";
+            ?>
+            <?php
+            $order = (int) $_GET["order"];
+            if($order <1){
+                $order = 1;
+            }
+            echo "order: $order <br>";
             $offset = ($pag-1) * $limit;//donde empieza a mostrar
             $dProd = new DataProductos();
-            $vProds = $dProd->getProductosImagen($offset,$limit,$id_categoria);//traigo los de prueba no mas
+            $vProds = $dProd->getProductosImagen($offset,$limit,$id_categoria, $order);//traigo los de prueba no mas
             $total = $dProd->getCountProducts();//el total tiene que 'venir' de la db
             $dProd->closeDB();
             $prod_found = count($vProds);

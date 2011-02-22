@@ -88,7 +88,8 @@ class DataProductos extends Data {
      * @param <int> $id_categoria //not yet implemented
      * @return Producto
      */
-    public function getProductosImagen($inicio, $fin, $id_categoria){
+    public function getProductosImagen($inicio, $fin, $id_categoria, $orden){
+        $order_arr = array("p.nombre","pp.precio");
         $query = "SELECT SQL_CALC_FOUND_ROWS p.id as id, p.nombre, i.id_imagen,pp.precio, p.descripcion".
             " FROM producto p".
             " LEFT JOIN imagen i ON p.id_imagen = i.id_imagen".
@@ -96,7 +97,7 @@ class DataProductos extends Data {
             " INNER JOIN categoria_producto cp ON cp.id_producto = p.id".
             " WHERE cp.id_categoria=$id_categoria".
             " GROUP BY p.id".
-            " ORDER BY p.nombre".
+            " ORDER BY ".$order_arr[$orden].
             " LIMIT $inicio , $fin";
 //        echo 'query '.$query;
         $result = mysql_query($query)

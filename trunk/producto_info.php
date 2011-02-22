@@ -26,8 +26,8 @@
             <div class="formField">
                 <label>Precio:</label>
                 <?php
-                	echo"<p class=\"prodPrecio\">$ ".$oProd->getPrecio().".-</p>";
-				?>
+                    echo"<p class=\"prodPrecio\">$ ".$oProd->getPrecio().".-</p>";
+                ?>
             </div>
             <div class="formField">
                 <label>Cantidad:</label>
