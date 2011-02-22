@@ -35,7 +35,8 @@ class Producto{
         $this->imagen=$_imagen;
     }
     function setPrecio($_precio){
-        $this->precio=$_precio;
+        $formato_numero = number_format($_precio, 2, ',', '.');
+        $this->precio=$formato_numero;
     }
 
 
