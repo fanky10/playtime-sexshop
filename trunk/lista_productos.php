@@ -40,7 +40,7 @@ de la lista de productos con footer de paginas
             echo "<form action=\"?id_cat=$id_categoria&pag=1\" method=\"GET\" id=\"formOrdenar\">";
             ?>
                 <label>Ordenar por:</label>
-                <select name="order">
+                <select name="order" id="order">
                     <option selected="selected">Seleccionar</option>
                     <option value="1">Nombre</option>
                     <option value="2">Precio</option>
