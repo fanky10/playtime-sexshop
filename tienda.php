@@ -74,9 +74,12 @@
 					</div><!--end contenido_central-->
 					
 					<div class="lateral" id="lateral_derecho">
-                    	<?php
-	                    	include 'lateral_derecho.php';
-                    	?>
+        	        	<a class="banner" href="#" title="Conectate al MSN">
+        	        		<img src="images/banners/banner-placeholder.png" alt="Conectate al MSN" />
+        	        	</a>
+        	            <a class="banner" href="#" title="Delivery hasta tu casa">
+        	            	<img src="images/banners/banner-placeholder.png" alt="Delivery hasta tu casa" />
+        	            </a>
 					</div><!--end lateral_derecho-->
 				
 				</div><!--end contenido -->

@@ -65,8 +65,7 @@
 					<?php
 	                    include 'menu_categorias.php';
                     ?>
-                    
-
+				    
 				</div><!--end lateral_izquierdo-->
 			
 				<div class="contenido">
@@ -84,12 +83,11 @@
                                         <h3>Anal Lub 50 grs.</h3>
                                         <p class="prodInfo">Dilatador anal. Crema humectante con f&oacute;rmula desensibilizadora, soluble en agua que act&uacute;a instant&aacute;neamente logrando un coito anal sin dolor. Tiene cualidades desinflamatorias y analg&eacute;sicas.</p>
                                         <p class="social">
-                        					<span>Compartir:</span>
-                        					<a href="#" class="socialFacebook"></a>
-                        					<a href="#" class="socialTwitter"></a>
-                        					<span class="socialRecomendar">Recomendar:</span>
-                        					<a href="#" class="socialMail"></a>
-                        				</p>
+                                            <span>Compartir:</span>
+                                            <a href="#" class="socialFacebook">Facebook</a>
+                                            <a href="#" class="socialTwitter">Twitter</a>
+                                            <a href="#" class="socialFeed">RSS</a>
+                                        </p>
                                     </div>
                                 </div><!-- End Slide -->
                             </li>                            
@@ -100,12 +98,11 @@
                                         <h3>Anal Lub 50 grs.</h3>
                                         <p class="prodInfo">Dilatador anal. Crema humectante con f&oacute;rmula desensibilizadora, soluble en agua que act&uacute;a instant&aacute;neamente logrando un coito anal sin dolor. Tiene cualidades desinflamatorias y analg&eacute;sicas.</p>
                                         <p class="social">
-                        					<span>Compartir:</span>
-                        					<a href="#" class="socialFacebook"></a>
-                        					<a href="#" class="socialTwitter"></a>
-                        					<span class="socialRecomendar">Recomendar:</span>
-                        					<a href="#" class="socialMail"></a>
-                        				</p>
+                                            <span>Compartir:</span>
+                                            <a href="#" class="socialFacebook">Facebook</a>
+                                            <a href="#" class="socialTwitter">Twitter</a>
+                                            <a href="#" class="socialFeed">RSS</a>
+                                        </p>
                                     </div>
                                 </div><!-- End Slide -->
                             </li>
@@ -120,12 +117,11 @@
                                         <h3>Anal Lub 50 grs.</h3>
                                         <p class="prodInfo">Dilatador anal. Crema humectante con f&oacute;rmula desensibilizadora, soluble en agua que act&uacute;a instant&aacute;neamente logrando un coito anal sin dolor. Tiene cualidades desinflamatorias y analg&eacute;sicas.</p>
                                         <p class="social">
-                        					<span>Compartir:</span>
-                        					<a href="#" class="socialFacebook"></a>
-                        					<a href="#" class="socialTwitter"></a>
-                        					<span class="socialRecomendar">Recomendar:</span>
-                        					<a href="#" class="socialMail"></a>
-                        				</p>
+                                            <span>Compartir:</span>
+                                            <a href="#" class="socialFacebook">Facebook</a>
+                                            <a href="#" class="socialTwitter">Twitter</a>
+                                            <a href="#" class="socialFeed">RSS</a>
+                                        </p>
                                     </div>
                                 </div><!-- End Slide -->
                             </li>                            
@@ -136,12 +132,11 @@
                                         <h3>Anal Lub 50 grs.</h3>
                                         <p class="prodInfo">Dilatador anal. Crema humectante con f&oacute;rmula desensibilizadora, soluble en agua que act&uacute;a instant&aacute;neamente logrando un coito anal sin dolor. Tiene cualidades desinflamatorias y analg&eacute;sicas.</p>
                                         <p class="social">
-                        					<span>Compartir:</span>
-                        					<a href="#" class="socialFacebook"></a>
-                        					<a href="#" class="socialTwitter"></a>
-                        					<span class="socialRecomendar">Recomendar:</span>
-                        					<a href="#" class="socialMail"></a>
-                        				</p>
+                                            <span>Compartir:</span>
+                                            <a href="#" class="socialFacebook">Facebook</a>
+                                            <a href="#" class="socialTwitter">Twitter</a>
+                                            <a href="#" class="socialFeed">RSS</a>
+                                        </p>
                                     </div>
                                 </div><!-- End Slide -->
                             </li>
@@ -151,9 +146,12 @@
 					</div><!--end contenido_central-->
 					
 					<div class="lateral" id="lateral_derecho">
-                    	<?php
-	                    	include 'lateral_derecho.php';
-                    	?>
+        	        	<a class="banner" href="#" title="Conectate al MSN">
+        	        		<img src="images/banners/banner-placeholder.png" alt="Conectate al MSN" />
+        	        	</a>
+        	            <a class="banner" href="#" title="Delivery hasta tu casa">
+        	            	<img src="images/banners/banner-placeholder.png" alt="Delivery hasta tu casa" />
+        	            </a>
 					</div><!--end lateral_derecho-->
 				
 				</div><!--end contenido -->
