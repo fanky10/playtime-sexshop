@@ -81,6 +81,7 @@ class DataProductos extends Data {
     /**
      * v1.0 crea un producto sin informacion o descripcion
      * v1.1 crea el producto con lo que falta
+     * v1.2 ahora toma como informacion los primeros 100 chars de la descrip
      * como informacion pone la descripcion recortada hasta el 2do punto
      * si no lo encuentra lo pone hasta el 1er punto
      * @param <int> $inicio
@@ -112,13 +113,15 @@ class DataProductos extends Data {
             $img = $row['id_imagen'];
             $precio = $row["precio"];
             $descripcion = $row["descripcion"];
-            $pos = strpos($descripcion, '.', 1); // la segunda ocurrencia
-            //si no hay un segundo punto busco el primero
-            if ($pos === false) {
-                $pos = strpos($descripcion, '.') + 1;//la posicion del primer punto
-            }
-            $informacion = substr($descripcion, 0,$pos);
+            #deprecated ahora toma los primeros 100 chars de la descripcion
+//            $pos = strpos($descripcion, '.', 1); // la segunda ocurrencia
+//            //si no hay un segundo punto busco el primero
+//            if ($pos === false) {
+//                $pos = strpos($descripcion, '.') + 1;//la posicion del primer punto
+//            }
+//            $informacion = substr($descripcion, 0,$pos);
 
+            $informacion = substr($descripcion, 0,100);
 
             $oProducto->setId_Producto($id_prod);
             $oProducto->setImagen($img);
