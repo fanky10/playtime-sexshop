@@ -374,7 +374,7 @@ a.icn-delete { background: url(../images/icn-delete.png) no-repeat; }
 
 #formCheckout02 { margin: 0 0 20px; }
 	#formCheckout02 .product-table { margin-bottom: 0; }
-		.product-table th.cartCantidad { width: 50px; }
+		#formCheckout02 .product-table th.cartCantidad, #factura .product-table th.cartCantidad { width: 50px; }
 	
 	#formCheckout02 label { display:block; float:none; width:auto; float:none; text-align:center; font-size:13px; font-weight:bold; color:#444; }
 	#formCheckout02 textarea { width: 430px; margin: 0 32px; }
