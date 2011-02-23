@@ -14,16 +14,21 @@
         <script src="js/jquery-1.5.js" type="text/javascript"></script>
 		<script src="js/secciones/inicio.js" type="text/javascript"></script><!--PROPIO-->
         
-        <!-- Anything Slider -->
+        <!-- Banner Superior -->
+        <link rel="stylesheet" href="css/style_banner.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script src="js/jquery.transform-0.8.0.min.js"></script>
+		<script src="js/jquery.banner.js" type="text/javascript"></script>
+        
+        <!-- Slider -->
         <link rel="stylesheet" href="css/anythingslider.css" type="text/css" media="screen" />
         <script type="text/javascript" src="js/jquery.anythingslider.js"></script>        
-       
+
         <!--[if lte IE 7]>
         <script type="text/javascript" src="js/supersleight-min.js"></script>
         <![endif]-->
 
-    </head>
-    
+</head>   
     <body>
 		<div class="wrapper">
 			<div class="cabecera">
@@ -46,8 +51,30 @@
 				</ul><!--end menu_acceso-->               
 					
 				<div class="destacados">
-        	        <img src="images/banners/banner-grande.jpg" alt="Play Time Sex Shop" title="Play Time Sex Shop" />
-				</div><!--end banner_grande-->
+                	<div id="ca_banner1" class="ca_banner ca_banner1">
+                        <div class="ca_slide ca_bg1">
+                            <div class="ca_zone ca_zone1"><!--Product-->
+                                <div class="ca_wrap ca_wrap1">
+                                    <img src="images/banners/product1.png" class="ca_shown" alt=""/>
+                                    <img src="images/banners/product2.png" alt="" style="display:none;"/>
+                                    <img src="images/banners/product3.png" alt="" style="display:none;"/>
+                                </div>
+                            </div>
+                            <div class="ca_zone ca_zone2"><!--Line-->
+                                <div class="ca_wrap ca_wrap2">
+                                    <img src="images/banners/line1.jpg" class="ca_shown" alt=""/>
+                                    <img src="images/banners/line2.jpg" alt="" style="display:none;"/>
+                                </div>
+                            </div>
+                            <div class="ca_zone ca_zone3"><!--Title-->
+                                <div class="ca_wrap ca_wrap3">
+                                    <img src="images/banners/title1.jpg" class="ca_shown" alt="" />
+                                    <img src="images/banners/title2.jpg" alt="" style="display:none;"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div><!--end destacados-->
 			</div><!--end superior-->
 			
 			<div class="contenedor">
