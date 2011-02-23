@@ -8,27 +8,18 @@ v1.2 me cope mal con ajax x)
 
 <script>
     //este script se ejecuta cuando alguien selecciona un tipo distinto de orden
-    function getOrden(id_cat){
-        //var id_categoria = 1;
-        var order = $('#order').val();//value from element id=order
-        //alert('cat: '+id_cat+' order: '+order);
-        $("#result").html("Cargando datos...");
-        page = "lista_productos.php";//nos llamamos a si mismo
-        $.ajax( {//necesito saberlo justo desp. de saber que categoria eligio
-                url:page,
-                data:"ord="+ order+"&id_cat="+id_cat,
-                asynch: true,
-                success: function(msg) {
-                    $('#result').hide();
-                    $("#result").html(msg)
-                    .fadeIn("slow");
-                }
-        } );
-    }
-    
-    //esta funcion se ejecuta cuando alguien hace click en alguna pagina (para no cargar todo nuevamente)
+    //tambien lo hace cuando alguien hace click en alguna pagina (para no cargar todo nuevamente)
     function loadData(id_cat,nro_pag,order){
-        //alert('cat: '+id_cat+' order: '+order+' pag: '+nro_pag);
+        if(order<0){//es xq fue selecionado desde el select box
+            order = $('#order').val();//value from element id=order
+        }
+        if(nro_pag<1){//por default 1
+            nro_pag = 1;
+        }
+        if(id_cat < 1){
+            id_cat = 1;
+        }
+        alert('cat: '+id_cat+' order: '+order+' pag: '+nro_pag);
         $("#result").html("Cargando datos...");
         page = "lista_productos.php";//nos llamamos a si mismo
         $.ajax( {
@@ -82,7 +73,7 @@ v1.2 me cope mal con ajax x)
             echo "<form action=\"?id_cat=$id_categoria&pag=1\" method=\"GET\" id=\"formOrdenar\">";
             ?>
                 <label>Ordenar por:</label>
-                <select name="ordenamiento" id="order" onchange="getOrden(<?php echo $id_categoria;?>);">
+                <select name="ordenamiento" id="order" onchange="loadData(<?php echo $id_categoria;?>,-1,-1);">
                     <option selected="selected" value="-1">Seleccionar</option>
                     <option value="0">Nombre</option>
                     <option value="1">Precio</option>
@@ -109,8 +100,13 @@ v1.2 me cope mal con ajax x)
                 if($img_id>0){
                     $img_source="scripts/image_script.php?id_img=$img_id";
                 }
+                $info = $oProducto->getInformacion();
+                $continues = "[...]";
+                if(strlen($info)<100){
+                    $continues = "";
+                }
                 echo "<a class=\"grupo_productos\" rel=\"grupoP\" href=\"$img_source\"><img class=\"prodImagen\" src=\"$img_source\" alt=\"".$oProducto->getNombre()."\" height=\"90\" width=\"90\"/></a>";
-                echo "<p class=\"prodInfo\">".$oProducto->getInformacion()." [...]";//substr($oProducto->getInformacion(), 0, 100);;
+                echo "<p class=\"prodInfo\">".$info." ".$continues;//substr($oProducto->getInformacion(), 0, 100);;
                 echo "<span class=\"prodPrecio\">$".$oProducto->getPrecio()."<a href=\"producto.php?id_prod=".$oProducto->getId_Producto()."\">Ver Detalles</a></span>";
                 echo "</p>";
                 echo "</div>\n";
