@@ -1,39 +1,3 @@
-<!--
-v1.0
-lista de productos con footer de paginas
-v1.1 hice el ordenamiento (medio choto)
-v1.2 me cope mal con ajax x)
--->
-
-
-<script>
-    //este script se ejecuta cuando alguien selecciona un tipo distinto de orden
-    //tambien lo hace cuando alguien hace click en alguna pagina (para no cargar todo nuevamente)
-    function loadData(id_cat,nro_pag,order){
-        if(order<0){//es xq fue selecionado desde el select box
-            order = $('#order').val();//value from element id=order
-        }
-        if(nro_pag<1){//por default 1
-            nro_pag = 1;
-        }
-        if(id_cat < 1){
-            id_cat = 1;
-        }
-        alert('cat: '+id_cat+' order: '+order+' pag: '+nro_pag);
-        $("#result").html("Cargando datos...");
-        page = "lista_productos.php";//nos llamamos a si mismo
-        $.ajax( {
-                url:page,
-                data:"ord="+ order+"&id_cat="+id_cat+"&pag="+nro_pag,
-                asynch: true,
-                success: function(msg) {
-                    $('#result').hide();
-                    $("#result").html(msg)
-                    .fadeIn("slow");
-                }
-        } );
-    }
-</script>
 <div id="result">
 <div class="coleccionProductos">
     <script src="js/jquery-1.5.js" type="text/javascript"></script>

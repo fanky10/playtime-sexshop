@@ -20,11 +20,39 @@ $("div.contenido").height(AlturaMax);
 	'speedOut'		:	300, 
 	'overlayShow'	:	false
 	});
-/*******************************************************
-*					VISUALIZAR IMAGENES				   *
-********************************************************/
-$("select").change(function () {
+
+});//end document
+
+/*$("select").change(function () {
 		alert($( 'select#orderdenamiento option:selected' ).val());
 		$('#formOrdenar').submit(); //ACA TE ARREGLAS VOS PARA VER COMO ENVIAS EL VALUE
              });
-});
+*/
+/*******************************************************
+*				ORDENAMIENTO PRODUCTOS				   *
+********************************************************/
+function loadData(id_cat,nro_pag,order){
+        if(order<0){//es xq fue selecionado desde el select box
+            order = $('#order').val();//value from element id=order
+        }
+        if(nro_pag<1){//por default 1
+            nro_pag = 1;
+        }
+        if(id_cat < 1){
+            id_cat = 1;
+        }
+        //alert('cat: '+id_cat+' order: '+order+' pag: '+nro_pag);
+        $("#result").html("Cargando datos...");
+        page = "lista_productos.php";//nos llamamos a si mismo
+        $.ajax( {
+                url:page,
+                data:"ord="+ order+"&id_cat="+id_cat+"&pag="+nro_pag,
+                asynch: true,
+                success: function(msg) {
+                    $('#result').hide();
+                    $("#result").html(msg)
+                    .fadeIn("slow");
+                }
+        } );
+    }
+
