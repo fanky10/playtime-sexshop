@@ -121,7 +121,7 @@ class DataProductos extends Data {
 //            }
 //            $informacion = substr($descripcion, 0,$pos);
 
-            $informacion = substr($descripcion, 0,100);
+            $informacion = substr($descripcion, 0,150);
 
             $oProducto->setId_Producto($id_prod);
             $oProducto->setImagen($img);

@@ -47,6 +47,7 @@ a { text-decoration:none; color:#85161C; }
     a:hover { cursor:pointer; text-decoration:underline; }
     				
 p { font-size: 12px; margin: 0 0 1em; }
+	p.copy { margin-right: 10px; }
 
 small { display: block; font-size:12px; line-height: 14px; margin-bottom: 5px; color: #939598; }
 strong { font-weight: bold; }
@@ -390,7 +391,7 @@ a.icn-delete { background: url(../images/icn-delete.png) no-repeat; }
 #formCart table input { background: #fff url(../images/bg-input.jpg) 0 0 repeat-x; color: #666; font-size:12px;  border:1px solid #d5d5d5; padding:4px 2px; width: 25px; }
 #formCart div.formButton { text-align: right; margin-right: 10px; }
 
-/*  ==============  CHECKOUT ================  */
+/*  ==============  CHECKOUT & FACTURA  ================  */
 #formCheckout01 { margin: 20px 40px; }
 	#formCheckout01 label { color: #666666; font-size: 14px; }
 	#formCheckout01 input.inputData, #formCheckout01 textarea, #formCheckout01 select { width: 300px; }
@@ -399,22 +400,23 @@ a.icn-delete { background: url(../images/icn-delete.png) no-repeat; }
 
 #formCheckout02 { margin: 0 0 20px; }
 	#formCheckout02 .product-table { margin-bottom: 0; }
-		#formCheckout02 .product-table th.cartCantidad { width: 50px; }
-
-	#formCheckout02 .confirmationInfo {
-		background: #FFFFFF url(../images/bg-content.png) 0 0 repeat-x;
-	    border: 1px solid #DDDDDD;
-	    border-top: none;
-	    margin: 0 10px 20px 0;
-	    padding: 20px 20px 10px;
-	    }
-	    #formCheckout02 .confirmationInfo h3 { border-bottom: 1px solid #b5b5b5; color: #444; padding-bottom: 5px; }
-	    #formCheckout02 .confirmationInfo dl { margin: 20px 40px 20px; font-size: 13px; color: #444; }
-		#formCheckout02 .confirmationInfo dl dt { float: left; font-weight: bold; margin: 0 15px 10px 0; text-align: right; width: 130px; }
-		#formCheckout02 .confirmationInfo dl dd { overflow: auto; padding-bottom:10px; }
+		.product-table th.cartCantidad { width: 50px; }
 	
 	#formCheckout02 label { display:block; float:none; width:auto; float:none; text-align:center; font-size:13px; font-weight:bold; color:#444; }
 	#formCheckout02 textarea { width: 430px; margin: 0 32px; }
 	
 	#formCheckout02 div.formButton { text-align: right; margin-right: 10px; }
-	
+
+	.confirmationInfo {
+		background: #FFFFFF url(../images/bg-content.png) 0 0 repeat-x;
+	    border: 1px solid #DDDDDD;
+	    margin: 0 10px 20px 0;
+	    padding: 20px 20px 10px;
+	    }
+	    .confirmationInfo hr { margin: 10px 0 20px; }
+	    #formCheckout02 .confirmationInfo { border-top: none; }
+	    .confirmationInfo h3 { border-bottom: 1px solid #b5b5b5; color: #444; padding-bottom: 5px; }
+	    .confirmationInfo dl { margin: 20px 40px 0; font-size: 13px; color: #444; }
+	    	#formCheckout02 .confirmationInfo dl { margin: 20px 40px 20px; font-size: 13px; color: #444; }
+		.confirmationInfo dl dt { float: left; font-weight: bold; margin: 0 15px 10px 0; text-align: right; width: 130px; }
+		.confirmationInfo dl dd { overflow: auto; padding-bottom:10px; }
