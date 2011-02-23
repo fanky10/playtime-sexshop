@@ -1,8 +1,5 @@
 <div id="result">
 <div class="coleccionProductos">
-    <script src="js/jquery-1.5.js" type="text/javascript"></script>
-    <script src="js/secciones/store.js" type="text/javascript"></script>
-
     <?php
         include_once 'datos/productos.php';
         include_once 'datos/categorias.php';
