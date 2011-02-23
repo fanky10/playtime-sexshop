@@ -196,6 +196,14 @@
 							    </tr>
 							</table>
 							
+							<div class="confirmationInfo">
+							    <h3>Comentarios adicionales</h3>
+							    <dl class="checkoutConfirmData">
+							    	<dt>Su comentario:</dt>
+							    	<dd><span>Duis dolore te feugait nulla facilisi nam liber tempor cum soluta. Sit amet consectetuer adipiscing elit sed diam nonummy nibh. Duis dolore te feugait nulla facilisi nam liber tempor cum soluta. Sit amet consectetuer adipiscing elit sed diam nonummy nibh.</span></dd>
+							    </dl>
+							</div>
+							
 						</div>
 					</div><!--end contenido_central-->
 					
