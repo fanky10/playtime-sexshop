@@ -69,18 +69,13 @@ v1.2 me cope mal con ajax x)
             echo "<div class=\"ruta\"><a href=\"index.php\">Inicio</a> / <a href=\"tienda.php\">Tienda</a> / ".ucwords(strtolower($oCat->getNombre()))."</div>";
             echo "<h1><span>".ucwords(strtolower($oCat->getNombre()))."</span></h1>";
             ?>
-            <?php
-            echo "<form action=\"?id_cat=$id_categoria&pag=1\" method=\"GET\" id=\"formOrdenar\">";
-            ?>
-                <label>Ordenar por:</label>
-                <select name="ordenamiento" id="order" onchange="loadData(<?php echo $id_categoria;?>,-1,-1);">
-                    <option selected="selected" value="-1">Seleccionar</option>
-                    <option value="0">Nombre</option>
-                    <option value="1">Precio</option>
-                </select>
-            <?php
-            echo "</form>";
-            ?>
+            <?php //TODO llamar a un script que arme estas opc con un array de opc y ademas le pase cual es el selected ?>
+            <label>Ordenar por:</label>
+            <select name="ordenamiento" id="order" onchange="loadData(<?php echo $id_categoria;?>,-1,-1);">
+                <option selected="selected" value="-1">Seleccionar</option>
+                <option value="0">Nombre</option>
+                <option value="1">Precio</option>
+            </select>
             <?php
             
             //echo "categoria: $id_categoria order: $order <br>";
