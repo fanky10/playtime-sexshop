@@ -34,12 +34,14 @@
             echo "<h1><span>".ucwords(strtolower($oCat->getNombre()))."</span></h1>";
             ?>
             <?php //TODO llamar a un script que arme estas opc con un array de opc y ademas le pase cual es el selected ?>
-            <label>Ordenar por:</label>
-            <select name="ordenamiento" id="order" onchange="loadData(<?php echo $id_categoria;?>,-1,-1);">
-                <option selected="selected" value="-1">Seleccionar</option>
-                <option value="0">Nombre</option>
-                <option value="1">Precio</option>
-            </select>
+            <form id="formOrdenar" action="" method="">
+            	<label>Ordenar por:</label>
+            	<select name="ordenamiento" id="order" onchange="loadData(<?php echo $id_categoria;?>,-1,-1);">
+                	<option selected="selected" value="-1">Seleccionar</option>
+                	<option value="0">Nombre</option>
+                	<option value="1">Precio</option>
+            	</select>
+           	</form>
             <?php
             
             //echo "categoria: $id_categoria order: $order <br>";
