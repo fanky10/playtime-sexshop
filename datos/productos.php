@@ -100,7 +100,7 @@ class DataProductos extends Data {
             " GROUP BY p.id".
             " ORDER BY ".$order_arr[$orden].
             " LIMIT $inicio , $fin";
-//        echo 'query '.$query;
+        //echo " query: $query <br>";
         $result = mysql_query($query)
             or die ("Query Failed ".mysql_error());
         $prod_idx = 0;

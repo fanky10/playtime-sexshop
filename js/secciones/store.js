@@ -24,7 +24,7 @@ $("div.contenido").height(AlturaMax);
 *					VISUALIZAR IMAGENES				   *
 ********************************************************/
 $("select").change(function () {
-		alert($( 'select#order option:selected' ).val());
+		alert($( 'select#orderdenamiento option:selected' ).val());
 		$('#formOrdenar').submit(); //ACA TE ARREGLAS VOS PARA VER COMO ENVIAS EL VALUE
-							 });
+             });
 });
