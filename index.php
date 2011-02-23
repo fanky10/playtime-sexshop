@@ -139,43 +139,6 @@
                             </li>
 						</ul>
                         
-                        <h3 class="sliderTittle">&Uacute;ltimos Productos</h3>
-                        <ul id="slider2">
-                            <li>
-                                <div class="slide">
-                                    <img height="180" width="180" alt="Lubricante - Anal Lub 50 grs." src="images/productos/lubricantes/lubricante2.jpg" class="sliderImg">
-                                    <div class="detalleDestacado">
-                                        <h3>Anal Lub 50 grs.</h3>
-                                        <p class="prodInfo">Dilatador anal. Crema humectante con f&oacute;rmula desensibilizadora, soluble en agua que act&uacute;a instant&aacute;neamente logrando un coito anal sin dolor. Tiene cualidades desinflamatorias y analg&eacute;sicas.</p>
-                                        <p class="social">
-                        					<span>Compartir:</span>
-                        					<a href="#" class="socialFacebook"></a>
-                        					<a href="#" class="socialTwitter"></a>
-                        					<span class="socialRecomendar">Recomendar:</span>
-                        					<a href="#" class="socialMail"></a>
-                        				</p>
-                                    </div>
-                                </div><!-- End Slide -->
-                            </li>                            
-                        	<li>
-                                <div class="slide">
-                                    <img height="180" width="180" alt="Lubricante - Anal Lub 50 grs." src="images/productos/lubricantes/lubricante2.jpg" class="sliderImg">
-                                    <div class="detalleDestacado">
-                                        <h3>Anal Lub 50 grs.</h3>
-                                        <p class="prodInfo">Dilatador anal. Crema humectante con f&oacute;rmula desensibilizadora, soluble en agua que act&uacute;a instant&aacute;neamente logrando un coito anal sin dolor. Tiene cualidades desinflamatorias y analg&eacute;sicas.</p>
-                                        <p class="social">
-                        					<span>Compartir:</span>
-                        					<a href="#" class="socialFacebook"></a>
-                        					<a href="#" class="socialTwitter"></a>
-                        					<span class="socialRecomendar">Recomendar:</span>
-                        					<a href="#" class="socialMail"></a>
-                        				</p>
-                                    </div>
-                                </div><!-- End Slide -->
-                            </li>
-						</ul>
-                        
-                        
 					</div><!--end contenido_central-->
 					
 					<div class="lateral" id="lateral_derecho">
