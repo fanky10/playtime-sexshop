@@ -1,12 +1,52 @@
 <!--
 v1.0
-de la lista de productos con footer de paginas
+lista de productos con footer de paginas
+v1.1 hice el ordenamiento (medio choto)
+v1.2 me cope mal con ajax x)
 -->
 
 
-
-
+<script>
+    //este script se ejecuta cuando alguien selecciona un tipo distinto de orden
+    function getOrden(id_cat){
+        //var id_categoria = 1;
+        var order = $('#order').val();//value from element id=order
+        //alert('cat: '+id_cat+' order: '+order);
+        $("#result").html("Cargando datos...");
+        page = "lista_productos.php";//nos llamamos a si mismo
+        $.ajax( {//necesito saberlo justo desp. de saber que categoria eligio
+                url:page,
+                data:"ord="+ order+"&id_cat="+id_cat,
+                asynch: true,
+                success: function(msg) {
+                    $('#result').hide();
+                    $("#result").html(msg)
+                    .fadeIn("slow");
+                }
+        } );
+    }
+    
+    //esta funcion se ejecuta cuando alguien hace click en alguna pagina (para no cargar todo nuevamente)
+    function loadData(id_cat,nro_pag,order){
+        //alert('cat: '+id_cat+' order: '+order+' pag: '+nro_pag);
+        $("#result").html("Cargando datos...");
+        page = "lista_productos.php";//nos llamamos a si mismo
+        $.ajax( {
+                url:page,
+                data:"ord="+ order+"&id_cat="+id_cat+"&pag="+nro_pag,
+                asynch: true,
+                success: function(msg) {
+                    $('#result').hide();
+                    $("#result").html(msg)
+                    .fadeIn("slow");
+                }
+        } );
+    }
+</script>
+<div id="result">
 <div class="coleccionProductos">
+    <script src="js/jquery-1.5.js" type="text/javascript"></script>
+    <script src="js/secciones/store.js" type="text/javascript"></script>
 
     <?php
         include_once 'datos/productos.php';
@@ -25,35 +65,34 @@ de la lista de productos con footer de paginas
             if($id_categoria <1){
                 $id_categoria = 1;
             }
+            $order = (int) $_GET["ord"];
+            if($order <0){
+                $order = 1;
+            }
+            //aqui abajo iba el script
+            ?>
+            
+            <?php
             $dCateg = new DataCategorias();
             $oCat = $dCateg->getCategoria($id_categoria);
             echo "<div class=\"ruta\"><a href=\"index.php\">Inicio</a> / <a href=\"tienda.php\">Tienda</a> / ".ucwords(strtolower($oCat->getNombre()))."</div>";
             echo "<h1><span>".ucwords(strtolower($oCat->getNombre()))."</span></h1>";
-			/*TODO: 
-					*Cortar cantidad de palabras para ver el detalle. Fijarte en el estatico.
-					*Agregar el escript de ordenamiento de los productos.
-			*/
-			
-			?>
-            <!--TODO implementar esto con un ordenador dentro del metodo getProductosImagen-->
+            ?>
             <?php
             echo "<form action=\"?id_cat=$id_categoria&pag=1\" method=\"GET\" id=\"formOrdenar\">";
             ?>
                 <label>Ordenar por:</label>
-                <select name="order" id="order">
-                    <option selected="selected">Seleccionar</option>
-                    <option value="1">Nombre</option>
-                    <option value="2">Precio</option>
+                <select name="ordenamiento" id="order" onchange="getOrden(<?php echo $id_categoria;?>);">
+                    <option selected="selected" value="-1">Seleccionar</option>
+                    <option value="0">Nombre</option>
+                    <option value="1">Precio</option>
                 </select>
             <?php
             echo "</form>";
             ?>
             <?php
-            $order = (int) $_GET["order"];
-            if($order <1){
-                $order = 1;
-            }
-            echo "order: $order <br>";
+            
+            //echo "categoria: $id_categoria order: $order <br>";
             $offset = ($pag-1) * $limit;//donde empieza a mostrar
             $dProd = new DataProductos();
             $vProds = $dProd->getProductosImagen($offset,$limit,$id_categoria, $order);//traigo los de prueba no mas
@@ -94,9 +133,12 @@ de la lista de productos con footer de paginas
      for( $i=1; $i<=$totalPag ; $i++)//muestro c/una de las paginas
      {
         if($i== $pag){
-            $links [] = "<li><a class=\"paginaSeleccionada\" href=\"?id_cat=$id_categoria&pag=$i\" title=\"\">$i</a></li>";
+            //no tendria que hacer nada la pag. seleccionada xD
+            //$links [] = "<li><a class=\"paginaSeleccionada\" href=\"?id_cat=$id_categoria&pag=$i&ord=$order\" title=\"\">$i</a></li>";
+            $links [] = "<li><a class=\"paginaSeleccionada\" title=\"\">$i</a></li>";
         }else{
-            $links [] = "<li><a href=\"?id_cat=$id_categoria&pag=$i\" title=\"\">$i</a></li>";
+            //$links [] = "<li><a href=\"?id_cat=$id_categoria&pag=$i&ord=$order\" title=\"\">$i</a></li>";
+            $links [] = "<li><a onclick=\"loadData($id_categoria,$i,$order);\" title=\"\">$i</a></li>";
         }
      }
      echo implode("", $links);
@@ -105,3 +147,4 @@ de la lista de productos con footer de paginas
 
   ?>
 </div>
+</div><!-- end of result div-->
