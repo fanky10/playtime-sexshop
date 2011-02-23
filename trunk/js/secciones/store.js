@@ -23,14 +23,10 @@ $("div.contenido").height(AlturaMax);
 
 });//end document
 
-/*$("select").change(function () {
-		alert($( 'select#orderdenamiento option:selected' ).val());
-		$('#formOrdenar').submit(); //ACA TE ARREGLAS VOS PARA VER COMO ENVIAS EL VALUE
-             });
-*/
 /*******************************************************
 *				ORDENAMIENTO PRODUCTOS				   *
 ********************************************************/
+$('#formOrdenar').submit(function(){return false}); //no se envía el form.
 function loadData(id_cat,nro_pag,order){
         if(order<0){//es xq fue selecionado desde el select box
             order = $('#order').val();//value from element id=order
