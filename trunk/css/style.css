@@ -180,24 +180,24 @@ ul.menu_acceso{
 #contenido_central form#formOrdenar { text-align: right; margin: 0 10px 10px 0; }
 	#contenido_central form#formOrdenar label { padding:0 5px 0 0; }
 
-#contenido_central .coleccionProductos { overflow:hidden; border-bottom: 1px solid #BD3C43; }
+#contenido_central .coleccionProductos { overflow:hidden; }
 	.producto {
 		border-top: 1px solid #BD3C43;
     	color: #000000;
     	float: left;
+    	height: 170px;
     	margin: 0 10px 10px 0;
     	padding: 15px 0 0;
     	width: 270px;
-    	height: 170px;
     	overflow: hidden;
     	}
-    	.producto .prodTitulo { margin-bottom: 5px; color: #85161C; }
-		.producto .prodImagen { float: left; margin-right: 15px; }
-		.producto .prodInfo { overflow: auto; word-wrap: break-word; }
+    	.producto .prodTitulo { margin-bottom: 15px; color: #85161C; }
+		.producto .prodImagen { float: left; margin-right:30px; }
+		.producto .prodInfo { float: left; width: 150px; word-wrap: break-word; }
 		.producto .prodPrecio { margin-top: 10px; line-height: 15px; font-size: 15px; font-weight: bold; display: block; }
 			.producto .prodPrecio a { color:#85161C; font-size: 11px; font-weight: normal; padding-left: 10px; text-decoration:none; }
 		
-#contenido_central .paginacion { overflow: hidden; font-size: 12px; }
+#contenido_central .paginacion { border-top: 1px solid #BD3C43; font-size: 12px; margin-right: 10px; overflow: hidden; }
 	#contenido_central .paginacion p.resultado { color:#BD3C43; float: left; line-height: 35px; margin: 0; }
 	#contenido_central .paginacion ul { text-align: right; list-style-type: none; float: right; margin: 0; }
 		#contenido_central .paginacion ul li { float: left; padding: 0; }
