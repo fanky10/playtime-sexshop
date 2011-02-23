@@ -16,37 +16,23 @@ div.anythingSlider {
 /****** SET COLORS HERE *******/
 /* Default State */
 div.anythingSlider .thumbNav a.cur, div.anythingSlider .thumbNav a {
-	background: #777;
+	background: #BD3C43;
 	color: #000;
 }
-div.anythingSlider .anythingWindow {
-	border-top: 3px solid #777;
-	border-bottom: 3px solid #777;
-}
-div.anythingSlider .start-stop {
-	background-color: #040;
-	color: #fff;
-}
-div.anythingSlider .start-stop.playing {
-	background-color: #800;
-}
-div.anythingSlider .start-stop:hover, div.anythingSlider .start-stop.hover {
-	color: #ddd;
-}
+div.anythingSlider .anythingWindow { border-bottom: 1px solid #BD3C43; }
+div.anythingSlider .start-stop { background-color: #BD3C43; color: #fff; }
+div.anythingSlider .start-stop.playing { background-color: #BD3C43; }
+div.anythingSlider .start-stop:hover, div.anythingSlider .start-stop.hover { color: #ddd; }
 
 /* Active State */
-div.anythingSlider.activeSlider .anythingWindow {
-	border-color: #7C9127;
-}
-div.anythingSlider.activeSlider .thumbNav a.cur, div.anythingSlider.activeSlider .thumbNav a {
-	background-color: #7C9127;
-}
+div.anythingSlider.activeSlider .anythingWindow { border-color: #BD3C43; }
+div.anythingSlider.activeSlider .thumbNav a.cur { background-color: #BD3C43; }
 div.anythingSlider .start-stop {
-	background-color: #080;
+	background:#BD3C43 url(../images/icn-slider-controls.png) center top no-repeat;
 	color: #fff;
 }
 div.anythingSlider .start-stop.playing {
-	background-color: #d00;
+	background:#BD3C43 url(../images/icn-slider-controls.png) center bottom no-repeat;
 }
 div.anythingSlider .start-stop:hover, div.anythingSlider .start-stop.hover {
 	color: #fff;
@@ -63,7 +49,8 @@ div.anythingSlider .anythingWindow {
 /* wrapper: 45px right & left padding for the arrows, 28px @ bottom for navigation */
 div.anythingSlider {
 	position: relative;
-	padding-bottom:28px;
+	padding-bottom:23px;
+	margin: 0 10px 30px 0;
 }
 /* anythingSlider base UL */
 ul.anythingBase {
@@ -109,26 +96,22 @@ div.anythingSlider .back a:hover, div.anythingSlider .back a.hover { background-
 
 /* Navigation Links */
 div.anythingSlider .anythingControls { outline: 0; }
-div.anythingSlider .thumbNav { margin: 0; }
-div.anythingSlider .thumbNav li { display: inline; }
+div.anythingSlider .thumbNav { margin: 0; float: left; }
+div.anythingSlider .thumbNav li { display: inline; padding: 0; }
 div.anythingSlider .thumbNav a {
-	font: 11px/18px Georgia, Serif;
+	background: none;
+	color: #BD3C43;
+	font-size:11px;
+	line-height: 20px;
 	display: inline-block;
 	text-decoration: none;
-	padding: 2px 8px;
-	height: 18px;
-	margin: 0 5px 0 0;
-	background-image: url(../images/cellshade.png);
-	background-repeat: repeat-x;
+	padding: 0 8px;
+	margin: 0;
 	text-align: center;
 	outline: 0;
-	border-radius: 0 0 5px 5px;
-	-moz-border-radius: 0 0 5px 5px;
-	-webkit-border-radius: 0 0 5px 5px;
 }
-div.anythingSlider .thumbNav a:hover {
-	background-image: none;
-}
+div.anythingSlider .thumbNav a.cur { color: #fff;  }
+div.anythingSlider .thumbNav a:hover { color: #999; background: #fafafa; }
 
 /* slider autoplay right-to-left, reverse order of nav links to look better */
 div.anythingSlider.rtl .thumbNav a { float: right; } /* reverse order of nav links */
@@ -137,21 +120,16 @@ div.anythingSlider.rtl .thumbNav { float: left; }    /* move nav link group to l
 
 /* Autoplay Start/Stop button */
 div.anythingSlider .start-stop {
-	background-image: url(../images/cellshade.png);
-	background-repeat: repeat-x;
-	background-position: center top;
-	padding: 2px 5px;
-	width: 40px;
+	padding: 0;
+	width: 20px;
+	height: 20px;
 	text-align: center;
 	text-decoration: none;
-	float: right;
+	float: left;
 	z-index: 100;
 	outline: 0;
-	border-radius: 0 0 5px 5px;
-	-moz-border-radius: 0 0 5px 5px;
-	-webkit-border-radius: 0 0 5px 5px;
 }
-div.anythingSlider .start-stop:hover, div.anythingSlider .start-stop.hover { background-image: none; }
+div.anythingSlider .start-stop:hover, div.anythingSlider .start-stop.hover {}
 
 div.anythingSlider, div.anythingSlider .anythingWindow, div.anythingSlider .thumbNav a, div.anythingSlider .arrow a, div.anythingSlider .start-stop {
 	transition-duration: 0;

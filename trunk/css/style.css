@@ -176,7 +176,8 @@ ul.menu_acceso{
 
 #contenido_central h1.categoria { color:#85161C; padding: 0 0 5px; border-bottom: 1px solid #BD3C43; margin-bottom: 20px; }
 #contenido_central h2.categoria { font-size: 20px; color:#85161C; padding: 0 0 5px; border-bottom: 1px solid #BD3C43; margin:20px 10px 20px 0; }
-
+	#contenido_central .categoriaSinRuta { margin-top: 15px; }
+	
 #contenido_central form { text-align: left; overflow: hidden; }
 #contenido_central form#formOrdenar { text-align: right; margin: 0 10px 10px 0; }
 	#contenido_central form#formOrdenar label { padding:0 5px 0 0; }
@@ -195,8 +196,8 @@ ul.menu_acceso{
     	.producto .prodTitulo { margin-bottom: 15px; color: #85161C; }
 		.producto .prodImagen { float: left; margin-right:15px; }
 		.producto .prodInfo { overflow: auto; word-wrap: break-word; }
-		.producto .prodPrecio { margin-top: 10px; line-height: 15px; font-size: 15px; font-weight: bold; display: block; }
-			.producto .prodPrecio a { color:#85161C; font-size: 11px; font-weight: normal; padding-left: 10px; text-decoration:none; }
+		.prodPrecio { margin-top: 10px; line-height: 15px; font-size: 15px; font-weight: bold; display: block; }
+			.prodPrecio a { color:#85161C; font-size: 11px; font-weight: normal; padding-left: 10px; text-decoration:none; }
 		
 #contenido_central .paginacion { border-top: 1px solid #BD3C43; font-size: 12px; margin-right: 10px; overflow: hidden; }
 	#contenido_central .paginacion p.resultado { color:#BD3C43; float: left; line-height: 35px; margin: 0; }
@@ -208,38 +209,11 @@ ul.menu_acceso{
 			#contenido_central .paginacion ul li a.paginaSeleccionada:hover { text-decoration: none; background:#BD3C43; color:#fff; }
 			#contenido_central .paginacion ul li a:hover { color: #999; background: #fafafa;}
 
-/*  =============  SLIDERS  ================  */			
-#slideshow { overflow: auto; margin: 0 10px 0 0; width: 550px; position: relative; }
-#slideshow #slidesContainer {
-	margin:0 auto;
-	width:550px;
-	height:180px;
-	overflow:auto; /* allow scrollbar */
-	position:relative;
-	}
-	#slideshow #slidesContainer .slide {
-		float: left;
-		margin:0;
-		width:530px; /* reduce by 20 pixels to avoid horizontal scroll */
-		height:180px;
-		}
-
-/*** Slideshow controls style rules. ***/
-.control {
-	display:block;
-	width:30px;
-	height:100%;
-	text-indent:-10000px;
-	position:absolute;
-	cursor: pointer;
-	z-index: 100;
-	}
-	#leftControl { top:0; left:1px; background:transparent url(../images/icn-slider-arrows.png) no-repeat left center; }
-	#rightControl { top:0; right:1px; background:transparent url(../images/icn-slider-arrows.png) no-repeat right center; }
-	
-.sliderImg { margin: 0 35px; float: left; }
-.detalleDestacado { overflow: auto; margin: 15px 35px 0; width: 265px; }
-	.detalleDestacado h3 { font-size: 20px; color:#85161C; margin-bottom: 10px; }
+/*  ===================  SLIDER   ==================  */
+.slide { overflow: hidden; }
+	.sliderImg { margin: 10px 35px; float: left; }
+	.detalleDestacado { overflow: auto; margin: 10px 35px 0; width: 265px; }
+		.detalleDestacado h3 { font-size: 20px; color:#85161C; margin-bottom: 10px; }
 			
 /*  =============  LATERAL DERECHO  ================  */
 .lateral#lateral_derecho { margin-top: 15px; }
