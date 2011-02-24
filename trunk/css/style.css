@@ -384,11 +384,11 @@ a.icn-delete { background: url(../images/icn-delete.png) no-repeat; }
 	
 	#formCheckout02 div.formButton { text-align: right; margin-right: 10px; }
 	
-	#factura .facturaHeader { margin: 0 0 20px; overflow: hidden; }
-		#factura .facturaHeader img { float: right; margin: 0; }
-		#factura .facturaHeader h4 { font-size: 18px; font-weight: bold; color: #666; margin: 20px 0 5px; }
-		#factura .facturaHeader p.contactInfo { margin: 0; }
-			#factura .facturaHeader p.contactInfo span { display: block; clear: left; margin: 2px 0; padding-left: 30px; }
+	#factura .facturaHeader { margin: 0 0 20px; overflow: hidden;  text-align: right; }
+		#factura .facturaHeader img { float: left; margin: 0; }
+		#factura .facturaHeader h4 { font-size: 18px; font-weight: bold; color: #666; margin: 20px 20px 5px; }
+		#factura .facturaHeader p.contactInfo { margin: 0 20px 0 0; overflow: auto; }
+			#factura .facturaHeader p.contactInfo span { background-position: right center; display: block; clear: right; margin: 2px 0; padding-right: 30px; }
 	
 	.confirmationInfo {
 		background: #FFFFFF url(../images/bg-content.png) 0 0 repeat-x;
