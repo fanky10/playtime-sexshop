@@ -321,11 +321,11 @@ form#frmContact label { font-size: 14px; color: #666; }
 form#frmContact .formField input.inputData, form#frmContact .formField textarea { width: 300px; }
 form#frmContact input.formButton {margin-left: 110px; font-size: 14px; }
 
-p.contactInfo {font-size: 12px; line-height: 21px; }
+p.contactInfo {font-size: 12px; line-height: 21px; color: #666; }
 	p.contactInfo span { padding-left: 25px; margin-right: 15px; }
-		p.contactInfo span.contactMail { background: url(../images/icn-mail.png) left top no-repeat; }
-		p.contactInfo span.contactMSN { background: url(../images/icn-MSN.png) left top no-repeat; padding-left: 15px; }
-		p.contactInfo span.contactTel { background: url(../images/icn-tel.png) left top no-repeat; padding-left: 15px;}
+		p.contactInfo span.contactMail { background: url(../images/icn-mail.png) left center no-repeat; }
+		p.contactInfo span.contactMSN { background: url(../images/icn-MSN.png) left center no-repeat; padding-left: 15px; }
+		p.contactInfo span.contactTel { background: url(../images/icn-tel.png) left center no-repeat; padding-left: 15px;}
 
 /*  ==============  CART ================  */
 /****  Tabla  ****/
@@ -383,7 +383,13 @@ a.icn-delete { background: url(../images/icn-delete.png) no-repeat; }
 	#formCheckout02 textarea { width: 430px; margin: 0 32px; }
 	
 	#formCheckout02 div.formButton { text-align: right; margin-right: 10px; }
-
+	
+	#factura .facturaHeader { margin: 0 0 20px; overflow: hidden; }
+		#factura .facturaHeader img { float: right; margin: 0; }
+		#factura .facturaHeader h4 { font-size: 18px; font-weight: bold; color: #666; margin: 20px 0 5px; }
+		#factura .facturaHeader p.contactInfo { margin: 0; }
+			#factura .facturaHeader p.contactInfo span { display: block; clear: left; margin: 2px 0; padding-left: 30px; }
+	
 	.confirmationInfo {
 		background: #FFFFFF url(../images/bg-content.png) 0 0 repeat-x;
 	    border: 1px solid #DDDDDD;
