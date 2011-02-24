@@ -183,6 +183,9 @@ ul.menu_acceso{
 	#contenido_central form#formOrdenar label { padding:0 5px 0 0; }
 
 #contenido_central .coleccionProductos { overflow:hidden; }
+	.bnrCateg { display: block; float: left; margin: 0 10px 10px 0; }
+		.bnrCateg img { display: block; }
+		
 	.producto {
 		border-top: 1px solid #BD3C43;
     	color: #000000;
