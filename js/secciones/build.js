@@ -4,5 +4,8 @@ $().ready(function(){
 /*******************************************************
 *					ALTO COLUMNA					   *
 ********************************************************/
-$("div.contenido").height($("#lateral_izquierdo").height());
+if($("#lateral_izquierdo").height()>$("div.contenido").height())
+{
+	$("div.contenido").height($("#lateral_izquierdo").height());
+}
 });
