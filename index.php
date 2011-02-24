@@ -159,36 +159,10 @@
 						</ul>
 						
 						<div class="coleccionProductos">
-							<div class="producto">
-								<h4 class="prodTitulo">Anal Lub 50 grs.</h4>
-								<a href="images/img_unavailable.jpg" rel="grupoP" class="grupo_productos"><img height="90" width="90" alt="Anal Lub 50 grs." src="images/img_unavailable.jpg" class="prodImagen"></a>
-								<p class="prodInfo">Dilatador anal. Crema humectante con f?rmula desensibilizadora, soluble en agua que act?a instant?neamente logrando un coito anal sin dolor.Tiene cual [...]<span class="prodPrecio">$37,00<a href="producto.php?id_prod=85">Ver Detalles</a></span></p>
-							</div>
-							<div class="producto">
-								<h4 class="prodTitulo">Anal Lub 50 grs.</h4>
-								<a href="images/img_unavailable.jpg" rel="grupoP" class="grupo_productos"><img height="90" width="90" alt="Anal Lub 50 grs." src="images/img_unavailable.jpg" class="prodImagen"></a>
-								<p class="prodInfo">Dilatador anal. Crema humectante con f?rmula desensibilizadora, soluble en agua que act?a instant?neamente logrando un coito anal sin dolor.Tiene cual [...]<span class="prodPrecio">$37,00<a href="producto.php?id_prod=85">Ver Detalles</a></span></p>
-							</div>
-							<div class="producto">
-								<h4 class="prodTitulo">Anal Lub 50 grs.</h4>
-								<a href="images/img_unavailable.jpg" rel="grupoP" class="grupo_productos"><img height="90" width="90" alt="Anal Lub 50 grs." src="images/img_unavailable.jpg" class="prodImagen"></a>
-								<p class="prodInfo">Dilatador anal. Crema humectante con f?rmula desensibilizadora, soluble en agua que act?a instant?neamente logrando un coito anal sin dolor.Tiene cual [...]<span class="prodPrecio">$37,00<a href="producto.php?id_prod=85">Ver Detalles</a></span></p>
-							</div>
-							<div class="producto">
-								<h4 class="prodTitulo">Anal Lub 50 grs.</h4>
-								<a href="images/img_unavailable.jpg" rel="grupoP" class="grupo_productos"><img height="90" width="90" alt="Anal Lub 50 grs." src="images/img_unavailable.jpg" class="prodImagen"></a>
-								<p class="prodInfo">Dilatador anal. Crema humectante con f?rmula desensibilizadora, soluble en agua que act?a instant?neamente logrando un coito anal sin dolor.Tiene cual [...]<span class="prodPrecio">$37,00<a href="producto.php?id_prod=85">Ver Detalles</a></span></p>
-							</div>
-							<div class="producto">
-								<h4 class="prodTitulo">Anal Lub 50 grs.</h4>
-								<a href="images/img_unavailable.jpg" rel="grupoP" class="grupo_productos"><img height="90" width="90" alt="Anal Lub 50 grs." src="images/img_unavailable.jpg" class="prodImagen"></a>
-								<p class="prodInfo">Dilatador anal. Crema humectante con f?rmula desensibilizadora, soluble en agua que act?a instant?neamente logrando un coito anal sin dolor.Tiene cual [...]<span class="prodPrecio">$37,00<a href="producto.php?id_prod=85">Ver Detalles</a></span></p>
-							</div>
-							<div class="producto">
-								<h4 class="prodTitulo">Anal Lub 50 grs.</h4>
-								<a href="images/img_unavailable.jpg" rel="grupoP" class="grupo_productos"><img height="90" width="90" alt="Anal Lub 50 grs." src="images/img_unavailable.jpg" class="prodImagen"></a>
-								<p class="prodInfo">Dilatador anal. Crema humectante con f?rmula desensibilizadora, soluble en agua que act?a instant?neamente logrando un coito anal sin dolor.Tiene cual [...]<span class="prodPrecio">$37,00<a href="producto.php?id_prod=85">Ver Detalles</a></span></p>
-							</div>
+							<a href="" class="bnrCateg"><img alt="Ellas" src="images/banners/bnr-categ-ellas.jpg" /></a>
+							<a href="" class="bnrCateg"><img alt="Ellos" src="images/banners/bnr-categ-ellos.jpg" /></a>
+							<a href="" class="bnrCateg"><img alt="Disfrases" src="images/banners/bnr-categ-disfrases.jpg" /></a>
+							<a href="" class="bnrCateg"><img alt="Lubricantes" src="images/banners/bnr-categ-lubricantes.jpg" /></a>
                         </div>
                         
 					</div><!--end contenido_central-->
