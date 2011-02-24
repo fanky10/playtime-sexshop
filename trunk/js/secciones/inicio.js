@@ -35,32 +35,3 @@ $('#slider1').anythingSlider({
 			}
 });
 });//end document
-/*******************************************************
-*					BANNER SUPERIOR					   *
-********************************************************/
-$(function() {
-	$('#ca_banner1').banner({
-		steps : [
-			[
-				//1 step:
-				[{"to" : "1"}, {"effect": "zoomOutRotated-zoomInRotated"}],
-				[{"to" : "2"}, {"effect": "fadeOut-fadeIn"}],
-				[{"to" : "1"}, {}]
-			],
-			[
-				//2 step:
-				[{"to" : "3"}, {"effect":"slideOutTop-slideInTop"}],
-				[{"to" : "2"}, {}],
-				[{"to" : "1"}, {"effect": "zoomOut-zoomIn"}]
-			],
-			[
-				//3 step:
-				[{"to" : "2"}, {"effect": "zoomOut-zoomIn"}],
-				[{"to" : "1"}, {}],
-				[{"to" : "2"}, {"effect": "slideOutRight-slideInRight"}]
-			]
-		],
-		total_steps	: 3,
-		speed : 5000
-	});
-});
