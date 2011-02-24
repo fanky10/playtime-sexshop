@@ -96,7 +96,7 @@
                 				<h4>Play Time Sex Shop</h4> 
                 				<p class="contactInfo">
         	            			<span class="contactTel">(011) - 156777777</span>
-        	            			<span class="contactMSN"><strong>msn:</strong> ventas@playtimesexshop.com</span>
+        	            			<span class="contactMSN">ventas@playtimesexshop.coms</span>
         	            			<span class="contactMail">info@playtimesexshop.com</span>
                         		</p>
                 			</div>
