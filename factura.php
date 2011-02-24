@@ -91,6 +91,15 @@
         	            <p class="copy">Esta misma factura de compra se le ha enviado a su direcci&oacute;n de correo electr&oacute;nico</p>
                         
                 		<div id="factura">
+                			<div class="facturaHeader">
+                				<img src="images/logo-factura.png" alt="Play Time Sex Shop" />
+                				<h4>Play Time Sex Shop</h4> 
+                				<p class="contactInfo">
+        	            			<span class="contactTel">(011) - 156777777</span>
+        	            			<span class="contactMSN"><strong>msn:</strong> ventas@playtimesexshop.com</span>
+        	            			<span class="contactMail">info@playtimesexshop.com</span>
+                        		</p>
+                			</div>
                 			
                 			<div class="confirmationInfo">
 							    <h3>Informaci&oacute;n del pedido</h3>
