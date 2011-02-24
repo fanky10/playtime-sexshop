@@ -161,8 +161,8 @@
 						<div class="coleccionProductos">
 							<a href="" class="bnrCateg"><img alt="Ellas" src="images/banners/bnr-categ-ellas.jpg" /></a>
 							<a href="" class="bnrCateg"><img alt="Ellos" src="images/banners/bnr-categ-ellos.jpg" /></a>
-							<a href="" class="bnrCateg"><img alt="Disfrases" src="images/banners/bnr-categ-disfrases.jpg" /></a>
 							<a href="" class="bnrCateg"><img alt="Lubricantes" src="images/banners/bnr-categ-lubricantes.jpg" /></a>
+							<a href="" class="bnrCateg"><img alt="Disfrases" src="images/banners/bnr-categ-disfrases.jpg" /></a>
                         </div>
                         
 					</div><!--end contenido_central-->
