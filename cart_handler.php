@@ -72,8 +72,12 @@ if($action=="clear"){
     $id_prod = (int)$_GET["prod_id"];
     $cant = (int)$_GET["qty"];
     $s = $_SESSION['cart'];
-    $aCart = unserialize($s);
-    $aCart->addItem($id_prod,$cant);
+    //lo transformamos en objeto
+    $oCart = unserialize($s);
+    $oCart->addItem($id_prod,$cant);
+    //ahora en bytes y lo subimos x)
+    $cart = serialize($oCart);
+    $_SESSION['cart'] = $cart;
     echo "added!";
 }else if($action=="show"){
     $s = $_SESSION['cart'];
