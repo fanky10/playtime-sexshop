@@ -27,28 +27,32 @@ class ShoppingCart{
     function addItem($id_item,$cant){
 //        echo "adding item: $id_item, $cant";
         $arrLenght = count($this->arrItems);
-//        $found =0;//false
-//        for($index=0;$index < $arrLenght;$index++){
-//            $item = $this->arrItems[$index];
-//            $current_id = $item['id'];
-//            $current_cant = $item['cant'];
-//            if($current_id == $id_item){
-//                $found = 1;
-//                $item['cant'] = $current_cant + $cant;
-//                echo 'cant updated!';
-//            }
-//        }
+        //todo re cabeza
+//        echo "count $arrLenght";
+//        $this->arrItems[$arrLenght]['id']=$id_item;
+//        $this->arrItems[$arrLenght]['cant']=$cant;
+//        print_r($this->arrItems);
+//        echo "after add: ".count($this->arrItems);
+        //ahora me fijo si el producto ya existe e incremento su cant x)
+        $found =0;//false
+        for($index=0;$index < $arrLenght;$index++){
+            $item = $this->arrItems[$index];
+            $current_id = $item['id'];
+            $current_cant = $item['cant'];
+            if($current_id == $id_item){
+                $found = 1;
+                $this->arrItems[$index]['cant']=$current_cant + $cant;
+                echo 'cant updated!';
+            }
+        }
         //echo "this".$this->intItemsNum;// = $arrLenght;
-        echo "count $arrLenght";
-        $this->arrItems[$arrLenght]['id']=$id_item;
-        $this->arrItems[$arrLenght]['cant']=$cant;
-        print_r($this->arrItems);
-        echo "after add: ".count($this->arrItems);
+
 //        $this->intItemsNum++;
 //        $prod_idx=$prod_idx+1;
-//        if($found!=1){
-//
-//        }
+        if($found!=1){
+            $this->arrItems[$arrLenght]['id']=$id_item;
+            $this->arrItems[$arrLenght]['cant']=$cant;
+        }
     }
     function show(){
         $arrLenght = count($this->arrItems);
