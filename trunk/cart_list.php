@@ -54,11 +54,9 @@ if(count($arrItems)<1){
         echo "<td>IDK 111</td>";
         echo "<td>".$oProducto->getPrecio()."</td>";
         echo "<td>";
-            echo "<input id=\"cartCantidad\" name=\"cartCantidad\" class=\"inputData required\" value=\"".$oProducto->getCantidad()."\" />";
-            //echo "<a href=\"cart_handler.php?redirect=cart_list.php&action=del&prod_id=".$oProducto->getId_Producto()."\" title=\"Delete\" class=\"tableIcon icn-delete\"></a>";
-            //echo "<a href=\"cart_handler.php?redirect=cart_list.php&action=upd&prod_id=".$oProducto->getId_Producto()."\" title=\"Update\" class=\"tableIcon icn-update\"></a>";
+            echo "<input id=\"cartCantidad_$index\" name=\"cartCantidad\" class=\"inputData required\" value=\"".$oProducto->getCantidad()."\" />";
             echo "<a onclick=\"reloadListShoppingCart('del',".$oProducto->getId_Producto().");\" title=\"Delete\" class=\"tableIcon icn-delete\"></a>";
-            echo "<a onclick=\"reloadListShoppingCart('upd',".$oProducto->getId_Producto().");\" title=\"Update\" class=\"tableIcon icn-update\"></a>";
+            echo "<a onclick=\"reloadListShoppingCart('upd',".$oProducto->getId_Producto().",'cartCantidad_$index');\" title=\"Update\" class=\"tableIcon icn-update\"></a>";
         echo "</td>";
 //        echo "<td>".$oProducto->getCantidad()."</td>";
         echo "<td>".$oProducto->getPrecio_Total()."</td>";
@@ -69,7 +67,6 @@ if(count($arrItems)<1){
     </table>
     <?php
     //echo "</table>";
-    //echo "<a onclick=\"reloadListShoppingCart('del',1);\">ClickMe</a>";
 }
 ?>
 </div>
