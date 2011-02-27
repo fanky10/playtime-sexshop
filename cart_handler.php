@@ -29,9 +29,27 @@ class ShoppingCart{
             if($current_id == $id_item){
                 $found = 1;
                 $this->arrItems[$index]['cant']=$current_cant + $cant;
-                echo 'cant updated!';
             }
         }
+        if($found!=1){
+            $this->arrItems[$arrLenght]['id']=$id_item;
+            $this->arrItems[$arrLenght]['cant']=$cant;
+        }
+    }
+    function updItem($id_item,$cant){
+        $arrLenght = count($this->arrItems);
+        //ahora me fijo si el producto ya existe y hago upd
+        $found =0;//false
+        for($index=0;$index < $arrLenght;$index++){
+            $item = $this->arrItems[$index];
+            $current_id = $item['id'];
+            $current_cant = $item['cant'];
+            if($current_id == $id_item){
+                $found = 1;
+                $this->arrItems[$index]['cant']= $cant;
+            }
+        }
+        //si no lo encontramos (??) lo agregamos x) 
         if($found!=1){
             $this->arrItems[$arrLenght]['id']=$id_item;
             $this->arrItems[$arrLenght]['cant']=$cant;
@@ -50,8 +68,8 @@ class ShoppingCart{
 //si la encontramos sin nada la creamos al toke
 if(!session_is_registered('cart')){//si no esta registrado lo registramos
     $oCart = new ShoppingCart();
-    $cart = serialize($oCart);
-    $_SESSION['cart'] = $cart;
+    $sCart = serialize($oCart);
+    $_SESSION['cart'] = $sCart;
 }
 $action = $_GET["action"];
 if($action=="clear"){
@@ -72,12 +90,40 @@ if($action=="clear"){
     $oCart = unserialize($s);
     $oCart->addItem($id_prod,$cant);
     //ahora en bytes y lo sobreescribimos
-    $cart = serialize($oCart);
-    $_SESSION['cart'] = $cart;
+    $sCart = serialize($oCart);
+    $_SESSION['cart'] = $sCart;
     echo "added!";
-}else if($action=="show"){
+}else if($action=="upd"){
+    $id_prod = (int)$_GET["prod_id"];
+    $cant = (int)$_GET["qty"];
+    //validamos entradas
+    if($id_prod<0){
+        return;
+    }
+    if($cant < 0){
+        $cant = 0;
+    }
+    //obtenemos el carrito
     $s = $_SESSION['cart'];
-    $aCart = unserialize($s);
+    //lo transformamos en objeto
+    $oCart = unserialize($s);
+    $oCart->updItem($id_prod,$cant);
+    //ahora en bytes y lo sobreescribimos
+    $sCart = serialize($oCart);
+    $_SESSION['cart'] = $sCart;
+    echo "added!";
+}else if($action=="show_status"){
+    //obtenemos el carrito
+    $s = $_SESSION['cart'];
+    //lo transformamos en objeto
+    $oCart = unserialize($s);
+    $arrItems = $oCart->getItems();
+    $arrLenght = count($arrItems);
+    echo "Compra ($arrLenght Items)";
+}
+else if($action=="show_list"){
+    $s = $_SESSION['cart'];
+    $oCart = unserialize($s);
     //lo mostramos un poquito mejor x)
 //    $aCart->show();
     
@@ -90,7 +136,7 @@ if($action=="clear"){
 <?php
     //llamar a datos, pasarle el arreglo(de ids) y que me devuelva un array de productos
     //con respectivas sus cants
-    $arrItems = $aCart->getItems();
+    $arrItems = $oCart->getItems();
     $arrLenght = count($arrItems);
 
     for($index=0;$index < $arrLenght;$index++){
@@ -103,18 +149,18 @@ if($action=="clear"){
         echo "<tr>";
     }
 
-}
+
 ?>
     </table>
-<?php
-
-
-?>
-<html>
     <br>
+<?php
+}
+?>
     <a href="?action=clear">clear me</a>
     <br>
     <a href="?action=add&prod_id=1&qty=10">add me</a>
     <br>
-    <a href="?action=show">show me</a>
+    <a href="?action=show_list">show list to me</a>
+    <br>
+    <a href="?action=show_status">show status</a>
 </html>
