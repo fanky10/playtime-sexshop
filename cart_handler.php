@@ -139,24 +139,45 @@ else if($action=="show_list"){
     <table border="1">
         <tr>
             <th>id_prod</th>
+            <th>Nombre</th>
+            <th>Precio Unitario</th>
             <th>cantidad</th>
+            <th>Precio Total</th>
         </tr>
 <?php
     //TODO: armar un array de ids y armar la parte de datos tmb
     //TODO: llamar a datos, pasarle el arreglo(de ids) y que me devuelva un array de productos
     //con sus respectivas cants
+    //datos hardcoded
     $arrItems = $oCart->getItems();
-    $arrLenght = count($arrItems);
-    print_r( $arrItems);echo"<br>";
-    for($index=0;$index < $arrLenght;$index++){
-        $item = $arrItems[$index];
-        $current_id = $item['id'];
-        $current_cant = $item['cant'];
+    include_once 'datos/productos.php';
+    //instancio datos
+    $dProd = new DataProductos();
+    //obtengo el arreglo corresp.
+    $vProds = $dProd->getProductosCarrito($arrItems);
+    $prod_found = count($vProds);
+    for($index=0;$index < $prod_found;$index++){
+        $oProducto = $vProds[$index];
         echo "<tr>";
-        echo "<td>".$current_id."</td>";
-        echo "<td>".$current_cant."</td>";
-        echo "<tr>";
+        echo "<td>".$oProducto->getId_Producto()."</td>";
+        echo "<td>".$oProducto->getNombre()."</td>";
+        echo "<td>".$oProducto->getPrecio()."</td>";
+        echo "<td>".$oProducto->getCantidad()."</td>";
+        echo "<td>".$oProducto->getPrecio_Total()."</td>";
+        echo "</tr>";
     }
+
+//    $arrLenght = count($arrItems);
+//    print_r( $arrItems);echo"<br>";
+//    for($index=0;$index < $arrLenght;$index++){
+//        $item = $arrItems[$index];
+//        $current_id = $item['id'];
+//        $current_cant = $item['cant'];
+//        echo "<tr>";
+//        echo "<td>".$current_id."</td>";
+//        echo "<td>".$current_cant."</td>";
+//        echo "<tr>";
+//    }
 
 
 ?>
@@ -169,12 +190,32 @@ if(isset ($_GET["redirect"])){
     header( 'Location: '.$_GET["redirect"] ) ;
 }
 //seteado a mano para testeo :)
-$test_opt=0;
+$test_opt=1;
 if($test_opt==1){
 ?>
     <a href="?ontest=1&action=clear">clear me</a>
     <br>
+    
+    <!--
     <a href="?ontest=1&action=add&prod_id=1&qty=10">add me</a>
+    -->
+    <form action="cart_handler.php?action=add" method="POST" id="formProducto">
+        <input type="hidden" name="prod_id" value="1"
+        <div class="formField">
+            <label>Precio:</label>
+            <p class="prodPrecio">$ 99,00.-</p>
+        </div>
+
+        <div class="formField">
+            <label>Cantidad:</label>
+            <input id="cantidad" name="qty" class="inputData required number" maxlength="3" value="1"/>
+
+        </div>
+        <div class="formButton">
+            <input id="comprar" class="formButton" type="submit" name="action" value="add" />
+        </div>
+    </form>
+
     <br>
     <a href="?ontest=1&action=show_list">show list to me</a>
     <br>
