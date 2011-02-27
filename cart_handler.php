@@ -71,18 +71,21 @@ if(!session_is_registered('cart')){//si no esta registrado lo registramos
     $sCart = serialize($oCart);
     $_SESSION['cart'] = $sCart;
 }
-$action = $_GET["action"];
+if(!isset ($action)){
+    $action = $_GET["action"];
+}
 if($action=="clear"){
     session_unset();
+    echo "cleared!<br>";
 }else if($action=="add"){
-    $id_prod = (int)$_GET["prod_id"];
-    $cant = (int)$_GET["qty"];
+    $id_prod = (int)$_POST["prod_id"];
+    $cant = (int)$_POST["qty"];
     //validamos entradas
-    if($id_prod<0){
-        return;
+    if($id_prod<1){
+        throw new Exception("Ivalid argument! id_prod > 0");
     }
     if($cant < 0){
-        $cant = 0;
+        $cant = 1;//por default
     }
     //obtenemos el carrito
     $s = $_SESSION['cart'];
@@ -92,7 +95,7 @@ if($action=="clear"){
     //ahora en bytes y lo sobreescribimos
     $sCart = serialize($oCart);
     $_SESSION['cart'] = $sCart;
-    echo "added!";
+    echo "added! <br>";
 }else if($action=="upd"){
     $id_prod = (int)$_GET["prod_id"];
     $cant = (int)$_GET["qty"];
@@ -111,7 +114,7 @@ if($action=="clear"){
     //ahora en bytes y lo sobreescribimos
     $sCart = serialize($oCart);
     $_SESSION['cart'] = $sCart;
-    echo "added!";
+    echo "updated! <br>";
 }else if($action=="show_status"){
     //obtenemos el carrito
     $s = $_SESSION['cart'];
@@ -119,7 +122,12 @@ if($action=="clear"){
     $oCart = unserialize($s);
     $arrItems = $oCart->getItems();
     $arrLenght = count($arrItems);
-    echo "Compra ($arrLenght Items)";
+    //linked to cart.php
+    //formatted
+    echo "<li id=\"cart\">\n
+        <a href=\"cart.php\">Compra (<strong>$arrLenght</strong> Item".($arrLenght>1?"s":"").")</a>\n
+        </li>";
+    
 }
 else if($action=="show_list"){
     $s = $_SESSION['cart'];
@@ -134,11 +142,12 @@ else if($action=="show_list"){
             <th>cantidad</th>
         </tr>
 <?php
-    //llamar a datos, pasarle el arreglo(de ids) y que me devuelva un array de productos
-    //con respectivas sus cants
+    //TODO: armar un array de ids y armar la parte de datos tmb
+    //TODO: llamar a datos, pasarle el arreglo(de ids) y que me devuelva un array de productos
+    //con sus respectivas cants
     $arrItems = $oCart->getItems();
     $arrLenght = count($arrItems);
-
+    print_r( $arrItems);echo"<br>";
     for($index=0;$index < $arrLenght;$index++){
         $item = $arrItems[$index];
         $current_id = $item['id'];
@@ -155,12 +164,22 @@ else if($action=="show_list"){
     <br>
 <?php
 }
+
+if(isset ($_GET["redirect"])){
+    header( 'Location: '.$_GET["redirect"] ) ;
+}
+//seteado a mano para testeo :)
+$test_opt=0;
+if($test_opt==1){
 ?>
-    <a href="?action=clear">clear me</a>
+    <a href="?ontest=1&action=clear">clear me</a>
     <br>
-    <a href="?action=add&prod_id=1&qty=10">add me</a>
+    <a href="?ontest=1&action=add&prod_id=1&qty=10">add me</a>
     <br>
-    <a href="?action=show_list">show list to me</a>
+    <a href="?ontest=1&action=show_list">show list to me</a>
     <br>
-    <a href="?action=show_status">show status</a>
+    <a href="?ontest=1&action=show_status">show status</a>
 </html>
+<?php
+}
+?>
