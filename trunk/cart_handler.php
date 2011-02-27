@@ -102,6 +102,7 @@ if(isset ($_GET["redirect"])){
 $test_opt=0;
 if($test_opt==1){
 ?>
+
 <!--Agregar - eliminar - modificar prods-->
     <form action="cart_handler.php?action=add" method="POST" id="formProducto">
         <div class="formField">
@@ -130,6 +131,7 @@ if($test_opt==1){
         <div class="formButton">
             <input id="comprar" class="formButton" type="submit" name="action" value="del" />
         </div>
+
     </form>
     <form action="cart_handler.php" method="GET" id="formProducto">
         <div class="formField">
