@@ -47,8 +47,18 @@
         	        <li id="home"><a href="#">Inicio</a></li>
         	        <li id="help"><a href="#">Ayuda</a></li>
         	        <li id="login"><a href="#">Acceso</a></li>
-        	        <li id="cart"><a href="#">Compra (<strong>0</strong> Items)</a></li>
-				</ul><!--end menu_acceso-->               
+                        <?php
+                          //segun: http://www.webmasterworld.com/php/3190423.htm
+                          //la correcta forma de pasar arguments es la siguiente:
+                          $action = "show_status";
+                          include_once 'cart_handler.php';
+                        ?>
+                        <!-- Modificado por fanky10
+        	        <li id="cart">
+                            <a href="#">Compra (<strong>0</strong> Items)</a>
+                        </li>
+                        -->
+                                </ul><!--end menu_acceso-->
 			</div><!--end superior-->
 			
 			<div class="contenedor">
@@ -76,6 +86,10 @@
         	            <h1 class="categoria"><span>Carrito de compras</span></h1>
                         
                 		<form id="formCart" action="">
+                                    <?php
+                                    include_once 'cart_list.php';
+                                    ?>
+                                    <!--
 							<table border="0" width="100%" cellpadding="0" cellspacing="0" class="product-table">
 								<tr>
 									<th class="line-left">Detalle</th>
@@ -155,6 +169,7 @@
 									<td>$ 158.45</td>
 								</tr>
 							</table>
+                                    -->
 							<div class="formButton">
                             	<input id="formCheckout" class="formButton" type="submit" name="formCheckout" value="checkout" />
                             </div>

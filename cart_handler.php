@@ -8,62 +8,7 @@
  * cant (si no se especifica por fault es 1)
  */
 session_start();
-class ShoppingCart{
-    //arreglo de items
-    private $arrItems;
-    public function __construct() {
-        $this->arrItems=Array();
-    }
-    /*
-     * agrego un nuevo id al arreglo
-     * no sin antes fijarme si ya esta en el arreglo y sumarle la cantidad
-     */
-    function addItem($id_item,$cant){
-        $arrLenght = count($this->arrItems);
-        //ahora me fijo si el producto ya existe e incremento su cant
-        $found =0;//false
-        for($index=0;$index < $arrLenght;$index++){
-            $item = $this->arrItems[$index];
-            $current_id = $item['id'];
-            $current_cant = $item['cant'];
-            if($current_id == $id_item){
-                $found = 1;
-                $this->arrItems[$index]['cant']=$current_cant + $cant;
-            }
-        }
-        if($found!=1){
-            $this->arrItems[$arrLenght]['id']=$id_item;
-            $this->arrItems[$arrLenght]['cant']=$cant;
-        }
-    }
-    function updItem($id_item,$cant){
-        $arrLenght = count($this->arrItems);
-        //ahora me fijo si el producto ya existe y hago upd
-        $found =0;//false
-        for($index=0;$index < $arrLenght;$index++){
-            $item = $this->arrItems[$index];
-            $current_id = $item['id'];
-            $current_cant = $item['cant'];
-            if($current_id == $id_item){
-                $found = 1;
-                $this->arrItems[$index]['cant']= $cant;
-            }
-        }
-        //si no lo encontramos (??) lo agregamos x) 
-        if($found!=1){
-            $this->arrItems[$arrLenght]['id']=$id_item;
-            $this->arrItems[$arrLenght]['cant']=$cant;
-        }
-    }
-    function show(){
-        $arrLenght = count($this->arrItems);
-        echo "found: $arrLenght <br>";
-        print_r($this->arrItems);
-    }
-    function getItems(){
-        return $this->arrItems;
-    }
-}
+include_once 'entidades/shoppingcart.php';
 
 //si la encontramos sin nada la creamos al toke
 if(!session_is_registered('cart')){//si no esta registrado lo registramos
@@ -130,45 +75,7 @@ if($action=="clear"){
     
 }
 else if($action=="show_list"){
-    $s = $_SESSION['cart'];
-    $oCart = unserialize($s);
-    //lo mostramos un poquito mejor x)
-//    $aCart->show();
-    $arrItems = $oCart->getItems();
-    if(count($arrItems)<1){
-        echo "sin items cargados <br>";
-    }else{
-    ?>
-    <table border="1">
-        <tr>
-            <th>id_prod</th>
-            <th>Nombre</th>
-            <th>Precio Unitario</th>
-            <th>cantidad</th>
-            <th>Precio Total</th>
-        </tr>
-    <?php
-
-        include_once 'datos/productos.php';
-        //datos new instance
-        $dProd = new DataProductos();
-        //obtengo el arreglo corresp.
-        $vProds = $dProd->getProductosCarrito($arrItems);
-        $prod_found = count($vProds);
-        //itero y muestro :)
-        for($index=0;$index < $prod_found;$index++){
-            $oProducto = $vProds[$index];
-            echo "<tr>";
-            echo "<td>".$oProducto->getId_Producto()."</td>";
-            echo "<td>".$oProducto->getNombre()."</td>";
-            echo "<td>".$oProducto->getPrecio()."</td>";
-            echo "<td>".$oProducto->getCantidad()."</td>";
-            echo "<td>".$oProducto->getPrecio_Total()."</td>";
-            echo "</tr>";
-        }
-        echo "</table>
-            <br>";
-    }
+    include 'cart_list.php';
 
 }
 
@@ -176,7 +83,7 @@ if(isset ($_GET["redirect"])){
     header( 'Location: '.$_GET["redirect"] ) ;
 }
 //seteado a mano para testeo :)
-$test_opt=1;
+$test_opt=0;
 if($test_opt==1){
 ?>
     <a href="?ontest=1&action=clear">clear me</a>
