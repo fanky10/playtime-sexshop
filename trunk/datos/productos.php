@@ -37,7 +37,7 @@ class DataProductos extends Data {
             " LEFT JOIN (select * from precio_producto order by fecha_hora desc) pp ON pp.id_producto=p.id ".
             " WHERE p.id in ($current_id)".
             " GROUP BY p.id";
-            echo " query: $query <br>";
+//            echo " query: $query <br>";
             $result = mysql_query($query)
                 or die ("Query Failed ".mysql_error());
 
