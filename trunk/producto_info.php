@@ -22,19 +22,26 @@
 			<div>";
         echo"<p class=\"prodInfo\">".$oProd->getDescription()."</p>";
 		?>
-        <form action="" method="" id="formProducto">
+                <!--aqui vamos a probar el cart_handler!-->
+        <form action="cart_handler.php?action=add&redirect=index.php" method="POST" id="formProducto">
+            <?php
+            //ponemos un input hidden para que envie por POST el prod_id
+            echo "<input type=\"hidden\" name=\"prod_id\" value=\"$id_producto\" ";
+            ?>
+
             <div class="formField">
                 <label>Precio:</label>
                 <?php
                     echo"<p class=\"prodPrecio\">$ ".$oProd->getPrecio().".-</p>";
                 ?>
             </div>
+
             <div class="formField">
                 <label>Cantidad:</label>
-                <input id="cantidad" name="cantidad" class="inputData required number" maxlength="3" value="1"/>
+                <input id="cantidad" name="qty" class="inputData required number" maxlength="3" value="1"/>
             </div>
             <div class="formButton">
-                <input id="comprar" class="formButton" type="submit" name="comprar" value="comprar" />
+                <input id="comprar" class="formButton" type="submit" name="action" value="add" />
             </div>
         </form>
         <p class="social">
