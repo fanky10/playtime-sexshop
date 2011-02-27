@@ -12,7 +12,14 @@ class Producto{
     private $categorias;
     private $imagen;
     private $precio;
-
+    private $precio_total;
+    private $cantidad;
+    function setCantidad($cantidad){
+        $this->cantidad = $cantidad;
+    }
+    function setPrecio_Total($precio_total){
+        $this->precio_total = $precio_total;
+    }
     function setId_Producto($_id_producto){
         $this->id_producto=$_id_producto;
     }
@@ -63,6 +70,12 @@ class Producto{
     }
     function getPrecio(){
         return $this->precio;
+    }
+    function getPrecio_Total(){
+        return $this->cantidad * $this->precio;
+    }
+    function getCantidad(){
+        return $this->cantidad;
     }
 }
 ?>

@@ -16,6 +16,100 @@ class DataProductos extends Data {
     public function __construct() {
         parent::__construct();
     }
+    /**
+     * a partir del arreglo que esta guardado en la variable SESSION
+     * de id_producto-cant
+     * armamos un arreglo de objetos Producto con Nombre - cant - precio unitario - precioTotal
+     * etc
+     * @param <Array> $prodV 
+     */
+    public function getProductosCarrito($arrItems){
+        //dos opc:
+        //a) llamo a datos por cada prod en el arreglo c/ una consulta nueva
+        //OPC A:
+        $arrLenght = count($arrItems);
+        $prod_idx = 0;
+        $vProductos;
+        for($index=0;$index < $arrLenght;$index++){
+            $item = $arrItems[$index];
+            $current_id = $item['id'];
+            $current_cant = $item['cant'];
+            $query = "select p.id as id, p.nombre, pp.precio".
+            " FROM producto p".
+            " LEFT JOIN (select * from precio_producto order by fecha_hora desc) pp ON pp.id_producto=p.id ".
+            " WHERE p.id in ($current_id)".
+            " GROUP BY p.id";
+            echo " query: $query <br>";
+            $result = mysql_query($query)
+                or die ("Query Failed ".mysql_error());
+
+
+            while($row = mysql_fetch_array($result,MYSQL_ASSOC)){
+                //objeto producto a agregar en el arreglo a devolver
+                $oProducto = new Producto();
+                $id_prod = $row['id'];
+                $nombre = $row['nombre'];
+                $precio = $row["precio"];
+
+                $oProducto->setId_Producto($id_prod);
+                $oProducto->setNombre($nombre);
+                $oProducto->setPrecio($precio);
+                $oProducto->setCantidad($current_cant);
+
+                //y lo agregamos al array
+                $vProductos[$prod_idx]=$oProducto;
+                $prod_idx=$prod_idx+1;//incremento el indice
+            }
+        }
+        
+        
+        //b) llamo a datos una vez y busco la cant en el arreglo --
+        
+        //OPC B: llama muchos loops 1-getidArray for where p.id in() 2-para encontrar cant
+//        $query = "select p.id as id, p.nombre, pp.precio".
+//            " FROM producto p".
+//            " LEFT JOIN (select * from precio_producto order by fecha_hora desc) pp ON pp.id_producto=p.id ".
+//            " WHERE p.id in (".
+//            " GROUP BY p.id";
+//        echo " query: $query <br>";
+//        $result = mysql_query($query)
+//            or die ("Query Failed ".mysql_error());
+//        $prod_idx = 0;
+//        $vProductos;
+//        while($row = mysql_fetch_array($result,MYSQL_ASSOC)){
+//            //objeto producto a agregar en el arreglo a devolver
+//            $oProducto = new Producto();
+//            $id_prod = $row['id'];
+//            $nombre = $row['nombre'];
+//            $precio = $row["precio"];
+//            $cantidad = 1;
+//            //buscamos la cant corresp
+//            //se setean las cant corresp
+//            //busqueda basica
+//            $arrLenght = count($sprodV);
+//            for($index=0;$index < $arrLenght;$index++){
+//                $item = $sprodV[$index];
+//                $current_id = $item['id'];
+//                $current_cant = $item['cant'];
+//                if($current_id == $id_prod){
+//                    $cantidad = $current_cant;
+//                }
+//            }
+//            $oProducto->setId_Producto($id_prod);
+//            $oProducto->setNombre($nombre);
+//            $oProducto->setPrecio($precio);
+//            $oProducto->setCantidad($cantidad);
+//
+//            //y lo agregamos al array
+//            $vProductos[$prod_idx]=$oProducto;
+//            $prod_idx=$prod_idx+1;//incremento el indice
+//        }
+        //se cierra la conex.
+        $this->closeDB();
+        
+        //se devuelve el array
+        return $vProductos;
+    }
     public function getProducto($id_producto){
         $query = "SELECT SQL_CALC_FOUND_ROWS p.id as id, p.nombre, i.id_imagen,pp.precio, p.descripcion".
             " FROM producto p".
