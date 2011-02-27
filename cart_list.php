@@ -45,7 +45,11 @@ if(count($arrItems)<1){
     //itero y muestro :)
     for($index=0;$index < $prod_found;$index++){
         $oProducto = $vProds[$index];
-        echo "<tr>";
+        /**
+         * Change '10' to be any number you want
+         * <?=(10&1) ? "odd" : "even"?>
+         */
+        echo "<tr ".(($index&1) ? "class=\"alternate-row\"" : "").">";//si es par: colorcito lindo
         echo "<td>".$oProducto->getNombre()."</td>";
         echo "<td>IDK 111</td>";
         echo "<td>".$oProducto->getPrecio()."</td>";
