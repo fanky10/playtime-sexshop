@@ -32,6 +32,7 @@ if($action=="clear"){
     if($cant < 0){
         $cant = 1;//por default
     }
+    //TODO: VERIFICAR QUE EXISTA EN DB
     //obtenemos el carrito
     $s = $_SESSION['cart'];
     //lo transformamos en objeto
@@ -41,6 +42,22 @@ if($action=="clear"){
     $sCart = serialize($oCart);
     $_SESSION['cart'] = $sCart;
     echo "added! <br>";
+}else if($action=="del"){//se usa un link
+    $id_prod = (int)$_GET["prod_id"];
+    //validamos entrada
+    if($id_prod<1){
+        throw new Exception("Ivalid argument! id_prod > 0");
+    }
+    //obtenemos el carrito
+    $s = $_SESSION['cart'];
+    //lo transformamos en objeto
+    $oCart = unserialize($s);
+    //descontamos el item
+    $oCart->delItem($id_prod);
+    //ahora en bytes y lo sobreescribimos
+    $sCart = serialize($oCart);
+    $_SESSION['cart'] = $sCart;
+    echo "deleted! <br>";
 }else if($action=="upd"){
     $id_prod = (int)$_GET["prod_id"];
     $cant = (int)$_GET["qty"];
@@ -72,7 +89,6 @@ if($action=="clear"){
     echo "<li id=\"cart\">\n
         <a href=\"cart.php\">Compra (<strong>$arrLenght</strong> Item".($arrLenght>1?"s":"").")</a>\n
         </li>";
-    
 }
 else if($action=="show_list"){
     include 'cart_list.php';
@@ -86,19 +102,14 @@ if(isset ($_GET["redirect"])){
 $test_opt=0;
 if($test_opt==1){
 ?>
-    <a href="?ontest=1&action=clear">clear me</a>
-    <br>
-    
-    <!--
-    <a href="?ontest=1&action=add&prod_id=1&qty=10">add me</a>
-    -->
+<!--Agregar - eliminar - modificar prods-->
     <form action="cart_handler.php?action=add" method="POST" id="formProducto">
-        <input type="hidden" name="prod_id" value="1"
         <div class="formField">
-            <label>Precio:</label>
-            <p class="prodPrecio">$ 99,00.-</p>
-        </div>
+            <label>IdProducto</label>
+            <input id="cantidad" name="prod_id" class="inputData required number" maxlength="3" value="1"/>
 
+        </div>
+        
         <div class="formField">
             <label>Cantidad:</label>
             <input id="cantidad" name="qty" class="inputData required number" maxlength="3" value="1"/>
@@ -109,10 +120,35 @@ if($test_opt==1){
         </div>
     </form>
 
+
+    <form action="cart_handler.php" method="GET" id="formProducto">
+        <div class="formField">
+            <label>IdProducto</label>
+            <input id="cantidad" name="prod_id" class="inputData required number" maxlength="3" value="1"/>
+
+        </div>
+        <div class="formButton">
+            <input id="comprar" class="formButton" type="submit" name="action" value="del" />
+        </div>
+    </form>
+    <form action="cart_handler.php" method="GET" id="formProducto">
+        <div class="formField">
+            <label>IdProducto</label>
+            <input id="cantidad" name="prod_id" class="inputData required number" maxlength="3" value="1"/>
+            <label>Cantidad</label>
+            <input id="cantidad" name="qty" class="inputData required number" maxlength="3" value="1"/>
+        </div>
+        <div class="formButton">
+            <input id="comprar" class="formButton" type="submit" name="action" value="upd" />
+        </div>
+    </form>
     <br>
-    <a href="?ontest=1&action=show_list">show list to me</a>
+    <a href="?action=show_list">show list to me</a>
     <br>
-    <a href="?ontest=1&action=show_status">show status</a>
+    <a href="?action=show_status">show status</a>
+    <br>
+    <a href="?action=clear">clear me</a>
+
 </html>
 <?php
 }
