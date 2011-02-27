@@ -26,7 +26,7 @@ function reloadListShoppingCart(accion,id_prod,cant_name){
     if(accion=="upd"){
         cant = $('#'+cant_name).val();//value from element id=cartCantidad
     }
-    alert('accion: '+accion+' id_prod: '+id_prod+" cantidad: "+cant);
+//    alert('accion: '+accion+' id_prod: '+id_prod+" cantidad: "+cant);
     $("#result").html("Actualizando datos...");
     page = "cart_handler.php";//nos llamamos a si mismo
     $.ajax( {
