@@ -72,7 +72,9 @@ class Producto{
         return $this->precio;
     }
     function getPrecio_Total(){
-        return $this->cantidad * $this->precio;
+        $this->precio_total = $this->cantidad * $this->precio;
+        $formato_numero = number_format($this->precio_total, 2, ',', '.');
+        return $this->precio=$formato_numero;
     }
     function getCantidad(){
         return $this->cantidad;

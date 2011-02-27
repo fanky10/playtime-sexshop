@@ -134,7 +134,10 @@ else if($action=="show_list"){
     $oCart = unserialize($s);
     //lo mostramos un poquito mejor x)
 //    $aCart->show();
-    
+    $arrItems = $oCart->getItems();
+    if(count($arrItems)<1){
+        echo "sin items cargados <br>";
+    }else{
     ?>
     <table border="1">
         <tr>
@@ -144,46 +147,29 @@ else if($action=="show_list"){
             <th>cantidad</th>
             <th>Precio Total</th>
         </tr>
-<?php
-    //TODO: armar un array de ids y armar la parte de datos tmb
-    //TODO: llamar a datos, pasarle el arreglo(de ids) y que me devuelva un array de productos
-    //con sus respectivas cants
-    //datos hardcoded
-    $arrItems = $oCart->getItems();
-    include_once 'datos/productos.php';
-    //instancio datos
-    $dProd = new DataProductos();
-    //obtengo el arreglo corresp.
-    $vProds = $dProd->getProductosCarrito($arrItems);
-    $prod_found = count($vProds);
-    for($index=0;$index < $prod_found;$index++){
-        $oProducto = $vProds[$index];
-        echo "<tr>";
-        echo "<td>".$oProducto->getId_Producto()."</td>";
-        echo "<td>".$oProducto->getNombre()."</td>";
-        echo "<td>".$oProducto->getPrecio()."</td>";
-        echo "<td>".$oProducto->getCantidad()."</td>";
-        echo "<td>".$oProducto->getPrecio_Total()."</td>";
-        echo "</tr>";
+    <?php
+
+        include_once 'datos/productos.php';
+        //datos new instance
+        $dProd = new DataProductos();
+        //obtengo el arreglo corresp.
+        $vProds = $dProd->getProductosCarrito($arrItems);
+        $prod_found = count($vProds);
+        //itero y muestro :)
+        for($index=0;$index < $prod_found;$index++){
+            $oProducto = $vProds[$index];
+            echo "<tr>";
+            echo "<td>".$oProducto->getId_Producto()."</td>";
+            echo "<td>".$oProducto->getNombre()."</td>";
+            echo "<td>".$oProducto->getPrecio()."</td>";
+            echo "<td>".$oProducto->getCantidad()."</td>";
+            echo "<td>".$oProducto->getPrecio_Total()."</td>";
+            echo "</tr>";
+        }
+        echo "</table>
+            <br>";
     }
 
-//    $arrLenght = count($arrItems);
-//    print_r( $arrItems);echo"<br>";
-//    for($index=0;$index < $arrLenght;$index++){
-//        $item = $arrItems[$index];
-//        $current_id = $item['id'];
-//        $current_cant = $item['cant'];
-//        echo "<tr>";
-//        echo "<td>".$current_id."</td>";
-//        echo "<td>".$current_cant."</td>";
-//        echo "<tr>";
-//    }
-
-
-?>
-    </table>
-    <br>
-<?php
 }
 
 if(isset ($_GET["redirect"])){
