@@ -22,10 +22,13 @@ $oCart = unserialize($s);
 //lo mostramos un poquito mejor x)
 //    $aCart->show();
 $arrItems = $oCart->getItems();
+//print_r($arrItems);
+//echo "<br>";
 if(count($arrItems)<1){
     echo "sin items cargados <br>";
 }else{
 ?>
+<div id="result">
 <table border="0" width="100%" cellpadding="0" cellspacing="0" class="product-table">
     <tr>
         <th>Detalle</th>
@@ -35,7 +38,8 @@ if(count($arrItems)<1){
         <th>Subtotal</th>
     </tr>
 <?php
-
+    //dos acciones: actualizar y delete
+    //podemos hacerlo: llamando a: ajax-> cart_list.php?redirect...
     include_once 'datos/productos.php';
     //datos new instance
     $dProd = new DataProductos();
@@ -45,22 +49,27 @@ if(count($arrItems)<1){
     //itero y muestro :)
     for($index=0;$index < $prod_found;$index++){
         $oProducto = $vProds[$index];
-        /**
-         * Change '10' to be any number you want
-         * <?=(10&1) ? "odd" : "even"?>
-         */
         echo "<tr ".(($index&1) ? "class=\"alternate-row\"" : "").">";//si es par: colorcito lindo
         echo "<td>".$oProducto->getNombre()."</td>";
         echo "<td>IDK 111</td>";
         echo "<td>".$oProducto->getPrecio()."</td>";
-        echo "<td>
-                <input id=\"cartCantidad\" name=\"cartCantidad\" class=\"inputData required\" value=\"".$oProducto->getCantidad()."\" />
-                <a href=\"\" title=\"Delete\" class=\"tableIcon icn-delete\"></a>
-                <a href=\"\" title=\"Update\" class=\"tableIcon icn-update\"></a>
-        </td>";
+        echo "<td>";
+            echo "<input id=\"cartCantidad\" name=\"cartCantidad\" class=\"inputData required\" value=\"".$oProducto->getCantidad()."\" />";
+            //echo "<a href=\"cart_handler.php?redirect=cart_list.php&action=del&prod_id=".$oProducto->getId_Producto()."\" title=\"Delete\" class=\"tableIcon icn-delete\"></a>";
+            //echo "<a href=\"cart_handler.php?redirect=cart_list.php&action=upd&prod_id=".$oProducto->getId_Producto()."\" title=\"Update\" class=\"tableIcon icn-update\"></a>";
+            echo "<a onclick=\"reloadListShoppingCart('del',".$oProducto->getId_Producto().");\" title=\"Delete\" class=\"tableIcon icn-delete\"></a>";
+            echo "<a onclick=\"reloadListShoppingCart('upd',".$oProducto->getId_Producto().");\" title=\"Update\" class=\"tableIcon icn-update\"></a>";
+        echo "</td>";
 //        echo "<td>".$oProducto->getCantidad()."</td>";
         echo "<td>".$oProducto->getPrecio_Total()."</td>";
         echo "</tr>";
     }
-    echo "</table><br>";
+    //odio errores en el codigo x mas que sepa que no hay errores x)
+    ?>
+    </table>
+    <?php
+    //echo "</table>";
+    //echo "<a onclick=\"reloadListShoppingCart('del',1);\">ClickMe</a>";
 }
+?>
+</div>

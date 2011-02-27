@@ -13,6 +13,7 @@
 		<!--JS FILES-->
         <script src="js/jquery-1.5.js" type="text/javascript"></script>
 		<script src="js/action.js" type="text/javascript"></script><!--PROPIO-->
+                <script src="js/secciones/store.js" type="text/javascript"></script><!--PROPIO-->
         <script src="http://widgets.twimg.com/j/2/widget.js"></script><!--TWITTER-->
         
         <script src="js/jquery.validate.js" type="text/javascript"></script><!--EMAIL-->
