@@ -25,7 +25,7 @@ $arrItems = $oCart->getItems();
 //print_r($arrItems);
 //echo "<br>";
 if(count($arrItems)<1){
-    echo "sin items cargados <br>";
+    echo "No tiene items agregados.<br>";
 }else{
 ?>
 <div id="result">
@@ -52,14 +52,14 @@ if(count($arrItems)<1){
         echo "<tr ".(($index&1) ? "class=\"alternate-row\"" : "").">";//si es par: colorcito lindo
         echo "<td>".$oProducto->getNombre()."</td>";
         echo "<td>IDK 111</td>";
-        echo "<td>".$oProducto->getPrecio()."</td>";
+        echo "<td> $ ".$oProducto->getPrecio()."</td>";
         echo "<td>";
             echo "<input id=\"cartCantidad_$index\" name=\"cartCantidad\" class=\"inputData required\" value=\"".$oProducto->getCantidad()."\" />";
-            echo "<a onclick=\"reloadListShoppingCart('del',".$oProducto->getId_Producto().");\" title=\"Delete\" class=\"tableIcon icn-delete\"></a>";
-            echo "<a onclick=\"reloadListShoppingCart('upd',".$oProducto->getId_Producto().",'cartCantidad_$index');\" title=\"Update\" class=\"tableIcon icn-update\"></a>";
+            echo "<a onclick=\"reloadListShoppingCart('del',".$oProducto->getId_Producto().");\" title=\"Borrar Producto\" alt=\"Borrar Producto\" class=\"tableIcon icn-delete\"></a>";
+            echo "<a onclick=\"reloadListShoppingCart('upd',".$oProducto->getId_Producto().",'cartCantidad_$index');\" title=\"Actualizar Cantidad\" alt=\"Actualizar Cantidad\" class=\"tableIcon icn-update\"></a>";
         echo "</td>";
 //        echo "<td>".$oProducto->getCantidad()."</td>";
-        echo "<td>".$oProducto->getPrecio_Total()."</td>";
+        echo "<td> $ ".$oProducto->getPrecio_Total()."</td>";
         echo "</tr>";
     }
     //odio errores en el codigo x mas que sepa que no hay errores x)
