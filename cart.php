@@ -65,7 +65,7 @@
 				<div class="contenido">
 					
 					<div id="contenido_central">
-        	        	<div class="ruta"><a href="index.php">Inicio</a> / <a href="tienda.php">Tienda</a> / <a href="#">Lubricantes</a> / Producto</div>
+        	        	<div class="ruta"><a href="index.php">Inicio</a> / <a href="tienda.php">Tienda</a> / Compra</div>
         	            <h1 class="categoria"><span>Carrito de compras</span></h1>
                         
                 		<form id="formCart" action="">
