@@ -19,17 +19,17 @@
 	<table>
 		<tr>
 			<td class="cartOvervireCantidad">1</td>
-			<td class="cartOverviewDetail">Pito de Goma Comun</td>
+			<td class="cartOverviewDetail"><a href="#">Pito de Goma Comun</a></td>
 			<td class="cartOverviewPrice">$ 150</td>
 		</tr>
 		<tr>
 			<td class="cartOvervireCantidad">1</td>
-			<td class="cartOverviewDetail">Sean Michaels Macizo</td>
+			<td class="cartOverviewDetail"><a href="#">Sean Michaels Macizo</a></td>
 			<td class="cartOverviewPrice">$ 250</td>
 		</tr>
 		<tr>
 			<td class="cartOvervireCantidad">1</td>
-			<td class="cartOverviewDetail">Chuck Norris</td>
+			<td class="cartOverviewDetail"><a href="#">Chuck Norris</a></td>
 			<td class="cartOverviewPrice">$ 1.000</td>
 		</tr>
 		<tr class="cartOverviewTotal">
