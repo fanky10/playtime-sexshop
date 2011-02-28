@@ -41,7 +41,7 @@
                 <input id="cantidad" name="qty" class="inputData required number" maxlength="3" value="1"/>
             </div>
             <div class="formButton">
-                <input id="comprar" class="formButton" type="submit" name="action" value="add" />
+                <input id="comprar" class="formButton" type="submit" name="action" value="comprar" />
             </div>
         </form>
         <p class="social">
