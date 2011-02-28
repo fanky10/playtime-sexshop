@@ -320,6 +320,7 @@ form#frmContact label { font-size: 14px; color: #666; }
 	form#frmContact label.error { color: #85161C; font-size: 11px; line-height: 20px; margin-left: 110px; }
 form#frmContact .formField input.inputData, form#frmContact .formField textarea { width: 300px; }
 form#frmContact input.formButton {margin-left: 110px; font-size: 14px; }
+p#mensaje{font-size:15px; margin:15px 0 0 110px; color:#85161C; } 
 
 p.contactInfo {font-size: 12px; line-height: 21px; color: #666; }
 	p.contactInfo span { padding-left: 25px; margin-right: 15px; }
@@ -365,7 +366,7 @@ a.icn-delete { background: url(../images/icn-delete.png) no-repeat; }
 	.product-table td.cartTotal { text-align: right; padding-right: 10px; }
 
 #formCart {margin: 0 0 20px; }
-#formCart table input { background: #fff url(../images/bg-input.jpg) 0 0 repeat-x; color: #666; font-size:12px;  border:1px solid #d5d5d5; padding:4px 2px; width: 25px; }
+#formCart table input { background: #fff url(../images/bg-input.jpg) 0 0 repeat-x; color: #666; font-size:12px;  border:1px solid #d5d5d5; padding:4px 2px; width: 25px; text-align:center; }
 #formCart div.formButton { text-align: right; margin-right: 10px; }
 
 /*  ==============  CHECKOUT & FACTURA  ================  */

@@ -25,23 +25,15 @@
     <body>
 		<div class="wrapper">
 			<div class="cabecera">
-        		<a href="index.php" title="Inicio"><img class="logo" src="images/logo-playtime.png" alt="Play Time Sex Shop -  Boutique Er&oacute;tica" title="Play Time Sex Shop -  Boutique Er&oacute;tica" border="0" /></a>
-				<ul class="menu">
-					<li><a href="index.php">Inicio</a></li>
-        	        <li><a href="tienda.php">Tienda</a></li>
-        	        <li><a href="../blog">Blog</a></li>
-        	        <li><a href="comprar.php">&iquest;C&oacute;mo Comprar?</a></li>
-        	        <li><a href="contacto.php">Contacto</a></li>
-				</ul><!--end menu-->
+        		<?php
+					include 'cabecera.php';
+				?>
 			</div><!--end cabecera-->
 			
 			<div class="superior">	
-				<ul class="menu_acceso">
-        	        <li id="home"><a href="#">Inicio</a></li>
-        	        <li id="help"><a href="#">Ayuda</a></li>
-        	        <li id="login"><a href="#">Acceso</a></li>
-        	        <li id="cart"><a href="#">Compra (<strong>0</strong> Items)</a></li>
-				</ul><!--end menu_acceso-->               
+				<?php
+					include 'superior.php';
+				?>           
 			</div><!--end superior-->
 			
 			<div class="contenedor">

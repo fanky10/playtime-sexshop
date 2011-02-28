@@ -26,37 +26,18 @@
     <body>
 		<div class="wrapper">
 			<div class="cabecera">
-        		<a href="index.php" title="Inicio"><img class="logo" src="images/logo-playtime.png" alt="Play Time Sex Shop -  Boutique Er&oacute;tica" title="Play Time Sex Shop -  Boutique Er&oacute;tica" border="0" /></a>
-				<ul class="menu">
-					<li><a href="index.php">Inicio</a></li>
-        	        <li><a href="tienda.php">Tienda</a></li>
-        	        <li><a href="../blog">Blog</a></li>
-        	        <li><a href="comprar.php">&iquest;C&oacute;mo Comprar?</a></li>
-        	        <li><a href="contacto.php">Contacto</a></li>
-				</ul><!--end menu-->
+                <?php
+					include 'cabecera.php';
+				?>
 			</div><!--end cabecera-->
 			
 			<div class="superior">	
-				<ul class="menu_acceso">
-        	        <li id="home"><a href="#">Inicio</a></li>
-        	        <li id="help"><a href="#">Ayuda</a></li>
-        	        <li id="login"><a href="#">Acceso</a></li>
-                        <?php
-                          //segun: http://www.webmasterworld.com/php/3190423.htm
-                          //la correcta forma de pasar arguments es la siguiente:
-                          $action = "show_status";
-                          include 'cart_handler.php';
-                        ?>
-                        <!-- Modificado por fanky10
-        	        <li id="cart">
-                            <a href="#">Compra (<strong>0</strong> Items)</a>
-                        </li>
-                        -->
-                                </ul><!--end menu_acceso-->
-					
-				<div class="destacados">
-                	<img src="images/banners/banner-grande.jpg" alt="Play Time Sex Shop" title="Play Time Sex Shop" />
-				</div><!--end destacados-->
+            	<?php
+					include 'superior.php';
+				?>
+                <div class="destacados">
+	                <img src="images/banners/banner-grande.jpg" alt="Play Time Sex Shop" title="Play Time Sex Shop" />
+                </div><!--end destacados-->
 			</div><!--end superior-->
 			
 			<div class="contenedor">
@@ -169,10 +150,10 @@
 						</ul>
 						
 						<div class="coleccionProductos">
-							<a href="" class="bnrCateg"><img alt="Ellas" src="images/banners/bnr-categ-ellas.jpg" /></a>
-							<a href="" class="bnrCateg"><img alt="Ellos" src="images/banners/bnr-categ-ellos.jpg" /></a>
-							<a href="" class="bnrCateg"><img alt="Lubricantes" src="images/banners/bnr-categ-lubricantes.jpg" /></a>
-							<a href="" class="bnrCateg"><img alt="Disfrases" src="images/banners/bnr-categ-disfrases.jpg" /></a>
+							<a href="tienda.php?id_cat=12" class="bnrCateg"><img alt="Ellas" src="images/banners/bnr-categ-ellas.jpg" /></a>
+							<a href="tienda.php?id_cat=16" class="bnrCateg"><img alt="Ellos" src="images/banners/bnr-categ-ellos.jpg" /></a>
+							<a href="tienda.php?id_cat=1" class="bnrCateg"><img alt="Lubricantes" src="images/banners/bnr-categ-lubricantes.jpg" /></a>
+							<a href="tienda.php?id_cat=15" class="bnrCateg"><img alt="Disfrases" src="images/banners/bnr-categ-disfrases.jpg" /></a>
                         </div>
                         
 					</div><!--end contenido_central-->
