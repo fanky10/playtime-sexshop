@@ -45,6 +45,18 @@ h6 { font-size:14px; }
 
 a { text-decoration:none; color:#85161C; }
     a:hover { cursor:pointer; text-decoration:underline; }
+    a.linkButton {
+		background: url("../images/bg-button-black.png") repeat-x scroll 0 0 transparent;
+    	border: 1px solid #555;
+    	color: #ccc;
+    	font-size: 12px;
+    	padding: 3px 10px;
+    
+    	-moz-border-radius:5px;	
+		-webkit-border-radius:5px;
+		border-radius:5px;
+		}
+		a.linkButton:hover {cursor: pointer; background: #222; text-decoration: none; }
     				
 p { font-size: 12px; margin: 0 0 1em; }
 	p.copy { margin-right: 10px; }
@@ -149,7 +161,29 @@ ul.menu_acceso{
 			ul.menu_acceso li#top { background:url('../images/icn-up.png') no-repeat 0 center; float:right; }
 
 
-.superior .destacados img { display: block; }
+.superior { position: relative; }
+	.superior .destacados img { display: block; }
+	.superior .carOverview {
+		background: rgba(0,0,0,.6);
+		border: 1px solid #444;
+		border-top: none;
+		padding: 5px 10px 15px;
+		position: absolute;
+		top:36px;
+		text-align: center;
+		right: 80px;
+		width: auto;
+		
+		-moz-border-radius:0 0 5px 5px;	
+		-webkit-border-radius:0 0 5px 5px;
+		border-radius:0 0 5px 5px;
+		}
+		.superior .carOverview table { margin: 0 0 15px; padding: 0; color: #ccc; text-align: left; }
+			.superior .carOverview table tr { border-bottom: 1px solid #333; }
+				.superior .carOverview table tr.cartOverviewTotal { background: #111; }
+			.superior .carOverview table td { padding: 7px; }
+			.superior .carOverview table td.cartOverviewDetail { width: 200px; padding-right: 5px; }
+			.superior .carOverview table td.cartOverviewPrice { width: auto; padding-left: 5px; }
 
 /*  ===========  LATERAL IZQUIERDO  =================  */
 .lateral#lateral_izquierdo form.buscador {}

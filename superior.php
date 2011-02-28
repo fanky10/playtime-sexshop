@@ -14,3 +14,29 @@
         </li>
         -->
 </ul><!--end menu_acceso-->
+
+<div class="carOverview">
+	<table>
+		<tr>
+			<td class="cartOvervireCantidad">1</td>
+			<td class="cartOverviewDetail">Pito de Goma Comun</td>
+			<td class="cartOverviewPrice">$ 150</td>
+		</tr>
+		<tr>
+			<td class="cartOvervireCantidad">1</td>
+			<td class="cartOverviewDetail">Sean Michaels Macizo</td>
+			<td class="cartOverviewPrice">$ 250</td>
+		</tr>
+		<tr>
+			<td class="cartOvervireCantidad">1</td>
+			<td class="cartOverviewDetail">Chuck Norris</td>
+			<td class="cartOverviewPrice">$ 1.000</td>
+		</tr>
+		<tr class="cartOverviewTotal">
+			<td class="cartOvervireCantidad">3</td>
+			<td class="cartOverviewDetail">Productos</td>
+			<td class="cartOverviewPrice">$ 1.400</td>
+		</tr>
+	</table>
+	<a href="#" class="linkButton">checkout</a>
+</div>
