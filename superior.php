@@ -38,5 +38,5 @@
 			<td class="cartOverviewPrice">$ 1.400</td>
 		</tr>
 	</table>
-	<a href="#" class="linkButton">checkout</a>
+	<a href="cart.php" class="linkButton">checkout</a>
 </div>
