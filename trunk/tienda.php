@@ -22,22 +22,6 @@
         <!--[if lte IE 7]>
         <script type="text/javascript" src="js/supersleight-min.js"></script>
         <![endif]-->
-        <script>
-        //modificacion del fancybox para que ande con las imagenes con url customizado
-        $(document).ready(function() {
-
-            $("a.grupo_productos").fancybox({
-                    'transitionIn'	:	'elastic',
-                    'transitionOut'	:	'elastic',
-                    'speedIn'		:	600,
-                    'speedOut'		:	200,
-                    'overlayShow'	:	false,
-                    'type' : 'image'
-            });
-        });
-
-
-</script>
 
     </head>
     

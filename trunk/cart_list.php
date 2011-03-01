@@ -25,7 +25,7 @@ $arrItems = $oCart->getItems();
 //print_r($arrItems);
 //echo "<br>";
 if(count($arrItems)<1){
-    echo "No tiene items agregados.<br>";
+    echo "<h3> No tiene items agregados.</h3>";
 }else{
 ?>
 <div id="result">
