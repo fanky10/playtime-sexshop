@@ -1,11 +1,8 @@
 <?php
 
 /**
- * este es el manejador del carrin!
- * basicamente va a haceptar tres parametros:
- * action [add | update | remove | empty]
- * id_producto (que se le hace la action)
- * cant (si no se especifica por fault es 1)
+ * este script solo muestra una tabla well formed de los datos contenidos en SESSION
+ * sobre el carrito de compras
  */
 session_start();
 include_once 'entidades/shoppingcart.php';
