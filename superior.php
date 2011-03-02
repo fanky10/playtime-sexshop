@@ -16,6 +16,10 @@
 </ul><!--end menu_acceso-->
 
 <div class="carOverview">
+    <?php
+    include 'cart_preview.php';
+    ?>
+    <!--
 	<table>
 		<tr>
 			<td class="cartOvervireCantidad">1</td>
@@ -38,5 +42,7 @@
 			<td class="cartOverviewPrice">$ 1.400</td>
 		</tr>
 	</table>
+
 	<a href="cart.php" class="linkButton">checkout</a>
+    -->
 </div>
