@@ -13,6 +13,7 @@
 		<!--JS FILES-->
         <script src="js/jquery-1.5.js" type="text/javascript"></script>
 		<script src="js/secciones/store.js" type="text/javascript"></script><!--PROPIO-->
+                <script src="js/secciones/tienda.js" type="text/javascript"></script><!--PROPIO-->
         
          <!--PRUEBA IMAGENES - INICIO-->
         <script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
