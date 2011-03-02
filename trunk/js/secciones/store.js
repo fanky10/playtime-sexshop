@@ -44,6 +44,15 @@ function loadData(id_cat,nro_pag,order){
                     $('#result').hide();
                     $("#result").html(msg)
                     .fadeIn("slow");
+                    //TODO: ver si funciona correctamente
+                    $("a.grupo_productos").fancybox({
+                        'transitionIn'	:	'elastic',
+                        'transitionOut'	:	'elastic',
+                        'speedIn'		:	600,
+                        'speedOut'		:	200,
+                        'overlayShow'	:	false,
+                        'type' : 'image'
+                    });
                 }
         } );
     }
