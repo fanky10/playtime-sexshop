@@ -67,12 +67,13 @@
 					<div id="contenido_central">
         	        	<div class="ruta"><a href="index.php">Inicio</a> / <a href="tienda.php">Tienda</a> / Compra</div>
         	            <h1 class="categoria"><span>Carrito de compras</span></h1>
-                        
-                		<form id="formCart" action="">
-                                    <?php
-                                    include_once 'cart_list.php';
-                                    ?>
-                                    <!--
+                            <?php
+                                include_once 'cart_list.php';
+                            ?>
+                            <!--
+                            <form id="formCart" action="">
+                                    
+                                    
 							<table border="0" width="100%" cellpadding="0" cellspacing="0" class="product-table">
 								<tr>
 									<th class="line-left">Detalle</th>
@@ -152,11 +153,12 @@
 									<td>$ 158.45</td>
 								</tr>
 							</table>
-                                    -->
+                                    
 							<div class="formButton">
                             	<input id="formCheckout" class="formButton" type="submit" name="formCheckout" value="checkout" />
                             </div>
 						</form>
+                                    -->
                         
 					</div><!--end contenido_central-->
 					
