@@ -99,12 +99,17 @@
                                 <input id="formCheckoutPostal" name="formCheckoutPostal" class="inputData required" maxlength="255" value="" />
                             </div>
                             <div class="formField">
-                               <label>Select:</label>
-                               <select id="formCheckoutSelect"  name="formCheckoutSelect">
-									<option selected="selected" value="arg">Opcion 01</option>
-									<option value="02">Opcion 02</option>
-									<option value="03">Opcion 03</option>
-								</select>
+                                <?php
+                                include 'opc_zonas.php';
+                                ?>
+                               <!--
+                                <label>Select:</label>
+                                   <select id="formCheckoutSelect"  name="formCheckoutSelect">
+                                        <option selected="selected" value="arg">Opcion 01</option>
+                                        <option value="02">Opcion 02</option>
+                                        <option value="03">Opcion 03</option>
+                                    </select>
+                                -->
                             </div>
                             <hr />
                             <input class="checkboxAgree" type="checkbox" id="formCheckoutAgree" name="formCheckoutAgree" />
