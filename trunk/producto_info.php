@@ -1,6 +1,7 @@
 <?php
     include_once 'datos/productos.php';
     include_once 'datos/categorias.php';
+    include_once 'util/utilidades.php';
     try{
         $id_producto = (int) $_GET["id_prod"];//id_producto jaja
         if($id_producto <1){
@@ -23,7 +24,7 @@
         echo"<p class=\"prodInfo\">".$oProd->getDescription()."</p>";
 		?>
                 <!--aqui vamos a probar el cart_handler!-->
-        <form action="cart_handler.php?action=add&redirect=index.php" method="POST" id="formProducto">
+        <form action="cart_handler.php?action=add&redirect=tienda.php" method="POST" id="formProducto">
             <?php
             //ponemos un input hidden para que envie por POST el prod_id
             echo "<input type=\"hidden\" name=\"prod_id\" value=\"$id_producto\" ";
@@ -32,7 +33,7 @@
             <div class="formField">
                 <label>Precio:</label>
                 <?php
-                    echo"<p class=\"prodPrecio\">$ ".$oProd->getPrecio().".-</p>";
+                    echo"<p class=\"prodPrecio\">$ ".Utilidades::formatero_numero($oProd->getPrecio()).".-</p>";
                 ?>
             </div>
 

@@ -7,6 +7,7 @@
  */
 
 class Configuracion {
+    public static $CONFIGURACION_IVA=0.21;
     public static function init(){
         define('ROOT_PATH', '/home/user/public_html/folder/');
         define('PROJECT_DIR', '/folder/');

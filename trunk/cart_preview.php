@@ -30,6 +30,7 @@ if(count($arrItems)<1){
     //dos acciones: actualizar y delete
     //podemos hacerlo: llamando a: ajax-> cart_list.php?redirect...
     include_once 'datos/productos.php';
+    include_once 'util/utilidades.php';
     //datos new instance
     $dProd = new DataProductos();
     //obtengo el arreglo corresp.
@@ -41,7 +42,7 @@ if(count($arrItems)<1){
         echo "<tr>\n";
         echo "<td class=\"cartOvervireCantidad\">".$oProducto->getCantidad()."</td>\n";
         echo "<td class=\"cartOverviewDetail\"><a href=\"producto.php?id_prod=".$oProducto->getId_Producto()."\">".$oProducto->getNombre()."</a></td>";
-        echo "<td class=\"cartOverviewPrice\">$ ".$oProducto->getPrecio_Total()."</td>";
+        echo "<td class=\"cartOverviewPrice\">$ ".Utilidades::formatero_numero($oProducto->getPrecio_Total())."</td>";
         echo "</tr>\n";
     }
     ?>

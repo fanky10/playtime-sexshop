@@ -3,6 +3,7 @@
     <?php
         include_once 'datos/productos.php';
         include_once 'datos/categorias.php';
+        include_once 'util/utilidades.php';
         try{
             //limite por pagina
             $limit = 8; //TODO sacarlo de la configuracion
@@ -65,7 +66,7 @@
                 }
                 echo "<a class=\"grupo_productos\" rel=\"grupoP\" href=\"$img_source\"><img class=\"prodImagen\" src=\"$img_source\" alt=\"".$oProducto->getNombre()."\" height=\"90\" width=\"90\"/></a>";
                 echo "<p class=\"prodInfo\">".$info." ".$continues;//substr($oProducto->getInformacion(), 0, 100);;
-                echo "<span class=\"prodPrecio\">$".$oProducto->getPrecio()."<a href=\"producto.php?id_prod=".$oProducto->getId_Producto()."\">Ver Detalles</a></span>";
+                echo "<span class=\"prodPrecio\">$".Utilidades::formatero_numero($oProducto->getPrecio())."<a href=\"producto.php?id_prod=".$oProducto->getId_Producto()."\">Ver Detalles</a></span>";
                 echo "</p>";
                 echo "</div>\n";
             }

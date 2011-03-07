@@ -38,6 +38,7 @@ if(count($arrItems)<1){
     //dos acciones: actualizar y delete
     //podemos hacerlo: llamando a: ajax-> cart_list.php?redirect...
     include_once 'datos/productos.php';
+    include_once 'util/utilidades.php';
     //datos new instance
     $dProd = new DataProductos();
     //obtengo el arreglo corresp.
@@ -49,14 +50,14 @@ if(count($arrItems)<1){
         echo "<tr ".(($index&1) ? "class=\"alternate-row\"" : "").">";//si es par: colorcito lindo
         echo "<td>".$oProducto->getNombre()."</td>";
         echo "<td>IDK 111</td>";
-        echo "<td> $ ".$oProducto->getPrecio()."</td>";
+        echo "<td> $ ".Utilidades::formatero_numero($oProducto->getPrecio())."</td>";
         echo "<td>";
             echo "<input id=\"cartCantidad_$index\" name=\"cartCantidad\" class=\"inputData required\" value=\"".$oProducto->getCantidad()."\" />";
             echo "<a onclick=\"reloadListShoppingCart('del',".$oProducto->getId_Producto().");\" title=\"Borrar Producto\" alt=\"Borrar Producto\" class=\"tableIcon icn-delete\"></a>";
             echo "<a onclick=\"reloadListShoppingCart('upd',".$oProducto->getId_Producto().",'cartCantidad_$index');\" title=\"Actualizar Cantidad\" alt=\"Actualizar Cantidad\" class=\"tableIcon icn-update\"></a>";
         echo "</td>";
 //        echo "<td>".$oProducto->getCantidad()."</td>";
-        echo "<td> $ ".$oProducto->getPrecio_Total()."</td>";
+        echo "<td> $ ".Utilidades::formatero_numero($oProducto->getPrecio_Total())."</td>";
         echo "</tr>";
     }
     //odio errores en el codigo x mas que sepa que no hay errores x)
