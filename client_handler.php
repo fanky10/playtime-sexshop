@@ -24,7 +24,7 @@ if($action=="add"){//espero por post todos los datos necesarios
     $direccion = $_POST["formCheckoutDireccion"];
     $ciudad = $_POST["formCheckoutCiudad"];
     $codigo_postal = $_POST["formCheckoutPostal"];
-    $zona_envio = $_POST["formCheckoutSelect"];
+    $zona_envio = (int) $_POST["formCheckoutSelect"];
     //validamos entradas
     if($zona_envio<1){
         throw new Exception("Ivalid argument! zona_envio > 0 is needed");
