@@ -14,6 +14,7 @@ class Producto{
     private $precio;
     private $precio_total;
     private $cantidad;
+    
     function setCantidad($cantidad){
         $this->cantidad = $cantidad;
     }
@@ -42,8 +43,7 @@ class Producto{
         $this->imagen=$_imagen;
     }
     function setPrecio($_precio){
-        $formato_numero = number_format($_precio, 2, ',', '.');
-        $this->precio=$formato_numero;
+        $this->precio=$_precio;
     }
 
 
@@ -72,9 +72,12 @@ class Producto{
         return $this->precio;
     }
     function getPrecio_Total(){
+        //ahora se usa una utilidad externa para mostrar bien los numeros
         $this->precio_total = $this->cantidad * $this->precio;
-        $formato_numero = number_format($this->precio_total, 2, ',', '.');
-        return $this->precio=$formato_numero;
+//        $formato_numero = number_format($this->precio_total, 2, ',', '.');
+//        return $formato_numero;
+        return $this->precio_total;
+        
     }
     function getCantidad(){
         return $this->cantidad;

@@ -83,11 +83,9 @@
                         
                 		<form id="formCheckout02" action="">
                                     <?php
-                                    //TODO: llenar con datos s/session
-                                    //llenar con Zona
-                                    //sumar el iva
-                                    //total
+                                        include 'cart_list_confirm.php';
                                     ?>
+                                    <!--
 							<table border="0" width="100%" cellpadding="0" cellspacing="0" class="product-table">
 								<tr>
 									<th class="line-left">Detalle</th>
@@ -127,6 +125,7 @@
 									<td><strong>$ 999.00</strong></td>
 								</tr>
 							</table>
+                                    -->
 
                                     <?php
 
