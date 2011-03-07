@@ -68,7 +68,7 @@
         	            <h1 class="categoria"><span>Informaci&oacute;n de cliente</span></h1>
         	            <p>Dolor sit amet consectetuer adipiscing elit sed diam nonummy. Lectores legere me lius, quod ii legunt saepius claritas est?Dolor sit amet consectetuer adipiscing elit sed diam nonummy. Lectores legere me lius, quod ii legunt saepius claritas est?</p>
                         
-                        <form action="" method="post" id="formCheckout01">
+                        <form action="client_handler.php?action=add&redirect=checkout02.php" method="post" id="formCheckout01">
                             <div class="formField">
                                 <label>Nombre:</label>
                                 <input id="formCheckoutNombre" name="formCheckoutNombre" class="inputData required" maxlength="255" value="" />

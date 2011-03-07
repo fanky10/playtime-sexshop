@@ -27,11 +27,6 @@
 				$("#formProducto").validate();
 			});
 		</SCRIPT>
-        <?php
-        //TODO: validar datos de entrada por post del form anterior:
-
-
-        ?>
     </head>
     
     <body>
@@ -88,12 +83,6 @@
                         
                 		<form id="formCheckout02" action="">
                                     <?php
-                                    //TODO: chequear que todo esto no sea mejor hacer un include 
-                                    //y llamar los datos del session
-                                    //en vez de por post, de esa forma al enviar el email
-                                    //se usa el mismo codigo html con includes (para la tabla y demases)
-                                    //para finalmente hacer un clear
-                                    //y se evita estar haciendo post continuamente entre checkout01 - 02 - email
                                     //TODO: llenar con datos s/session
                                     //llenar con Zona
                                     //sumar el iva
@@ -140,10 +129,11 @@
 							</table>
 
                                     <?php
-                                    //TODO: llenar con datos del cliente enviados por post
-                                    //para luego enviar este mismo html por email
+
+                                    include 'client_data.php';
 
                                     ?>
+                                    <!--
 							<div class="confirmationInfo">
 								<h3>Por favor revise la informaci&oacute;n de envio y confirme la orden:</h3>
 								<dl class="checkoutConfirmData">
@@ -162,6 +152,7 @@
                                 	<textarea id="comentario" name="comentario" class="required"></textarea> 
                             	</div>
 							</div>
+                                    -->
 							
 							<div class="formButton">
                             	<input id="formConfirmar" class="formButton" type="submit" name="formConfirmar" value="confirmar" />
