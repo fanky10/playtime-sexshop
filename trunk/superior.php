@@ -1,50 +1,29 @@
+<!--JS FILES-->
+<script src="js/jquery-1.5.js" type="text/javascript"></script>
+<script src="js/secciones/carrito.js" type="text/javascript"></script><!--PROPIO-->
+<script type="text/javascript">
+//hace que aparezca la lista de menu oculta :)
+$(document).ready(function()
+{
+    $('#cartOverview').hide();
+}
+);
+
+</script>
 <ul class="menu_acceso">
     <li id="home"><a href="index.php">Inicio</a></li>
     <li id="help"><a href="#">Ayuda</a></li>
     <li id="login"><a href="#">Acceso</a></li>
-    <div id="cart_status">
+    <div id="cart_status" onmouseover="showCartPreview()" onmouseout="hideCartPreview()">
         <?php
-          //segun: http://www.webmasterworld.com/php/3190423.htm
-          //la correcta forma de pasar arguments es la siguiente:
           $action = "show_status";
           include 'cart_handler.php';
         ?>
-        </div>
-        <!-- Modificado por fanky10
-    <li id="cart">
-            <a href="#">Compra (<strong>0</strong> Items)</a>
-        </li>
-        -->
+    </div>
 </ul><!--end menu_acceso-->
 
-<div class="carOverview" id="cartOverview">
+<div class="carOverview"  id="cartOverview" onmouseover="showCartPreview()" onmouseout="hideCartPreview()" >
     <?php
     include 'cart_preview.php';
     ?>
-    <!--
-	<table>
-		<tr>
-			<td class="cartOvervireCantidad">1</td>
-			<td class="cartOverviewDetail"><a href="#">Pito de Goma Comun</a></td>
-			<td class="cartOverviewPrice">$ 150</td>
-		</tr>
-		<tr>
-			<td class="cartOvervireCantidad">1</td>
-			<td class="cartOverviewDetail"><a href="#">Sean Michaels Macizo</a></td>
-			<td class="cartOverviewPrice">$ 250</td>
-		</tr>
-		<tr>
-			<td class="cartOvervireCantidad">1</td>
-			<td class="cartOverviewDetail"><a href="#">Chuck Norris</a></td>
-			<td class="cartOverviewPrice">$ 1.000</td>
-		</tr>
-		<tr class="cartOverviewTotal">
-			<td class="cartOvervireCantidad">3</td>
-			<td class="cartOverviewDetail">Productos</td>
-			<td class="cartOverviewPrice">$ 1.400</td>
-		</tr>
-	</table>
-
-	<a href="cart.php" class="linkButton">checkout</a>
-    -->
 </div>

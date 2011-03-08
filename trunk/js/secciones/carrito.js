@@ -28,27 +28,40 @@ function reloadListShoppingCart(accion,id_prod,cant_name){
                 .fadeIn("slow");
                 //en cascade para que nos aseguremos que anda todo bien
                 //al ser asincrono no se me ocurrio nada mejor x)
-                $.ajax( {
-                        url:"cart_handler.php",//llamamos al handler
-                        data:"action=show_status",//le pedimos el status
-                        asynch: true,
-                        success: function(msg) {
-                            $('#cart_status').hide();
-                            $("#cart_status").html(msg)
-                            .fadeIn("slow");
-
-                            $.ajax( {
-                                    url:"cart_preview.php",//llamamos al previewer
-                                    data:"",
-                                    asynch: true,
-                                    success: function(msg) {
-                                        $('#cartOverview').hide();
-                                        $("#cartOverview").html(msg).fadeIn("slow");
-                                    }
-                            } );
-                        }
-                } );
+                reloadCartLink();
             }
     } );
     
+}
+function reloadCartLink(){
+    $.ajax( {
+            url:"cart_handler.php",//llamamos al handler
+            data:"action=show_status",//le pedimos el status
+            asynch: true,
+            success: function(msg) {
+                $('#cart_status').hide();
+                $("#cart_status").html(msg)
+                .fadeIn("slow");
+                reloadCartPreview()
+
+            }
+    } );
+}
+function reloadCartPreview(){
+    //si esta hidden que la muestre
+    $.ajax( {
+            url:"cart_preview.php",//llamamos al previewer
+            data:"",
+            asynch: true,
+            success: function(msg) {
+                $("#cartOverview").html(msg);
+                $('#cartOverview').hide();
+            }
+    } );
+}
+function hideCartPreview(){
+    $('#cartOverview').hide();
+}
+function showCartPreview(){
+    $('#cartOverview').show();
 }
