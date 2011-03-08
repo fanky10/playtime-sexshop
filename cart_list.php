@@ -51,7 +51,7 @@ if(count($arrItems)<1){
         echo "<td>IDK 111</td>";
         echo "<td> $ ".Utilidades::formatero_numero($oProducto->getPrecio())."</td>";
         echo "<td>";
-            echo "<input id=\"cartCantidad_$index\" name=\"cartCantidad\" class=\"inputData required\" value=\"".$oProducto->getCantidad()."\" />";
+            echo "<input id=\"cartCantidad_$index\" name=\"cartCantidad\" class=\"inputData required\" value=\"".$oProducto->getCantidad()."\" size=\"10\"/>";
             echo "<a onclick=\"reloadListShoppingCart('del',".$oProducto->getId_Producto().");\" title=\"Borrar Producto\" alt=\"Borrar Producto\" class=\"tableIcon icn-delete\"></a>";
             echo "<a onclick=\"reloadListShoppingCart('upd',".$oProducto->getId_Producto().",'cartCantidad_$index');\" title=\"Actualizar Cantidad\" alt=\"Actualizar Cantidad\" class=\"tableIcon icn-update\"></a>";
         echo "</td>";

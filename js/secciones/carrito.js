@@ -62,6 +62,7 @@ function reloadCartPreview(){
 function hideCartPreview(){
     $('#cartOverview').hide();
 }
+//FIXME: con show() anda bien, con show('slow'); no x)
 function showCartPreview(){
-    $('#cartOverview').show();
+    $('#cartOverview').show();//show('slow');
 }
