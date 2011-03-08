@@ -2,12 +2,14 @@
     <li id="home"><a href="index.php">Inicio</a></li>
     <li id="help"><a href="#">Ayuda</a></li>
     <li id="login"><a href="#">Acceso</a></li>
+    <div id="cart_status">
         <?php
           //segun: http://www.webmasterworld.com/php/3190423.htm
           //la correcta forma de pasar arguments es la siguiente:
           $action = "show_status";
           include 'cart_handler.php';
         ?>
+        </div>
         <!-- Modificado por fanky10
     <li id="cart">
             <a href="#">Compra (<strong>0</strong> Items)</a>
@@ -15,7 +17,7 @@
         -->
 </ul><!--end menu_acceso-->
 
-<div class="carOverview">
+<div class="carOverview" id="cartOverview">
     <?php
     include 'cart_preview.php';
     ?>
