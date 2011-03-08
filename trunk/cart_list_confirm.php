@@ -5,7 +5,7 @@
  * sobre el carrito de compras
  * para la confirmacion de datos
  */
-session_start();
+@session_start();
 include_once 'entidades/shoppingcart.php';
 include_once 'entidades/cliente.php';
 

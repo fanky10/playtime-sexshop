@@ -3,7 +3,7 @@
  * muestra los datos para el checkout02.php
  */
 
-session_start();
+@session_start();
 include_once 'entidades/cliente.php';
 
 //si la encontramos sin nada la creamos al toke

@@ -46,7 +46,7 @@
         	        <form action="#" method="post" class="buscador">
         	        	<div class="buscador_back">
         	                <div class="busc_left"></div>
-        	                <input type="text" name="buscar" id="buscar" value="Buscar..." class="busc_middle" /> 
+        	                <input type="text" name="buscar" id="buscar" value="Buscar..." class="busc_middle" onblur="if(this.value == '') { this.value='Buscar...'}" onfocus="if (this.value == 'Buscar...') {this.value=''}" />
         	                <div class="busc_right"></div>
 				    	</div>                            
         	        </form>
