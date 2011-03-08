@@ -7,7 +7,8 @@
  * id_producto (que se le hace la action)
  * cant (si no se especifica por fault es 1)
  */
-session_start();
+//suppression operator @ for errors XD
+@session_start();
 include_once 'entidades/shoppingcart.php';
 
 //si la encontramos sin nada la creamos al toke

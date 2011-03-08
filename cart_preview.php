@@ -3,7 +3,7 @@
 /**
  * este es el que muestra una preview de lo que viene comprando...
  */
-session_start();
+@session_start();
 include_once 'entidades/shoppingcart.php';
 
 //si la encontramos sin nada la creamos al toke

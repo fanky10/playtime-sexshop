@@ -4,7 +4,7 @@
  * este script solo muestra una tabla well formed de los datos contenidos en SESSION
  * sobre el carrito de compras
  */
-session_start();
+@session_start();
 include_once 'entidades/shoppingcart.php';
 
 //si la encontramos sin nada la creamos al toke

@@ -3,7 +3,7 @@
  * este es el manejador del cliente! aqui se setea un cliente
  * para luego usarlo con distintos fines
  */
-session_start();
+@session_start();
 include_once 'entidades/cliente.php';
 
 //si la encontramos sin nada la creamos al toke
