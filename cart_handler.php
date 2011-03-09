@@ -88,7 +88,7 @@ if($action=="clear"){
     //linked to cart.php
     //formatted
     echo "<li id=\"cart\">\n
-        <a href=\"cart.php\">Compra (<strong>$arrLenght</strong> Item".($arrLenght>1?"s":"").")</a>\n
+        <a href=\"#\">Compra (<strong>$arrLenght</strong> Item".($arrLenght>1?"s":"").")</a>\n
         </li>";
 }
 else if($action=="show_list"){
