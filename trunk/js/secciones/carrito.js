@@ -59,10 +59,12 @@ function reloadCartPreview(){
             }
     } );
 }
-function hideCartPreview(){
-    $('#cartOverview').hide();
-}
-//FIXME: con show() anda bien, con show('slow'); no x)
-function showCartPreview(){
-    $('#cartOverview').show();//show('slow');
-}
+
+$(document).ready(function(){
+$('.carOverview').hide();	
+$('#cart_status').click(function() {
+  $('.carOverview').toggle('slow', function() {
+    // Animation complete.
+  });
+});
+});
