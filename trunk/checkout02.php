@@ -81,7 +81,7 @@
         	        	<div class="ruta"><a href="index.php">Inicio</a> / <a href="tienda.php">Tienda</a> / <a href="#">Lubricantes</a> / Producto</div>
         	            <h1 class="categoria"><span>Confirmaci&oacute;n de compra</span></h1>
                         
-                		<form id="formCheckout02" action="">
+                		<form id="formCheckout02" action="envio_checkout.php">
                                     <?php
                                         include 'cart_list_confirm.php';
                                     ?>

@@ -48,7 +48,7 @@ if(count($arrItems)<1){
         $oProducto = $vProds[$index];
         echo "<tr ".(($index&1) ? "class=\"alternate-row\"" : "").">";//si es par: colorcito lindo
         echo "<td>".$oProducto->getNombre()."</td>";
-        echo "<td>IDK 111</td>";
+        echo "<td>".$oProducto->getCodigo()."</td>";
         echo "<td> $ ".Utilidades::formatero_numero($oProducto->getPrecio())."</td>";
         echo "<td>";
             echo "<input id=\"cartCantidad_$index\" name=\"cartCantidad\" class=\"inputData required\" value=\"".$oProducto->getCantidad()."\" size=\"10\"/>";
