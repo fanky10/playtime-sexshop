@@ -24,7 +24,7 @@
         echo"<p class=\"prodInfo\">".$oProd->getDescription()."</p>";
 		?>
                 <!--aqui vamos a probar el cart_handler!-->
-                <form action="cart_handler.php?action=add&redirect=producto.php?id_prod=<?php echo $oProd->getId_Producto()?>" method="POST" id="formProducto">
+                <form action="cart_handler.php?action=add&redirect=producto.php?id_prod=<?php echo $id_producto?>" method="POST" id="formProducto">
             <?php
             //ponemos un input hidden para que envie por POST el prod_id
             echo "<input type=\"hidden\" name=\"prod_id\" value=\"$id_producto\"> ";
@@ -48,10 +48,10 @@
         <p class="social">
             <span>Compartir:</span>           
             <?php
-                echo"<a href=\"javascript:popUp('http://www.facebook.com/sharer.php?s=100&p[url]=http://www.playtimesexshop.com/producto.php?id_prod="param=AQUI_ID"&p[images][0]=http://www.playtimesexshop.com/images/logo_social.jpg&p[title]=".$oProd->getNombre()."&p[summary]=".$oProd->getDescription().".')\" class=\"socialFacebook\"></a>"/*FACEBOOK*/
-			?>
+                echo"<a href=\"javascript:popUp('http://www.facebook.com/sharer.php?s=100&p[url]=http://www.playtimesexshop.com/producto.php?id_prod=$id_producto&p[images][0]=http://www.playtimesexshop.com/images/logo_social.jpg&p[title]=".$oProd->getNombre()."&p[summary]=".$oProd->getDescription().".')\" class=\"socialFacebook\"></a>"/*FACEBOOK*/
+            ?>
             <?php				
-                echo"<a href=\"javascript:popUp('http://twitter.com/home?status=Me ha gustado mucho el articulo ".$oProd->getNombre()." que he visto en http://www.playtimesexshop.com/http://www.playtimesexshop.com/producto.php?id_prod="param=AQUI_ID"')\" class=\"socialTwitter\"></a>";/*TWITTER*/
+                echo"<a href=\"javascript:popUp('http://twitter.com/home?status=Me ha gustado mucho el articulo ".$oProd->getNombre()." que he visto en http://www.playtimesexshop.com/http://www.playtimesexshop.com/producto.php?id_prod=$id_producto')\" class=\"socialTwitter\"></a>";/*TWITTER*/
             ?>
             <span class="socialRecomendar">Recomendar:</span>
             <a href="#" class="socialMail"></a>
