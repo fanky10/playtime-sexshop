@@ -1,4 +1,4 @@
-// JavaScript Document
+﻿// JavaScript Document
 $().ready(function(){
 /*******************************************************
 *					ALTO COLUMNA					   *
@@ -35,6 +35,9 @@ function loadData(id_cat,nro_pag,order){
         }
         //alert('cat: '+id_cat+' order: '+order+' pag: '+nro_pag);
         $("#result").html("Cargando datos...");
+        //luego que se hizo pelota por el cargando datos...
+        orderColumn();
+        //ya con todo ordenadito.. si es mas grande eh.. bueno mejor! jajaja
         page = "lista_productos.php";//nos llamamos a si mismo
         $.ajax( {
                 url:page,
@@ -53,6 +56,17 @@ function loadData(id_cat,nro_pag,order){
                         'overlayShow'	:	false,
                         'type' : 'image'
                     });
+                    
                 }
         } );
     }
+
+function orderColumn(){
+    /*******************************************************
+    *                                       ALTO COLUMNA                                       *
+    ********************************************************/
+    if($("#lateral_izquierdo").height()>$("div.contenido").height())
+    {
+            $("div.contenido").height($("#lateral_izquierdo").height());
+    }
+}
