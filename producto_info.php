@@ -23,11 +23,13 @@
 			<div>";
         echo"<p class=\"prodInfo\">".$oProd->getDescription()."</p>";
 		?>
-                <!--aqui vamos a probar el cart_handler!-->
+                <!--aqui vamos a probar el cart_handler
+                no hay mas form -> ahora se hace con jscript
                 <form action="cart_handler.php?action=add&redirect=producto.php?id_prod=<?php echo $id_producto?>" method="POST" id="formProducto">
-            <?php
+                !-->
+                <?php
             //ponemos un input hidden para que envie por POST el prod_id
-            echo "<input type=\"hidden\" name=\"prod_id\" value=\"$id_producto\"> ";
+            echo "<input type=\"hidden\" name=\"prod_id\" id=\"prod_id\" value=\"$id_producto\"> ";
             ?>
 
             <div class="formField">
@@ -42,9 +44,10 @@
                 <input id="cantidad" name="qty" class="inputData required number" maxlength="3" value="1"/>
             </div>
             <div class="formButton">
-                <input id="comprar" class="formButton compraProduc" type="submit" name="action" value="agregar" />
+                <input id="comprar" class="formButton compraProduc" type="submit" name="action" value="agregar" onclick="addProduct();"/>
             </div>
-        </form>
+                <!-- //TODO: erase me -> prueba<div id="result">aqui resultados</div>-->
+        <!--</form>-->
         <p class="social">
             <span>Compartir:</span>           
             <?php
