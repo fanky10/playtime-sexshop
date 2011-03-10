@@ -32,7 +32,7 @@ class DataProductos extends Data {
             $item = $arrItems[$index];
             $current_id = $item['id'];
             $current_cant = $item['cant'];
-            $query = "select p.id as id, p.nombre, pp.precio".
+            $query = "select p.id as id, p.nombre, pp.precio, p.codigo".
             " FROM producto p".
             " LEFT JOIN (select * from precio_producto order by fecha_hora desc) pp ON pp.id_producto=p.id ".
             " WHERE p.id in ($current_id)".
@@ -48,11 +48,13 @@ class DataProductos extends Data {
                 $id_prod = $row['id'];
                 $nombre = $row['nombre'];
                 $precio = $row["precio"];
+                $codigo = $row["codigo"];
 
                 $oProducto->setId_Producto($id_prod);
                 $oProducto->setNombre($nombre);
                 $oProducto->setPrecio($precio);
                 $oProducto->setCantidad($current_cant);
+                $oProducto->setCodigo($codigo);
 
                 //y lo agregamos al array
                 $vProductos[$prod_idx]=$oProducto;
@@ -66,7 +68,7 @@ class DataProductos extends Data {
         return $vProductos;
     }
     public function getProducto($id_producto){
-        $query = "SELECT SQL_CALC_FOUND_ROWS p.id as id, p.nombre, i.id_imagen,pp.precio, p.descripcion".
+        $query = "SELECT SQL_CALC_FOUND_ROWS p.id as id, p.nombre, i.id_imagen,pp.precio, p.descripcion, p.codigo".
             " FROM producto p".
             " LEFT JOIN imagen i ON p.id_imagen = i.id_imagen".
             " LEFT JOIN (select * from precio_producto order by fecha_hora desc) pp ON pp.id_producto=p.id ".
@@ -85,7 +87,7 @@ class DataProductos extends Data {
         $img = $row['id_imagen'];
         $precio = $row["precio"];
         $descripcion = $row["descripcion"];
-
+        $codigo = $row["codigo"];
 
         $oProducto->setId_Producto($id_prod);
         $oProducto->setImagen($img);
@@ -93,6 +95,7 @@ class DataProductos extends Data {
         $oProducto->setPrecio($precio);
         $oProducto->setDescripcion($descripcion);//mostramos directamente la descripcion
 //            $oProducto->setInformacion($informacion);
+        $oProducto->setCodigo($codigo);
         $this->closeDB();//cierro conexion
         return $oProducto;
     }

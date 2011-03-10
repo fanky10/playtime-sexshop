@@ -14,7 +14,10 @@ class Producto{
     private $precio;
     private $precio_total;
     private $cantidad;
-    
+    private $codigo;
+    function setCodigo($codigo){
+        $this->codigo = $codigo;
+    }
     function setCantidad($cantidad){
         $this->cantidad = $cantidad;
     }
@@ -46,7 +49,9 @@ class Producto{
         $this->precio=$_precio;
     }
 
-
+    function getCodigo(){
+        return $this->codigo;
+    }
     function getId_Producto(){
         return $this->id_producto;
     }
