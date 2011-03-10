@@ -67,4 +67,10 @@ $('#cart_status').click(function() {
     // Animation complete.
   });
 });
+
+
+$('.compraProduc').click(function() {
+  $('.carOverview').show();
+});	
+
 });

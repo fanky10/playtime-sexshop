@@ -1,5 +1,6 @@
 // JavaScript Document
 $().ready(function(){
+
 /*******************************************************
 *					ALTO COLUMNA					   *
 ********************************************************/
@@ -11,7 +12,7 @@ if($("#lateral_izquierdo").height()>$("div.contenido").height())
 *			VALIDAR FORMULARIO PRODUCTO				   *
 ********************************************************/
 	$("#formProducto").validate();
-				   });
+});
 
 /*******************************************************
 *			POPUP FACEBOOK	Y TWITTER				   *
@@ -23,8 +24,5 @@ eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=1,scrollbars=0,lo
 }
 
 
-$('.carOverview').hide();	
-$('#comprar').click(function() {
-  $('.carOverview').show();
-});
+
 
