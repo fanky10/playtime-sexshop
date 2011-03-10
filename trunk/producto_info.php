@@ -24,10 +24,10 @@
         echo"<p class=\"prodInfo\">".$oProd->getDescription()."</p>";
 		?>
                 <!--aqui vamos a probar el cart_handler!-->
-        <form action="cart_handler.php?action=add&redirect=producto.php?id_prod=\".$oProd.\"" method="POST" id="formProducto">
+                <form action="cart_handler.php?action=add&redirect=producto.php?id_prod=<?php echo $oProd->getId_Producto()?>" method="POST" id="formProducto">
             <?php
             //ponemos un input hidden para que envie por POST el prod_id
-            echo "<input type=\"hidden\" name=\"prod_id\" value=\"$id_producto\" ";
+            echo "<input type=\"hidden\" name=\"prod_id\" value=\"$id_producto\"> ";
             ?>
 
             <div class="formField">
