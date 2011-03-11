@@ -46,5 +46,5 @@
     $mail_sent = mail($user_mail, $subject, $html_message, $headers);
     echo $mail_sent ? "Mail sent" : "Mail failed";
     //eliminamos todos los datos de la session :)
-    @session_unset();
+//    @session_unset();
  ?>
