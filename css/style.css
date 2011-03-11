@@ -322,12 +322,12 @@ div.producto.detalleProducto { border: none; overflow:hidden; height: auto; widt
 	    word-wrap: break-word;
 	}
 
-div#formProducto div.formField { clear: both; overflow: hidden; margin: 0 0 10px; }
-div#formProducto div.formField label { float: left; text-align: right; padding-right: 10px; line-height: 25px; width: 100px; }
-div#formProducto div.formField input.inputData, div#formProducto div.formField textarea { background:url(../images/bg-input.jpg) 0 0 repeat-x; color: #666; font-size:12px; font-family: Helvetica, "Lucida Grande", Arial, sans-serf; border:1px solid #d5d5d5; padding:5px 2px; width: 200px; }
-div#formProducto div.formField textarea { height: 100px;}
-div#formProducto div.formField input.inputData:focus, div#formProducto div.formField textarea:focus { background: #fff; }
-div#formProducto input.formButton {
+form div.formField { clear: both; overflow: hidden; margin: 0 0 10px; }
+form .formField label { float: left; text-align: right; padding-right: 10px; line-height: 25px; width: 100px; }
+form .formField input.inputData, form .formField textarea { background:url(../images/bg-input.jpg) 0 0 repeat-x; color: #666; font-size:12px; font-family: Helvetica, "Lucida Grande", Arial, sans-serf; border:1px solid #d5d5d5; padding:5px 2px; width: 200px; }
+form .formField textarea { height: 100px;}
+form .formField input.inputData:focus, form .formField textarea:focus { background: #fff; }
+form input.formButton {
 	background: url("../images/bg-button.png") repeat-x scroll 0 0 transparent;
     border: 1px solid #671A07;
     color: #FFFFFF;
@@ -338,17 +338,18 @@ div#formProducto input.formButton {
 	-webkit-border-radius:5px;
 	border-radius:5px;
 	}
-	div#formProducto input.formButton:hover {cursor: pointer; background: #7E2F27; }
+	form input.formButton:hover {cursor: pointer; background: #7E2F27; }
 
-div#formProducto label.error { clear: both; width: auto; text-align: left; }
+form label.error { clear: both; width: auto; text-align: left; }
 
-/****  Div Producto  ****/
-div#formProducto { border-top: 1px solid #ccc; margin-top: 15px; padding: 15px 0 20px;}
-div#formProducto label { width: 60px; }
-div#formProducto p.prodPrecio { overflow: hidden; margin: 0; line-height:25px; }
-div#formProducto div.formField input.inputData { width: 30px; text-align:center; }
-div#formProducto input.formButton { margin-left: 110px; }
-div#formProducto div.formField label.error { color: #85161C; font-size: 11px; line-height: 20px; margin-left: 110px; width: auto; display: none; }    
+/****  Form Producto  ****/
+form#formProducto  { border-top: 1px solid #ccc; margin-top: 15px; padding: 15px 0 20px;}
+form#formProducto label { width: 60px; }
+form#formProducto p.prodPrecio { overflow: hidden; margin: 0; line-height:25px; }
+form#formProducto input.inputData { width: 30px; text-align:center; }
+form#formProducto input.formButton { margin-left: 70px; }
+form#formProducto label.error { color: #85161C; font-size: 11px; line-height: 20px; margin-left: 70px; width: auto; }
+    
 /*  ==============  CONTACTO ================  */
 /****  Form Contacto  ****/
 form#frmContact { margin: 40px; }
