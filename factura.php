@@ -79,10 +79,18 @@
 					<div id="contenido_central">
         	        	<div class="ruta"><a href="index.php">Inicio</a> / <a href="tienda.php">Tienda</a> / <a href="#">Lubricantes</a> / Producto</div>
         	            <h1 class="categoria"><span>Confirmaci&oacute;n de compra</span></h1>
-                            <?php //TODO: llamar a enviar email?>
+                            <?php //TODO: llamar a enviar email
+                                include_once 'entidades/email.php';
+                                $email = new Email();
+                                if($email->enviarEmail()){
+                            ?>
         	            <p class="copy">Esta misma factura de compra se le ha enviado a su direcci&oacute;n de correo electr&oacute;nico</p>
                             <?php
                                 include 'cart_factura.php';
+                                }
+                                else{
+                                    echo "Error no se pudo enviar el email";
+                                }
                             ?>
                             <!--
                 		<div id="factura">
@@ -210,6 +218,7 @@
 							
 						</div>
                             -->
+
 					</div><!--end contenido_central-->
 					
 					<div class="lateral" id="lateral_derecho">
