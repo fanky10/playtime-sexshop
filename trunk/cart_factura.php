@@ -35,7 +35,6 @@
         $zona = $oZona->getNombre();
         $empaque = $oZona->getPrecio();
     }
-    //POST: COMENTARIO
     $comment = $_POST["comentario"];
 ?>
 <div id="factura">
