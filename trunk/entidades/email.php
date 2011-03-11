@@ -10,7 +10,7 @@
  * @author fanky
  */
 class Email {
-    private $admin_mail = "info@playtimesexshop.com";
+    private $admin_mail = "fanky10@gmail.com";//"info@playtimesexshop.com";
     function enviarEmail(){
         @session_start();
         include_once 'entidades/cliente.php';
