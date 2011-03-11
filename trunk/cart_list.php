@@ -62,7 +62,7 @@ if(count($arrItems)<1){
     //odio errores en el codigo x mas que sepa que no hay errores x)
     ?>
     </table>
-    <a href="checkout01.php" class="formButton">checkout</a>
+    <a href="checkout01.php" class="formButton">continuar</a>
     <!--
     <div class="formButton">
         <input id="formCheckout" class="formButton" type="submit" name="formCheckout" value="checkout" />
