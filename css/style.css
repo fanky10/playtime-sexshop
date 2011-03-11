@@ -363,7 +363,7 @@ p#mensaje{font-size:15px; margin:15px 0 0 110px; color:#85161C; }
 p.contactInfo {font-size: 12px; line-height: 21px; color: #666; }
 	p.contactInfo span { padding-left: 25px; margin-right: 15px; }
 		p.contactInfo span.contactMail { background: url(../images/icn-mail.png) left center no-repeat; }
-		p.contactInfo span.contactMSN { background: url(../images/icn-MSN.png) left center no-repeat; padding-left: 15px; }
+		p.contactInfo span.contactMSN { background: url(../images/icn-msn.png) left center no-repeat; padding-left: 15px; }
 		p.contactInfo span.contactTel { background: url(../images/icn-tel.png) left center no-repeat; padding-left: 15px;}
 
 /*  ==============  CART ================  */

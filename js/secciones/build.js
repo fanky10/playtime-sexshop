@@ -2,7 +2,7 @@
 
 $().ready(function(){
 /*******************************************************
-*					ALTO COLUMNA					   *
+*					ANCHO COLUMNA					   *
 ********************************************************/
 if($("#lateral_izquierdo").height()>$("div.contenido").height())
 {

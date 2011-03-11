@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>Play Time Sex Shop .::. Botique Erótica - PRODUCTO</title>
+        <title>Play Time Sex Shop .::. Botique Erótica - CARRITO</title>
         <meta name="keywords" content="juguetes, toys, Lubricantes, Anillos, Estimuladores Clitoreales, Placer Anal, Doble Penetraci&oacute;n, Siliconados, Hot Pink, Black Fantasy, Realistic, Funny, Cyberskin, Desarrolladores Peneanos, extensiones, Arneses, Mu&ntilde;ecas, Vaginas, Disfraces" />
         <meta name="description" content="Este es un sitio donde encontrar&aacute; muchas formas de dar placer a su pareja, formas de jugar y divertirse." />
 		
@@ -12,22 +12,14 @@
 
 		<!--JS FILES-->
         <script src="js/jquery-1.5.js" type="text/javascript"></script>
-		<script src="js/action.js" type="text/javascript"></script><!--PROPIO-->
-                <script src="js/secciones/carrito.js" type="text/javascript"></script><!--PROPIO-->
-        <script src="http://widgets.twimg.com/j/2/widget.js"></script><!--TWITTER-->
-        
-        <script src="js/jquery.validate.js" type="text/javascript"></script><!--EMAIL-->
+        <script src="js/secciones/build.js" type="text/javascript"></script><!--ANCHO COLUMNAS-->
+		<!--<script src="js/action.js" type="text/javascript"></script>PROPIO-->
+        <script src="js/secciones/carrito.js" type="text/javascript"></script><!--PROPIO-->
         
         <!--[if lte IE 7]>
         <script type="text/javascript" src="js/supersleight-min.js"></script>
         <![endif]-->
         
-        <SCRIPT type="text/javascript">
-			$().ready(function() {
-				// valida el formulario de CONTACTO
-				$("#formProducto").validate();
-			});
-		</SCRIPT>
     </head>
     
     <body>

@@ -1,17 +1,10 @@
 // JavaScript Document
-$().ready(function(){
-/*******************************************************
-*					ALTO COLUMNA					   *
-********************************************************/
-if($("#lateral_izquierdo").height()>$("div.contenido").height())
-{
-	$("div.contenido").height($("#lateral_izquierdo").height());
-}
+//$().ready(function(){
 /*******************************************************
 *						SLIDERS HOME				   *
 ********************************************************/
 
-$('#slider1').anythingSlider({
+/*$('#slider1').anythingSlider({
 			startStopped    : false,      // If autoPlay is on, this can force it to start stopped
 			width           : 550,        
 			height          : 200,        
@@ -30,5 +23,5 @@ $('#slider1').anythingSlider({
 			onSlideComplete : function(slider){
 				// alert('Welcome to Slide #' + slider.currentPage);
 			}
-});
-});//end document
+});*/
+//});//end document

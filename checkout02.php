@@ -12,21 +12,14 @@
 
 		<!--JS FILES-->
         <script src="js/jquery-1.5.js" type="text/javascript"></script>
-		<script src="js/action.js" type="text/javascript"></script><!--PROPIO-->
-        <script src="http://widgets.twimg.com/j/2/widget.js"></script><!--TWITTER-->
+		<script src="js/secciones/build.js" type="text/javascript"></script><!--ANCHO COLUMNAS-->
+		<!--<script src="js/action.js" type="text/javascript"></script>PROPIO-->
         
-        <script src="js/jquery.validate.js" type="text/javascript"></script><!--EMAIL-->
         
         <!--[if lte IE 7]>
         <script type="text/javascript" src="js/supersleight-min.js"></script>
         <![endif]-->
-        
-        <SCRIPT type="text/javascript">
-			$().ready(function() {
-				// valida el formulario de CONTACTO
-				$("#formProducto").validate();
-			});
-		</SCRIPT>
+
     </head>
     
     <body>
@@ -55,23 +48,9 @@
         	        </form>
         	        
         	        <h3><span>Categor&iacute;as</span></h3>
-        	        <ul>
-        	            <li class="item first" id="lubricantes"><a href="#">Lubricantes</a></li>
-        	            <li class="item" id="anillos"><a href="#">Anillos</a></li>
-        	            <li class="item" id="estimuladores"><a href="#">Estimuladores Clitoreales</a></li>
-        	            <li class="item" id="lubricantes"><a href="#">Lubricantes</a></li>
-        	            <li class="item" id="anillos"><a href="#">Anillos</a></li>
-        	            <li class="item" id="estimuladores"><a href="#">Estimuladores Clitoreales</a></li>
-				    </ul><!--end categorias-->
-				    
-				    <h3><span>Lorem ipsum</span></h3>
-        	        <ul>
-        	            <li class="item first" id="lubricantes"><a href="#">Dolor sit amet consectetur</a></li>
-        	            <li class="item" id="anillos"><a href="#">Anillos</a></li>
-        	            <li class="item" id="estimuladores"><a href="#">Estimuladores Clitoreales</a></li>
-        	            <li class="item" id="lubricantes"><a href="#">Lubricantes</a></li>
-        	            <li class="item" id="anillos"><a href="#">Anillos</a></li>
-				    </ul><!--end categorias-->
+        	        <?php
+	                    include 'menu_categorias.php';
+                    ?><!--end categorias-->
 				    
 				</div><!--end lateral_izquierdo-->
 			
@@ -162,18 +141,9 @@
 					</div><!--end contenido_central-->
 					
 					<div class="lateral" id="lateral_derecho">
-						<p class="social">
-                        	<span>Sueguinos:</span>
-                        	<a href="#" class="socialFacebook"></a>
-                        	<a href="#" class="socialTwitter"></a>
-                        	<a href="#" class="socialFeed"></a>
-                        </p>
-        	        	<a class="banner" href="#" title="Conectate al MSN">
-        	        		<img src="images/banners/bnr-msn03.jpg" alt="Conectate al MSN" />
-        	        	</a>
-        	            <a class="banner" href="#" title="Delivery hasta tu casa">
-        	            	<img src="images/banners/bnr-envio.jpg" alt="Delivery hasta tu casa" />
-        	            </a>
+						<?php
+	                    	include 'lateral_derecho.php';
+                    	?>
 					</div><!--end lateral_derecho-->
 				
 				</div><!--end contenido -->
@@ -186,71 +156,7 @@
         	        <li id="top"><a href="#">Arriba</a></li>
 				</ul><!--end menu_acceso-->  
 				
-				<div class="items">
-					<div class="items-block">
-						<h4>Columna 1</h4>
-						<ul>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-						</ul>
-					</div>
-					
-					<div class="items-block">
-						<h4>Columna 2</h4>
-						<ul>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-						</ul>
-					</div>
-					
-					<div class="items-block">
-						<script>
-new TWTR.Widget({
-  version: 2,
-  type: 'profile',
-  rpp: 2,
-  interval: 5000,
-  width: 200,
-  height: 140,
-  theme: {
-    shell: {
-      background: '#771116',
-      color: '#ffffff'
-    },
-    tweets: {
-      background: '#7C2F27',
-      color: '#ffffff',
-      links: '#000000'
-    }
-  },
-  features: {
-    scrollbar: false,
-    loop: true,
-    live: true,
-    hashtags: true,
-    timestamp: true,
-    avatars: false,
-    behavior: 'default'
-  }
-}).render().setUser('playtimesexshop').start();
-</script>
-					</div>
-					
-					<div class="items-block last">
-						<h4>Columna 4</h4>
-						<ul>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-							<li><a href="#" title="Lorem Ipsum">Lorem ipsum dolor sit amet lamet</a></li>
-						</ul>
-					</div>
-					
-				</div><!--end items-->
+				<!--ITEMS-->
 					
 				<div class="submenu">
 				    <ul>
