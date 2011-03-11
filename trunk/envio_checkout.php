@@ -14,7 +14,7 @@ $s = $_SESSION['client'];
 $oClient = unserialize($s);
 
 // The message
-$admin_mail = "info@playtimesexshop.com";
+$admin_mail = "qwertydrc@hotmail.com";
 $user_mail = $oClient->getEmail();
 $subject="Compra Efectuada en PlayTimeSexShop";
 ob_start(); # start buffer

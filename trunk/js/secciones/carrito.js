@@ -69,8 +69,8 @@ $('#cart_status').click(function() {
 });
 
 
-$('.compraProduc').click(function() {
+/*$('.compraProduc').click(function() {
   $('.carOverview').show();
-});	
+});*/	
 
 });
