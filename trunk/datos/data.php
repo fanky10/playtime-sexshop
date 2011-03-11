@@ -56,6 +56,7 @@ class Data {
 
         $connection = mysql_connect($databaseURL,$databaseUName,$databasePWord)
                 or die ("Error while connecting to host");
+        mysql_query('SET NAMES utf8');
         $db = mysql_select_db($databaseName,$connection)
                 or die ("Error while connecting to database");
         return $connection;
