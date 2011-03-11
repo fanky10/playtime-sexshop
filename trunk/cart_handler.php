@@ -97,7 +97,8 @@ else if($action=="show_list"){
 }
 
 if(isset ($_GET["redirect"])){
-    header( 'Location: '.$_GET["redirect"] ) ;
+    include_once $_GET["redirect"];
+    //header( 'Location: '.$_GET["redirect"] ) ;
 }
 //seteado a mano para testeo :)
 $test_opt=0;
