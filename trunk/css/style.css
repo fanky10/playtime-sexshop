@@ -327,7 +327,7 @@ form .formField label { float: left; text-align: right; padding-right: 10px; lin
 form .formField input.inputData, form .formField textarea { background:url(../images/bg-input.jpg) 0 0 repeat-x; color: #666; font-size:12px; font-family: Helvetica, "Lucida Grande", Arial, sans-serf; border:1px solid #d5d5d5; padding:5px 2px; width: 200px; }
 form .formField textarea { height: 100px;}
 form .formField input.inputData:focus, form .formField textarea:focus { background: #fff; }
-form input.formButton {
+form input.formButton, a.formButton {
 	background: url("../images/bg-button.png") repeat-x scroll 0 0 transparent;
     border: 1px solid #671A07;
     color: #FFFFFF;
@@ -338,9 +338,10 @@ form input.formButton {
 	-webkit-border-radius:5px;
 	border-radius:5px;
 	}
-	form input.formButton:hover {cursor: pointer; background: #7E2F27; }
+	form input.formButton:hover, a.formButton:hover {cursor: pointer; background: #7E2F27; }
 
 form label.error { clear: both; width: auto; text-align: left; }
+form#formProducto div.formField label.error{display: none; }
 
 /****  Form Producto  ****/
 form#formProducto  { border-top: 1px solid #ccc; margin-top: 15px; padding: 15px 0 20px;}
