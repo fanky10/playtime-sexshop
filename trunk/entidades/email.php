@@ -10,8 +10,9 @@
  * @author fanky
  */
 class Email {
-    private $admin_mail = "fanky10@gmail.com";//"info@playtimesexshop.com";
-    function enviarEmail(){
+    private $admin_mail = "info@playtimesexshop.com";
+    
+    function enviarEmail($comment){
         @session_start();
         include_once 'entidades/cliente.php';
 
@@ -35,6 +36,11 @@ class Email {
         include_once 'client_mail.php';
         echo "La compra efectuada: <br><br>";
         include_once 'cart_mail.php';
+        echo "<br><br>";
+        if(isset ($comment)){
+            echo $comment;
+            echo "<br><br>Agradecemos sus comentarios para poder brindarle la mejor atencion<br>";
+        }
         echo "<br><br>Un representante se contactara con usted via telefonica o email a la brevedad.<br>";
         echo "<br><br>Saluda Atte,<br>";
         echo "Administracion PlayTimeSexShop";
