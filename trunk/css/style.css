@@ -358,7 +358,7 @@ form#frmContact label { font-size: 14px; color: #666; }
 	form#frmContact label.error { color: #85161C; font-size: 11px; line-height: 20px; margin-left: 110px; }
 form#frmContact .formField input.inputData, form#frmContact .formField textarea { width: 300px; }
 form#frmContact input.formButton {margin-left: 110px; font-size: 14px; }
-p#mensaje{font-size:15px; margin:15px 0 0 110px; color:#85161C; } 
+p#mensaje{font-size:20px; margin:15px 60px; color:#85161C; } 
 
 p.contactInfo {font-size: 12px; line-height: 21px; color: #666; }
 	p.contactInfo span { padding-left: 25px; margin-right: 15px; }
