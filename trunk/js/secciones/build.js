@@ -21,6 +21,17 @@ $().ready(function(){
 *			VALIDAR FORMULARIO PRODUCTO				   *
 ********************************************************/
 	$("#formProducto").submit(function(){return false;});	
+	
+/*******************************************************
+*						RECARGAR PAGINA						   *	
+********************************************************/
+	$('#aceptar').click(function() {
+            // Recargo la página
+            location.reload();
+        });
 });//end DOCUMENT
+
+
+
 
 
