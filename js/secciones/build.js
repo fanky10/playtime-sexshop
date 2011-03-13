@@ -2,7 +2,7 @@
 
 $().ready(function(){
 /*******************************************************
-*					ANCHO COLUMNA					   *
+*					ALTO COLUMNA					   *
 ********************************************************/
 	if($("#lateral_izquierdo").height()>$("div.contenido").height())
 	{
@@ -26,7 +26,7 @@ $().ready(function(){
 *						RECARGAR PAGINA						   *	
 ********************************************************/
 	$('#aceptar').click(function() {
-            // Recargo la página
+            // Recargo la pï¿½gina
             location.reload();
         });
 });//end DOCUMENT
