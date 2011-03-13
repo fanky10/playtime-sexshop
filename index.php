@@ -13,7 +13,7 @@
 		<!--JS FILES-->
         <script src="js/jquery-1.5.js" type="text/javascript"></script>
         <script src="js/secciones/build.js" type="text/javascript"></script><!--ANCHO COLUMNAS-->
-		<script src="js/secciones/inicio.js" type="text/javascript"></script><!--PROPIO-->
+        <script src="js/secciones/inicio.js" type="text/javascript"></script><!--PROPIO-->
         
         <!-- Slider -->
         <link rel="stylesheet" href="css/anythingslider.css" type="text/css" media="screen" />

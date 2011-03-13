@@ -12,9 +12,7 @@
 
 		<!--JS FILES-->
         <script src="js/jquery-1.5.js" type="text/javascript"></script>
-		<script src="js/secciones/build.js" type="text/javascript"></script><!--ANCHO COLUMNAS-->
-		<!--<script src="js/action.js" type="text/javascript"></script>PROPIO-->
-        
+		<script src="js/secciones/build.js" type="text/javascript"></script><!--ANCHO COLUMNAS-->        
         
         <!--[if lte IE 7]>
         <script type="text/javascript" src="js/supersleight-min.js"></script>

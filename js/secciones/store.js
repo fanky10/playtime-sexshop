@@ -40,25 +40,6 @@ function loadData(id_cat,nro_pag,order){
                     $('#result').hide();
                     $("#result").html(msg)
                     .fadeIn("slow");
-                    //todo: ver si funciona correctamente
-                    /*$("a.grupo_productos").fancybox({
-                        'transitionIn'	:	'elastic',
-                        'transitionOut'	:	'elastic',
-                        'speedIn'		:	600,
-                        'speedOut'		:	200,
-                        'overlayShow'	:	false,
-                        'type' : 'image'
-                    });*/ 
-                    
                 }
         });
     }
-//function orderColumn(){
-    /*******************************************************
-    *                                       ALTO COLUMNA                                       *
-    ********************************************************/
-    /*if($("#lateral_izquierdo").height()>$("div.contenido").height())
-    {
-            $("div.contenido").height($("#lateral_izquierdo").height());
-    }*/
-//}

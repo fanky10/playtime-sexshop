@@ -13,7 +13,7 @@
 		<!--JS FILES-->
         <script src="js/jquery-1.5.js" type="text/javascript"></script>
         <script src="js/secciones/build.js" type="text/javascript"></script><!--ANCHO COLUMNAS-->
-		<script src="js/secciones/contact.js" type="text/javascript"></script><!--PROPIO-->
+   		<script src="js/secciones/contact.js" type="text/javascript"></script><!--PROPIO-->
         
 		<script src="js/jquery.validate.js" type="text/javascript"></script><!--EMAIL-->
         <meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
