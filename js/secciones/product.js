@@ -20,7 +20,8 @@ function addProduct(){
         data:dataString,
         async:true,
         success: function(msg){
-            alert('session updated!');
+            //alert('session updated!');
+			$('#basic-modal-content').modal();
         }
     });
     }

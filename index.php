@@ -8,7 +8,7 @@
         <meta name="description" content="Este es un sitio donde encontrar&aacute; muchas formas de dar placer a su pareja, formas de jugar y divertirse." />
 		
 		<!--CSS FILES-->
-		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />              
 		
 		<!--JS FILES-->
         <script src="js/jquery-1.5.js" type="text/javascript"></script>
@@ -18,8 +18,8 @@
         <!-- Slider -->
         <link rel="stylesheet" href="css/anythingslider.css" type="text/css" media="screen" />
         <script type="text/javascript" src="js/jquery.anythingslider.js"></script>        
-
-        <!--[if lte IE 7]>
+    
+    	<!--[if lte IE 7]>
         <script type="text/javascript" src="js/supersleight-min.js"></script>
         <![endif]-->
 
@@ -236,7 +236,7 @@
 			
 			<div class="pie_pagina">
 				<a class="mawape" href="http://www.mawape.com.ar" title="MAWAPE Sistemas"><img src="images/logo-mawape.png" alt="MAWAPE Sistemas" title="MAWAPE Sistemas" /></a>
-				<p class="copyright">&copy; Copyright 2011 - Play Time Sex Shop. Boutique Er&oacute;tica. Todos los derechos.</p>
+				<p class="copyright">&copy; Copyright 2011 - <a href='#' class='basic'>Play Time Sex Shop</a>. Boutique Er&oacute;tica. Todos los derechos.</p>
 			</div><!--end pie-pagina-->
 		</div>
     </body>

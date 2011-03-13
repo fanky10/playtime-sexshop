@@ -15,6 +15,10 @@
         <script src="js/secciones/build.js" type="text/javascript"></script><!--ANCHO COLUMNAS-->
   		<script src="js/secciones/product.js" type="text/javascript"></script><!--PROPIO-->
         
+        <!-- Modal -->
+		<link type='text/css' href='css/basic.css' rel='stylesheet' media='screen' />
+        <script type='text/javascript' src='js/jquery.simplemodal-1.4.1.js'></script>
+        
         <!--[if lte IE 7]>
         <script type="text/javascript" src="js/supersleight-min.js"></script>
         <![endif]-->
@@ -98,5 +102,15 @@
 				<p class="copyright">&copy; Copyright 2011 - Play Time Sex Shop. Boutique Er&oacute;tica. Todos los derechos.</p>
 			</div><!--end pie-pagina-->
 		</div>
+        <!-- modal content -->
+		<div id="basic-modal-content">
+			<h3>Producto agregado correctamente!!!</h3>
+			<p><a class="formButton" id="aceptar" href='#'>aceptar</a></p>
+		</div>
+		<!-- preload the images -->
+		<div style='display:none'>
+			<img src='images/x.png' alt='cerrrar' title="cerrar" />
+		</div><!-- END modal content -->
+        
     </body>
 </html>
