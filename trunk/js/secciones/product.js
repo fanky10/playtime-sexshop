@@ -1,11 +1,4 @@
 // JavaScript Document
-$().ready(function(){
-/*******************************************************
-*			VALIDAR FORMULARIO PRODUCTO				   *
-********************************************************/
-	$("#formProducto").submit(function(){return false;});
-});
-
 function addProduct(){
     //TODO: mejorar muestra de validaciones
     var cantidad =($('#cantidad').val());

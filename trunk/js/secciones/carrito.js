@@ -33,6 +33,7 @@ function reloadListShoppingCart(accion,id_prod,cant_name){
     } );
     
 }
+
 function reloadCartLink(){
     $.ajax( {
             url:"cart_handler.php",//llamamos al handler
@@ -47,6 +48,7 @@ function reloadCartLink(){
             }
     } );
 }
+
 function reloadCartPreview(){
     //si esta hidden que la muestre
     $.ajax( {
@@ -60,17 +62,3 @@ function reloadCartPreview(){
     } );
 }
 
-$(document).ready(function(){
-$('.carOverview').hide();	
-$('#cart_status').click(function() {
-  $('.carOverview').toggle('slow', function() {
-    // Animation complete.
-  });
-});
-
-
-/*$('.compraProduc').click(function() {
-  $('.carOverview').show();
-});*/	
-
-});
