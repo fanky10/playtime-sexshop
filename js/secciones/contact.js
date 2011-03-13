@@ -1,5 +1,6 @@
 // JavaScript Document
 $().ready(function(){				   
+$("#mensaje").hide();
 /*******************************************************
 *			VALIDAR FORMULARIO CONTACTO				   *
 ********************************************************/
@@ -30,11 +31,12 @@ $("#frmContact").validate({
 		data: "nombre="+$('#ContactName').val()+"&email="+$('#ContactRecipient').val()+"&telefono="+$('#ContactPhone').val()+"&comentario="+$('#ContactMessage').val(),
 		success: function(msg){
 		//if(msg==1){
-		$("#mensaje").html("<strong>El mensaje se ha enviado correctamente!</strong>");
+		$("#mensaje").fadeIn('slow');
 		$('#ContactName').val('');
 		$('#ContactRecipient').val('');
 		$('#ContactPhone').val('');
 		$('#ContactMessage').val('');
+		$('#frmContact').fadeOut('slow');
 		//}
 		}
 	});

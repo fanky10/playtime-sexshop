@@ -86,8 +86,9 @@
                             <div class="formButton">
 	                            <input type="image" alt="enviar" class="formButton" />
                             </div>
-							<p id="mensaje"></p>
+                            <p></p>
 						</form>
+						<p id="mensaje"><strong>El mensaje se ha enviado correctamente!!!</strong></p>
         	            
         	            <p class="contactInfo">
         	            	<span class="contactMail">info@playtimesexshop.com</span>
