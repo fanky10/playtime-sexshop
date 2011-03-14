@@ -1,3 +1,33 @@
+<?php
+
+/**
+ * este script valida si la session esta seteada
+ * y si tiene items en el carrito
+ */
+@session_start();
+include_once 'entidades/shoppingcart.php';
+include_once 'entidades/cliente.php';
+$mensaje_error = null;
+if(!session_is_registered('cart')){
+    $mensaje_error = "<h3> No tiene items agregados.</h3>";
+}
+if(!session_is_registered('client')){
+    $mensaje_error = "<h3> No existen datos sobre el cliente. Ingreselos <a href=\"checkout01.php\">aqui</a></h3>";
+}
+$s = $_SESSION['cart'];
+$oCart = unserialize($s);
+
+$s = $_SESSION['client'];
+$oClient = unserialize($s);
+
+
+$arrItems = $oCart->getItems();
+if(count($arrItems)<1){
+    $mensaje_error = "<h3> No tiene items agregados.</h3>";
+}
+
+?>
+
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -57,18 +87,26 @@
         	        	<div class="ruta"><a href="index.php">Inicio</a> / <a href="tienda.php">Tienda</a> / <a href="#">Lubricantes</a> / Producto</div>
         	            <h1 class="categoria"><span>Confirmaci&oacute;n de compra</span></h1>
                             <?php //TODO: llamar a enviar email
-                                include_once 'entidades/email.php';
-                                $comment = $_POST["comentario"];
-                                $email = new Email();
-                                if($email->enviarEmail($comment)){
+                                if(isset($mensaje_error) ){
+                                    echo $mensaje_error;
+
+                                }else{//si no tiene ningun mensaje de error..
+                                    include_once 'entidades/email.php';
+                                    $comment = $_POST["comentario"];
+                                    $email = new Email();
+                                    if($email->enviarEmail($comment)){
                             ?>
         	            <p class="copy">Esta misma factura de compra se le ha enviado a su direcci&oacute;n de correo electr&oacute;nico</p>
                             <?php
-                                include 'cart_factura.php';
+                                    include 'cart_factura.php';
+                                    }
+                                    else{
+                                        echo "Error no se pudo enviar el email";
+                                    }
+                                    //ya sea que se envio o no el email
+                                    session_unset();
                                 }
-                                else{
-                                    echo "Error no se pudo enviar el email";
-                                }
+
                             ?>
                             <!--
                 		<div id="factura">

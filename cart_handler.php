@@ -21,8 +21,7 @@ if(!isset ($action)){
     $action = $_GET["action"];
 }
 if($action=="clear"){
-    session_unset();
-    echo "cleared!<br>";
+    session_unregister('cart');
 }else if($action=="add"){
     $id_prod = (int)$_POST["prod_id"];
     $cant = (int)$_POST["qty"];
@@ -58,7 +57,7 @@ if($action=="clear"){
     //ahora en bytes y lo sobreescribimos
     $sCart = serialize($oCart);
     $_SESSION['cart'] = $sCart;
-    echo "deleted! <br>";
+//    echo "deleted! <br>";
 }else if($action=="upd"){
     $id_prod = (int)$_GET["prod_id"];
     $cant = (int)$_GET["qty"];
@@ -77,7 +76,7 @@ if($action=="clear"){
     //ahora en bytes y lo sobreescribimos
     $sCart = serialize($oCart);
     $_SESSION['cart'] = $sCart;
-    echo "updated! <br>";
+//    echo "updated! <br>";
 }else if($action=="show_status"){
     //obtenemos el carrito
     $s = $_SESSION['cart'];

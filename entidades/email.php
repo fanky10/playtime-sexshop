@@ -18,7 +18,7 @@ class Email {
 
         //si la encontramos sin nada la creamos al toke
         if(!session_is_registered('client')){//si no esta registrado lo registramos
-            echo "client unreg!";
+//            echo "client unreg!";
             $oClient = new Cliente();
             $sClient = serialize($oClient);
             $_SESSION['client'] = $sClient;

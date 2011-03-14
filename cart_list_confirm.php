@@ -2,13 +2,12 @@
 
 /**
  * este script solo muestra una tabla well formed de los datos contenidos en SESSION
- * sobre el carrito de compras
+ * sobre el carrito de compras y el cliente
  * para la confirmacion de datos
  */
 @session_start();
 include_once 'entidades/shoppingcart.php';
 include_once 'entidades/cliente.php';
-
 //si la encontramos sin nada la creamos al toke
 if(!session_is_registered('cart')){//si no esta registrado lo registramos
     $oCart = new ShoppingCart();
@@ -16,7 +15,7 @@ if(!session_is_registered('cart')){//si no esta registrado lo registramos
     $_SESSION['cart'] = $sCart;
 }
 
-if(!session_is_registered('client')){
+if(!session_is_registered('client')){    
     $oClient = new Cliente();
     $sClient = serialize($oClient);
     $_SESSION['client'] = $sClient;
@@ -29,9 +28,6 @@ $s = $_SESSION['client'];
 $oClient = unserialize($s);
 
 $arrItems = $oCart->getItems();
-if(count($arrItems)<1){
-    echo "<h3> No tiene items agregados.</h3>";
-}else{
 ?>
 
 <table border="0" width="100%" cellpadding="0" cellspacing="0" class="product-table">
@@ -105,6 +101,3 @@ if(count($arrItems)<1){
         </tr>\n";
     ?>
 </table>
-<?php
-}
-?>

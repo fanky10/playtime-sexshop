@@ -1,4 +1,33 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?php
+
+/**
+ * este script valida si la session esta seteada
+ * y si tiene items en el carrito
+ */
+@session_start();
+include_once 'entidades/shoppingcart.php';
+include_once 'entidades/cliente.php';
+$mensaje_error = null;
+$mensaje_error = null;
+if(!session_is_registered('cart')){
+    $mensaje_error = "<h3> No tiene items agregados.</h3>";
+}
+
+$s = $_SESSION['cart'];
+$oCart = unserialize($s);
+
+$s = $_SESSION['client'];
+$oClient = unserialize($s);
+
+
+$arrItems = $oCart->getItems();
+if(count($arrItems)<1){
+    $mensaje_error = "<h3> No tiene items agregados.</h3>";
+}
+
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -55,6 +84,13 @@
 				<div class="contenido">
 					
 					<div id="contenido_central">
+                                            <?php
+                                            //TODO: verifica elementos en carrito
+                                            if(isset($mensaje_error) ){
+                                                echo $mensaje_error;
+
+                                            }else{
+                                            ?>
         	        	<div class="ruta"><a href="index.php">Inicio</a> / <a href="contacto.php">Contacto</a></div>
         	            
         	            <h1 class="categoria"><span>Informaci&oacute;n de cliente</span></h1>
@@ -110,7 +146,9 @@
                             	<input id="formCheckoutSubmit" class="formButton" type="submit" name="formCheckoutSubmit" value="continuar" />
                             </div>
         	            </form>
-        	            
+        	            <?php
+                            }//end else del check de error
+                            ?>
 					</div><!--end contenido_central-->
 					
 					<div class="lateral" id="lateral_derecho">
