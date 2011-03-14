@@ -1,3 +1,33 @@
+<?php
+
+/**
+ * este script valida si la session esta seteada
+ * y si tiene items en el carrito
+ */
+@session_start();
+include_once 'entidades/shoppingcart.php';
+include_once 'entidades/cliente.php';
+$mensaje_error = null;
+if(!session_is_registered('cart')){
+    $mensaje_error = "<h3> No tiene items agregados.</h3>";
+}
+if(!session_is_registered('client')){
+    $mensaje_error = "<h3> No existen datos sobre el cliente. Ingreselos <a href=\"checkout01.php\">aqui</a></h3>";
+}
+$s = $_SESSION['cart'];
+$oCart = unserialize($s);
+
+$s = $_SESSION['client'];
+$oClient = unserialize($s);
+
+
+$arrItems = $oCart->getItems();
+if(count($arrItems)<1){
+    $mensaje_error = "<h3> No tiene items agregados.</h3>";
+}
+
+?>
+
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -54,89 +84,28 @@
 			
 				<div class="contenido">
 					
-					<div id="contenido_central">
+                            <div id="contenido_central">
+                                <?php
+                                //TODO: verifica elementos en carrito
+                                if(isset($mensaje_error) ){
+                                    echo $mensaje_error;
+
+                                }else{
+                                ?>
         	        	<div class="ruta"><a href="index.php">Inicio</a> / <a href="tienda.php">Tienda</a> / <a href="#">Lubricantes</a> / Producto</div>
         	            <h1 class="categoria"><span>Confirmaci&oacute;n de compra</span></h1>
                         
                 		<form id="formCheckout02" action="factura.php" method="POST">
-                                    <?php
-                                        include 'cart_list_confirm.php';
-                                    ?>
-                                    <!--
-							<table border="0" width="100%" cellpadding="0" cellspacing="0" class="product-table">
-								<tr>
-									<th class="line-left">Detalle</th>
-									<th class="line-left cartSKU">SKU</th>
-									<th class="line-left cartPrecio">Precio</th>
-									<th class="line-left cartCantidad">Cantidad</th>
-									<th class="line-left cartSubtotal">Total</th>
-								</tr>
-								<tr>
-									<td>Pito de goma</td>
-									<td>096RT</td>
-									<td>$ 158.45</td>
-									<td>1</td>
-									<td>$ 158.45</td>
-								</tr>
-								<tr class="alternate-row">
-									<td>Pito de goma</td>
-									<td>096RT</td>
-									<td>$ 158.45</td>
-									<td>1</td>
-									<td>$ 158.45</td>
-								</tr>
-								<tr>
-									<td colspan="4" class="cartTotal">Subtotal</td>
-									<td>$ 158.45</td>
-								</tr>
-								<tr class="alternate-row">
-									<td colspan="4" class="cartTotal">Manejo y empaque</td>
-									<td>$ 15.00</td>
-								</tr>
-								<tr>
-									<td colspan="4" class="cartTotal">IVA</td>
-									<td>$ 15.80</td>
-								</tr>
-								<tr class="alternate-row">
-									<td colspan="4" class="cartTotal"><strong>Total</strong></td>
-									<td><strong>$ 999.00</strong></td>
-								</tr>
-							</table>
-                                    -->
-
-                                    <?php
-
+                                <?php
+                                    include 'cart_list_confirm.php';
                                     include 'client_data.php';
-
-                                    ?>
-                                    <!--
-							<div class="confirmationInfo">
-								<h3>Por favor revise la informaci&oacute;n de envio y confirme la orden:</h3>
-								<dl class="checkoutConfirmData">
-									<dt>Direcci&oacute;n:</dt>
-									<dd><span>Lavalle 2617</span> (<span>2452</span>) <span>San Jorge</span></dd>
-								
-									<dt>Metodo de env&iacute;o:</dt>
-									<dd><span>Correo argentina, contrareembolso</span></dd>
-								
-									<dt>Otro dato:</dt>
-									<dd><span>Lorem ipsum dolor sit amet</span></dd>
-								</dl>
-								
-								<div class="formField">
-                                	<label>Si lo desea puede dejar un comentario junto con su orden de compra:</label>
-                                	<textarea id="comentario" name="comentario" class="required"></textarea> 
-                            	</div>
-							</div>
-                                    -->
-							
-							<div class="formButton">
-                            	<input id="formConfirmar" class="formButton" type="submit" name="formConfirmar" value="confirmar" />
-                            </div>
-                            
-						</form>
-                        
-					</div><!--end contenido_central-->
+                                ?>
+                                <div class="formButton">
+                                    <input id="formConfirmar" class="formButton" type="submit" name="formConfirmar" value="confirmar" />
+                                </div>
+                                </form>
+                            <?php } //fin else de validacion?>
+                            </div><!--end contenido_central-->
 					
 					<div class="lateral" id="lateral_derecho">
 						<?php

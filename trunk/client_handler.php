@@ -48,6 +48,8 @@ if($action=="add"){//espero por post todos los datos necesarios
 }else if($action=="show_data"){
     include 'client_data.php';
 
+}else if($action=="clear"){
+    session_unregister('client');
 }
 //si es necesario redireccionar:
 
