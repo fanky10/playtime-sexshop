@@ -16,6 +16,7 @@ $().ready(function(){
 		$('.carOverview').toggle('slow', function() {
 		// Animation complete.
 		});
+		setTimeout("$('.carOverview').fadeOut('slow');", 5000);
 	});
 });//end DOCUMENT
 
