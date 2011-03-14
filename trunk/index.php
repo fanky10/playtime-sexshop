@@ -154,7 +154,7 @@
 							<a href="tienda.php?id_cat=12" class="bnrCateg"><img alt="Ellas" src="images/banners/bnr-categ-ellas.jpg" /></a>
 							<a href="tienda.php?id_cat=16" class="bnrCateg"><img alt="Ellos" src="images/banners/bnr-categ-ellos.jpg" /></a>
 							<a href="tienda.php?id_cat=1" class="bnrCateg"><img alt="Lubricantes" src="images/banners/bnr-categ-lubricantes.jpg" /></a>
-							<a href="tienda.php?id_cat=15" class="bnrCateg"><img alt="Disfrases" src="images/banners/bnr-categ-disfrases.jpg" /></a>
+							<a href="tienda.php?id_cat=15" class="bnrCateg"><img alt="Disfrases" src="images/banners/bnr-categ-disfraces.jpg" /></a>
                         </div>
                         
 					</div><!--end contenido_central-->
@@ -236,7 +236,7 @@
 			
 			<div class="pie_pagina">
 				<a class="mawape" href="http://www.mawape.com.ar" title="MAWAPE Sistemas"><img src="images/logo-mawape.png" alt="MAWAPE Sistemas" title="MAWAPE Sistemas" /></a>
-				<p class="copyright">&copy; Copyright 2011 - <a href='#' class='basic'>Play Time Sex Shop</a>. Boutique Er&oacute;tica. Todos los derechos.</p>
+				<p class="copyright">&copy; Copyright 2011 - Play Time Sex Shop. Boutique Er&oacute;tica. Todos los derechos.</p>
 			</div><!--end pie-pagina-->
 		</div>
     </body>
