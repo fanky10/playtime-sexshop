@@ -44,6 +44,24 @@ if(count($arrItems)<1){
         <script src="js/jquery-1.5.js" type="text/javascript"></script>
         <script src="js/secciones/build.js" type="text/javascript"></script><!--ANCHO COLUMNAS-->
         
+        <!-- Modal -->
+		<link type='text/css' href='css/basic.css' rel='stylesheet' media='screen' />
+        <script type='text/javascript' src='js/jquery.simplemodal-1.4.1.js'></script>
+        
+        <script type="text/javascript">
+        
+			$().ready(function(){
+/*******************************************************
+*				RECARGAR PAGINA						   *	
+********************************************************/
+	$('#abrirTYC').click(function() {
+            // Recargo la pagina
+            $('.modalTYC#basic-modal-content').modal();
+        });
+});
+		
+        </script>
+        
         <!--[if lte IE 7]>
         <script type="text/javascript" src="js/supersleight-min.js"></script>
         <![endif]-->
@@ -141,7 +159,7 @@ if(count($arrItems)<1){
                             </div>
                             <hr />
                             <input class="checkboxAgree" type="checkbox" id="formCheckoutAgree" name="formCheckoutAgree" />
-                            <label>Acepto los t&eacute;rminos y condiciones de uso de este sitio web</label>
+                            <label>Acepto los <a href="#" id="abrirTYC">t&eacute;rminos y condiciones</a> de uso de este sitio web</label>
                             <div class="formButton">
                             	<input id="formCheckoutSubmit" class="formButton" type="submit" name="formCheckoutSubmit" value="continuar" />
                             </div>
@@ -187,5 +205,14 @@ if(count($arrItems)<1){
 				<p class="copyright">&copy; Copyright 2011 - Play Time Sex Shop. Boutique Er&oacute;tica. Todos los derechos.</p>
 			</div><!--end pie-pagina-->
 		</div>
+        <!-- modal content -->
+		<div id="basic-modal-content" class="modalTYC">
+			<h3>Términos y Condiciones de Compra</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet nibh. Vivamus non arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus, tellus ac ornare aliquam, massa diam tristique urna, id faucibus lectus erat ut pede. Maecenas varius neque nec libero laoreet faucibus. Phasellus sodales, lectus sed vulputate rutrum, ipsum nulla lacinia magna, sed imperdiet ligula nisi eu ipsum.</p>
+		</div>
+		<!-- preload the images -->
+		<div style='display:none'>
+			<img src='images/x.png' alt='cerrrar' title="cerrar" />
+		</div><!-- END modal content -->
     </body>
 </html>

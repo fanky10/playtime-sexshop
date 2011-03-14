@@ -103,13 +103,13 @@
 			</div><!--end pie-pagina-->
 		</div>
         <!-- modal content -->
-		<div id="basic-modal-content">
+		<div id="basic-modal-content" class="modalPROD">
 			<h3>Producto agregado correctamente!!!</h3>
 			<p><a class="formButton" id="aceptar" href='#'>aceptar</a></p>
 		</div>
 		<!-- preload the images -->
 		<div style='display:none'>
-			<img src='images/x.png' alt='cerrrar' title="cerrar" />
+			<img src='images/x.png' alt='cerrar' title="cerrar" />
 		</div><!-- END modal content -->
         
     </body>
