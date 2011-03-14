@@ -84,7 +84,7 @@
                                 <textarea name="data[Contact][message]" cols="5" rows="3" class="textArea" id="ContactMessage" ></textarea>
                             </div>
                             <div class="formButton">
-	                            <input type="image" alt="enviar" class="formButton" />
+	                            <input type="submit" alt="enviar" class="formButton" value="enviar" />
                             </div>
                             <p></p>
 						</form>
