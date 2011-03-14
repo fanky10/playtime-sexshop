@@ -21,7 +21,7 @@ function addProduct(){
         async:true,
         success: function(msg){
             //alert('session updated!');
-			$('#basic-modal-content').modal();
+			$('.modalPROD#basic-modal-content').modal();
         }
     });
     }
@@ -34,3 +34,19 @@ day = new Date();
 id = day.getTime();
 eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=1,scrollbars=0,location=1,statusbar=0,menubar=0,resizable=0,width=800,height=300,left = 200,top = 250');");
 }
+
+$().ready(function(){
+/*******************************************************
+*			VALIDAR FORMULARIO PRODUCTO				   *
+********************************************************/
+	$("#formProducto").submit(function(){return false;});	
+	
+/*******************************************************
+*				RECARGAR PAGINA						   *	
+********************************************************/
+	$('#aceptar').click(function() {
+            // Recargo la p?gina
+            location.reload();
+        });
+});
+	

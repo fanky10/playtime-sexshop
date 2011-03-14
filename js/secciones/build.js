@@ -17,18 +17,6 @@ $().ready(function(){
 		// Animation complete.
 		});
 	});
-/*******************************************************
-*			VALIDAR FORMULARIO PRODUCTO				   *
-********************************************************/
-	$("#formProducto").submit(function(){return false;});	
-	
-/*******************************************************
-*						RECARGAR PAGINA						   *	
-********************************************************/
-	$('#aceptar').click(function() {
-            // Recargo la p�gina
-            location.reload();
-        });
 });//end DOCUMENT
 
 
