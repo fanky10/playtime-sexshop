@@ -154,7 +154,7 @@
 							<a href="tienda.php?id_cat=12" class="bnrCateg"><img alt="Ellas" src="images/banners/bnr-categ-ellas.jpg" /></a>
 							<a href="tienda.php?id_cat=16" class="bnrCateg"><img alt="Ellos" src="images/banners/bnr-categ-ellos.jpg" /></a>
 							<a href="tienda.php?id_cat=1" class="bnrCateg"><img alt="Lubricantes" src="images/banners/bnr-categ-lubricantes.jpg" /></a>
-							<a href="tienda.php?id_cat=15" class="bnrCateg"><img alt="Disfrases" src="images/banners/bnr-categ-disfraces.jpg" /></a>
+							<a href="tienda.php?id_cat=15" class="bnrCateg"><img alt="Disfraces" src="images/banners/bnr-categ-disfraces.jpg" /></a>
                         </div>
                         
 					</div><!--end contenido_central-->
