@@ -52,7 +52,8 @@ if(count($arrItems)<1){
     
     <body>
 		<div class="wrapper">
-				<?php
+			<div class="cabecera">
+                <?php
 					include 'cabecera.php';
 				?>
 			</div><!--end cabecera-->
