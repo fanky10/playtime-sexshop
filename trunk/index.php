@@ -69,10 +69,11 @@
                         <ul id="slider1">
                             <li>
                                 <div class="slide">
-                                    <img height="180" width="180" alt="Lubricante - Anal Lub 50 grs." src="images/productos/lubricantes/lubricante1.jpg" class="sliderImg">
+                                	
+                                    <img height="180" width="180" alt="Duck Massager" src="scripts/image_script.php?id_img=57" class="sliderImg">
                                     <div class="detalleDestacado">
-                                        <h3>Anal Lub 50 grs.</h3>
-                                        <p class="prodInfo">Dilatador anal. Crema humectante con f&oacute;rmula desensibilizadora, soluble en agua que act&uacute;a instant&aacute;neamente logrando un coito anal sin dolor. Tiene cualidades desinflamatorias y analg&eacute;sicas.<span class="prodPrecio">$37,00<a href="#">Ver Detalles</a></span></p>
+                                        <h3>Duck Massager</h3>
+                                        <p class="prodInfo">TE ANIMAS? Ideal para pasarlo por el clítoris, pezones, lados del pene, entrepierna y para dar un masaje por todo el cuerpo. El/ella a vos y vos a él/ella.<span class="prodPrecio">$ 150,00<a href="producto.php?id_prod=28">Ver Detalles</a></span></p>
                                         <p class="social">
                         					<span>Compartir:</span>
                                                                 
@@ -86,10 +87,10 @@
                             </li>                            
                         	<li>
                                 <div class="slide">
-                                    <img height="180" width="180" alt="Lubricante - Anal Lub 50 grs." src="images/productos/lubricantes/lubricante1.jpg" class="sliderImg">
+                                    <img height="180" width="180" alt="Climax Gems Blue" src="scripts/image_script.php?id_img=58" class="sliderImg">
                                     <div class="detalleDestacado">
-                                        <h3>Anal Lub 50 grs.</h3>
-                                        <p class="prodInfo">Dilatador anal. Crema humectante con f&oacute;rmula desensibilizadora, soluble en agua que act&uacute;a instant&aacute;neamente logrando un coito anal sin dolor. Tiene cualidades desinflamatorias y analg&eacute;sicas.<span class="prodPrecio">$37,00<a href="#">Ver Detalles</a></span></p>
+                                        <h3>Climax Gems Blue</h3>
+                                        <p class="prodInfo">De exclusivos diseños y dimensiones delicadas (15 cm.). Sumergibles para jugar donde quieras. Ideal para llevarlos en la cartera a todos lados…<span class="prodPrecio">$ 149,00<a href="producto.php?id_prod=52">Ver Detalles</a></span></p>
                                         <p class="social">
                         					<span>Compartir:</span>
                         					<a href="#" class="socialFacebook"></a>
@@ -102,10 +103,10 @@
                             </li>
                             <li>
                                 <div class="slide">
-                                    <img height="180" width="180" alt="Lubricante - Anal Lub 50 grs." src="images/productos/lubricantes/lubricante1.jpg" class="sliderImg">
+                                    <img height="180" width="180" alt="Jeff Stricker -SCV-" src="scripts/image_script.php?id_img=85" class="sliderImg">
                                     <div class="detalleDestacado">
-                                        <h3>Anal Lub 50 grs.</h3>
-                                        <p class="prodInfo">Dilatador anal. Crema humectante con f&oacute;rmula desensibilizadora, soluble en agua que act&uacute;a instant&aacute;neamente logrando un coito anal sin dolor. Tiene cualidades desinflamatorias y analg&eacute;sicas.<span class="prodPrecio">$37,00<a href="#">Ver Detalles</a></span></p>
+                                        <h3>Jeff Stricker -SCV-</h3>
+                                        <p class="prodInfo">Firme, flexible y 100% sólido. Usted vera y sentirá un verdadero hombre, con la diferencia de que nunca se cansará. Medidas: 22x6 cm<span class="prodPrecio">$ 210,00<a href="producto.php?id_prod=48">Ver Detalles</a></span></p>
                                         <p class="social">
                         					<span>Compartir:</span>
                         					<a href="#" class="socialFacebook"></a>
@@ -118,11 +119,11 @@
                             </li>
                             <li>
                                 <div class="slide">
-                                    <img height="180" width="180" alt="Lubricante - Anal Lub 50 grs." src="images/productos/lubricantes/lubricante1.jpg" class="sliderImg">
+                                    <img height="180" width="180" alt="Mariposa Super Excitadora" src="scripts/image_script.php?id_img=64" class="sliderImg">
                                     <div class="detalleDestacado">
-                                        <h3>Anal Lub 50 grs.</h3>
-                                        <p class="prodInfo">Dilatador anal. Crema humectante con f&oacute;rmula desensibilizadora, soluble en agua que act&uacute;a instant&aacute;neamente logrando un coito anal sin dolor. Tiene cualidades desinflamatorias y analg&eacute;sicas.<span class="prodPrecio">$37,00<a href="#">Ver Detalles</a></span></p>
-                                        <p class="social">
+                                        <h3>Mariposa Super Excitadora</h3>
+                                        <p class="prodInfo">Despliega sus alas y deja tu Pasión Volar... Encontraras tu lado salvaje con su confortable y sensual cosquilleo. Para aumentar las estimulaciones clitoriales combinando simultáneamente la penetración anal u otras tareas.<span class="prodPrecio">$ 99,00<a href="producto.php?id_prod=11">Ver Detalles</a></span></p>
+                                        <p class="social" style="margin:-8px 0 0 0;">
                         					<span>Compartir:</span>
                         					<a href="#" class="socialFacebook"></a>
                         					<a href="#" class="socialTwitter"></a>
@@ -134,10 +135,10 @@
                             </li>
                             <li>
                                 <div class="slide">
-                                    <img height="180" width="180" alt="Lubricante - Anal Lub 50 grs." src="images/productos/lubricantes/lubricante1.jpg" class="sliderImg">
+                                    <img height="180" width="180" alt="El Torero -SCV-" src="scripts/image_script.php?id_img=16" class="sliderImg">
                                     <div class="detalleDestacado">
-                                        <h3>Anal Lub 50 grs.</h3>
-                                        <p class="prodInfo">Dilatador anal. Crema humectante con f&oacute;rmula desensibilizadora, soluble en agua que act&uacute;a instant&aacute;neamente logrando un coito anal sin dolor. Tiene cualidades desinflamatorias y analg&eacute;sicas.<span class="prodPrecio">$37,00<a href="#">Ver Detalles</a></span></p>
+                                        <h3>El Torero -SCV-</h3>
+                                        <p class="prodInfo">Dejaras exhausta a tu pareja con este anillo de suave gel con estimulador clitorial y una exclusiva sensación de vibración para ambos.<span class="prodPrecio">$ 99,00<a href="producto.php?id_prod=84">Ver Detalles</a></span></p>
                                         <p class="social">
                         					<span>Compartir:</span>
                         					<a href="#" class="socialFacebook"></a>
