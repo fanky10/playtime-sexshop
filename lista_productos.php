@@ -64,7 +64,7 @@
                 if(strlen($info)<100){
                     $continues = "";
                 }
-                echo "<a class=\"grupo_productos\" rel=\"grupoP\" href=\"$img_source\"><img class=\"prodImagen\" src=\"$img_source\" alt=\"".$oProducto->getNombre()."\" height=\"90\" width=\"90\"/></a>";
+                echo "<a class=\"grupo_productos\" rel=\"grupoP\" href=\"$img_source\"><img class=\"prodImagen\" src=\"$img_source\" alt=\"".$oProducto->getNombre()."\" height=\"auto\" width=\"90\"/></a>";
                 echo "<p class=\"prodInfo\">".$info." ".$continues;//substr($oProducto->getInformacion(), 0, 100);;
                 echo "<span class=\"prodPrecio\">$".Utilidades::formatero_numero($oProducto->getPrecio())."<a href=\"producto.php?id_prod=".$oProducto->getId_Producto()."\">Ver Detalles</a></span>";
                 echo "</p>";

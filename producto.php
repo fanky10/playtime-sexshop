@@ -105,7 +105,8 @@
         <!-- modal content -->
 		<div id="basic-modal-content" class="modalPROD">
 			<h3>Producto agregado correctamente!!!</h3>
-			<p><a class="formButton" id="aceptar" href='#'>aceptar</a></p>
+			<p><a class="formButton" id="aceptar" href='#'>seguir comprando</a></p>
+			<p><a class="formButton" id="finalCompra" href='cart.php'>finalizar compra</a></p>
 		</div>
 		<!-- preload the images -->
 		<div style='display:none'>
