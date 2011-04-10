@@ -63,7 +63,7 @@
         	        	<div class="ruta"><a href="index.php">Inicio</a> / <a href="contacto.php">Contacto</a></div>
         	            
         	            <h1 class="categoria"><span>Contacto</span></h1>
-        	            <p class="copy">Dolor sit amet consectetuer adipiscing elit sed diam nonummy. Lectores legere me lius, quod ii legunt saepius claritas est?Dolor sit amet consectetuer adipiscing elit sed diam nonummy. Lectores legere me lius, quod ii legunt saepius claritas est?</p>
+        	            <p class="copy">Si tenes dudas, sugerencias o algún otro tipo de inquietud, no dudes en contactarnos.</p>
                         
                         <form id="frmContact">
 							<fieldset style="display:none;"><input type="hidden" name="_method" value="POST" /></fieldset>
