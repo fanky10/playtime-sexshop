@@ -24,6 +24,11 @@ if($action=="add"){//espero por post todos los datos necesarios
     $direccion = $_POST["formCheckoutDireccion"];
     $ciudad = $_POST["formCheckoutCiudad"];
     $codigo_postal = $_POST["formCheckoutPostal"];
+    echo 'echoing data..'.$nombre.'<br/>';
+    echo 'echoing data..'.$apellido.'<br/>';
+    echo 'echoing data..'.$email.'<br/>';
+    echo 'echoing data..'.$telefono.'<br/>';
+    echo 'echoing data.. SELECT'.$_POST["formCheckoutSelect"].'<br/>';
     $zona_envio = (int) $_POST["formCheckoutSelect"];
     //validamos entradas
     if($zona_envio<1){

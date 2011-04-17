@@ -43,6 +43,8 @@ if(count($arrItems)<1){
 		<!--JS FILES-->
         <script src="js/jquery-1.5.js" type="text/javascript"></script>
         <script src="js/secciones/build.js" type="text/javascript"></script><!--ANCHO COLUMNAS-->
+        <script src="js/secciones/checkout01.js" type="text/javascript"></script><!--PROPIO-->
+        <script src="js/jquery.validate.js" type="text/javascript"></script><!--NEEDED FOR VALIDATIONS-->
         
         <!-- Modal -->
 		<link type='text/css' href='css/basic.css' rel='stylesheet' media='screen' />
@@ -96,73 +98,70 @@ if(count($arrItems)<1){
         	        <h3><span>Categor&iacute;as</span></h3>
         	        <?php
 	                    include 'menu_categorias.php';
-                    ?>
-				</div><!--end lateral_izquierdo-->
+                        ?>
+                        </div><!--end lateral_izquierdo-->
 			
-				<div class="contenido">
-					
-					<div id="contenido_central">
-                                            <?php
-                                            //TODO: verifica elementos en carrito
-                                            if(isset($mensaje_error) ){
-                                                echo $mensaje_error;
+                    <div class="contenido">
 
-                                            }else{
-                                            ?>
-        	        	<div class="ruta"><a href="index.php">Inicio</a> / <a href="contacto.php">Contacto</a></div>
+                            <div id="contenido_central">
+                                <?php
+                                //TODO: verifica elementos en carrito
+                                if(isset($mensaje_error) ){
+                                    echo $mensaje_error;
+
+                                }else{
+                                ?>
+                        <div class="ruta"><a href="index.php">Inicio</a> / <a href="contacto.php">Contacto</a></div>
         	            
         	            <h1 class="categoria"><span>Informaci&oacute;n de cliente</span></h1>
-        	            <p>Dolor sit amet consectetuer adipiscing elit sed diam nonummy. Lectores legere me lius, quod ii legunt saepius claritas est?Dolor sit amet consectetuer adipiscing elit sed diam nonummy. Lectores legere me lius, quod ii legunt saepius claritas est?</p>
-                        
-                        <form action="client_handler.php?action=add&redirect=checkout02.php" method="post" id="formCheckout01">
-                            <div class="formField">
-                                <label>Nombre:</label>
-                                <input id="formCheckoutNombre" name="formCheckoutNombre" class="inputData required" maxlength="255" value="" />
-                            </div>
-                            <div class="formField">
-                                <label>Apellido:</label>
-                                <input id="formCheckoutApellido" name="formCheckoutApellido" class="inputData required" maxlength="255" value="" />
-                            </div>
-                            <div class="formField">
-                                <label>E-mail:</label>
-                                <input id="formCheckoutMail" name= "formCheckoutMail" class="inputData required email" maxlength="255" value="" />
-                            </div>
-                            <div class="formField">
-                                <label>Tel&eacute;fono:</label>
-                                <input id="formCheckoutTel" name="formCheckoutTel" class="inputData number" maxlength="255" value="" />
-                            </div>
-                            
-                            <div class="formField">
-                                <label>Direcci&oacute;n:</label>
-                                <input id="formCheckoutDireccion" name= "formCheckoutDireccion" class="inputData required" maxlength="255" value="" />
-                            </div>
-                            <div class="formField">
-                                <label>Ciudad:</label>
-                                <input id="formCheckoutCiudad" name="formCheckoutCiudad" class="inputData required" maxlength="255" value="" />
-                            </div>
-                            <div class="formField">
-                                <label>C&oacute;digo Postal:</label>
-                                <input id="formCheckoutPostal" name="formCheckoutPostal" class="inputData required" maxlength="255" value="" />
-                            </div>
-                            <div class="formField">
-                                <?php
-                                include 'opc_zonas.php';
-                                ?>
-                               <!--
-                                <label>Select:</label>
-                                   <select id="formCheckoutSelect"  name="formCheckoutSelect">
-                                        <option selected="selected" value="arg">Opcion 01</option>
-                                        <option value="02">Opcion 02</option>
-                                        <option value="03">Opcion 03</option>
-                                    </select>
-                                -->
-                            </div>
-                            <hr />
-                            <input class="checkboxAgree" type="checkbox" id="formCheckoutAgree" name="formCheckoutAgree" />
-                            <label>Acepto los <a href="#" id="abrirTYC">t&eacute;rminos y condiciones</a> de uso de este sitio web</label>
-                            <div class="formButton">
-                            	<input id="formCheckoutSubmit" class="formButton" type="submit" name="formCheckoutSubmit" value="continuar" />
-                            </div>
+                            <p>Ingrese sus datos por favor</p>
+        	            <!--
+                            <p>Dolor sit amet consectetuer adipiscing elit sed diam nonummy. Lectores legere me lius, quod ii legunt saepius claritas est?Dolor sit amet consectetuer adipiscing elit sed diam nonummy. Lectores legere me lius, quod ii legunt saepius claritas est?</p>
+                            -->
+                            <form id="formCheckout01" action="client_handler.php?action=add&redirect=checkout02.php" method="POST">
+                                <fieldset style="display:none;">
+                                    <input type="hidden" name="_method" value="POST" />
+                                </fieldset>
+                                <div class="formField">
+                                    <label for="formCheckoutNombre">Nombre:</label>
+                                    <input name="data[User][name]" type="text" class="inputData" maxlength="255" value="" id="formCheckoutNombre" />
+                                </div>
+                                <div class="formField">
+                                    <label>Apellido:</label>
+                                    <input id="formCheckoutApellido" name="data[User][surname]" class="inputData required" maxlength="255" value="" />
+                                </div>
+                                <div class="formField">
+                                    <label>E-mail:</label>
+                                    <input id="formCheckoutMail" name= "data[User][email]" class="inputData required email" maxlength="255" value="" />
+                                </div>
+                                <div class="formField">
+                                    <label>Tel&eacute;fono:</label>
+                                    <input id="formCheckoutTel" name="data[User][phone]" class="inputData number" maxlength="255" value="" />
+                                </div>
+
+                                <div class="formField">
+                                    <label>Direcci&oacute;n:</label>
+                                    <input id="formCheckoutDireccion" name= "data[User][address]" class="inputData required" maxlength="255" value="" />
+                                </div>
+                                <div class="formField">
+                                    <label>Ciudad:</label>
+                                    <input id="formCheckoutCiudad" name="data[User][city]" class="inputData required" maxlength="255" value="" />
+                                </div>
+                                <div class="formField">
+                                    <label>C&oacute;digo Postal:</label>
+                                    <input id="formCheckoutPostal" name="data[User][postalc]" class="inputData required" maxlength="255" value="" />
+                                </div>
+                                <div class="formField">
+                                    <?php
+                                    include 'opc_zonas.php';
+                                    ?>
+                                </div>
+                                <hr />
+                                <label for="formCheckoutAgree">Acepto los <a href="#" id="abrirTYC">t&eacute;rminos y condiciones</a> de uso de este sitio web</label>
+                                <input class="checkboxAgree" type="checkbox" id="formCheckoutAgree" name="data[User][agree]" />
+                                <div class="formButton">
+                                    <input id="formCheckoutSubmit" class="formButton" type="submit" name="formCheckoutSubmit" value="continuar" />
+                                </div>
         	            </form>
         	            <?php
                             }//end else del check de error
