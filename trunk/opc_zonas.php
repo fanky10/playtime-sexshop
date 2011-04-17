@@ -6,9 +6,9 @@
         <option value="03">Opcion 03</option>
     </select>
 -->
-<label>Select:</label>
-   <select id="formCheckoutSelect"  name="formCheckoutSelect">
-       <option selected="selected" value="-1">Seleccione Zona Envio</option>
+<label>Zona:</label>
+   <select id="formCheckoutSelect"  name="data[User][sendzone]" validate="required:true">
+       <option selected="selected" value="">Seleccione Zona Envio</option>
 <?php
 include_once 'datos/zonas.php';
 $dZonas = new DataZonas();
