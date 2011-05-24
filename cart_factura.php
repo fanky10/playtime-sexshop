@@ -1,9 +1,11 @@
 <?php
     @session_start();
-    include_once 'entidades/shoppingcart.php';
-    include_once 'entidades/cliente.php';
-    include_once 'datos/zonas.php';
-    include_once 'util/utilidades.php';
+    
+    include_once 'init.php';
+    include_once ROOT_DIR .'/entidades/shoppingcart.php';
+    include_once ROOT_DIR .'/entidades/cliente.php';
+    include_once ROOT_DIR .'/datos/zonas.php';
+    include_once ROOT_DIR .'/util/utilidades.php';
     //datos del cart
     //si la encontramos sin nada la creamos al toke
     if(!session_is_registered('cart')){//si no esta registrado lo registramos

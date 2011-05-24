@@ -4,7 +4,8 @@
  * este es el que muestra una preview de lo que viene comprando...
  */
 @session_start();
-include_once 'entidades/shoppingcart.php';
+include_once 'init.php';
+include_once ROOT_DIR .'/entidades/shoppingcart.php';
 
 //si la encontramos sin nada la creamos al toke
 if(!session_is_registered('cart')){//si no esta registrado lo registramos

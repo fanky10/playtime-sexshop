@@ -13,6 +13,9 @@
  * @author fanky
  *
  */
+
+include_once '../init.php';
+include_once ROOT_DIR .'/conf/conf.php';
 class Data {
     protected $connection;
     public function __construct() {
@@ -26,7 +29,7 @@ class Data {
     protected function initDB(){
         //setea en la session la database
         if(! isset($_SESSION['databaseURL'])){
-                include("./conf/conf.php");
+//                include("../conf/conf.php");
                 $dbConf = new Configuracion();
                 $databaseURL = $dbConf->get_databaseURL();
                 $databaseUName = $dbConf->get_databaseUName();

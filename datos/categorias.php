@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 include_once 'data.php';
-include_once './entidades/categoria.php';
+include_once '../init.php';
+include_once ROOT_DIR .'/entidades/categoria.php';
 /**
  * Description of categorias
  *
