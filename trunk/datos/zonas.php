@@ -5,7 +5,8 @@
  */
 
 include_once 'data.php';
-include_once './entidades/zona.php';
+include_once '../init.php';
+include_once ROOT_DIR .'/entidades/zona.php';
 /**
  * Description of zonas
  *

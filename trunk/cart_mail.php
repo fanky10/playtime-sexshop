@@ -6,8 +6,9 @@
  * para la confirmacion de datos
  */
 @session_start();
-include_once 'entidades/shoppingcart.php';
-include_once 'entidades/cliente.php';
+include_once 'init.php';
+include_once ROOT_DIR .'/entidades/shoppingcart.php';
+include_once ROOT_DIR .'/entidades/cliente.php';
 
 //si la encontramos sin nada la creamos al toke
 if(!session_is_registered('cart')){//si no esta registrado lo registramos
