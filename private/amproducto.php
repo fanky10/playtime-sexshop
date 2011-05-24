@@ -14,10 +14,10 @@
             <!--JS FILES-->
         <script src="../js/jquery-1.5.js" type="text/javascript"></script>
         <script src="../js/secciones/build.js" type="text/javascript"></script><!--ANCHO COLUMNAS-->
-        <script src="../js/secciones/contact.js" type="text/javascript"></script><!--PROPIO-->
+        
         <script src="../js/jquery.validate.js" type="text/javascript"></script><!--EMAIL-->
         <script type="text/javascript" src="../js/jquery.metadata.js"></script>
-        
+        <script src="js/amproducto.js" type="text/javascript"></script><!--PROPIO DEL AM-->
         <!--[if lte IE 7]>
         <script type="text/javascript" src="js/supersleight-min.js"></script>
         <![endif]-->
@@ -34,12 +34,12 @@
                         <h1 class="categoria"><span>Alta Producto</span></h1>
                         <p class="copy">Ingrese los datos de un nuevo producto.</p>
                         
-                        <form id="frmContact">
+                        <form id="frmAMProducto">
                             <fieldset style="display:none;"><input type="hidden" name="_method" value="POST" /></fieldset>
 
                             <div class="formField">
                             <label for="ContactName">Nombre Producto:</label>
-                            <input name="data[Contact][name]" type="text" class="inputData" maxlength="255" value="" id="ContactName" />                            
+                            <input name="data[Product][name]" type="text" class="inputData" maxlength="255" value="" id="ContactName" />                            
                             </div>
                             <!--
                             <div class="formField">
