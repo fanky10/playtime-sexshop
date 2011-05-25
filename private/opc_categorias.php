@@ -8,7 +8,7 @@
 //echo "data instance created!";//everything went right!
 ?>
 <label>Categoria:</label>
-   <select id="formCheckoutSelect"  name="data[User][sendzone]" validate="required:true">
+   <select id="ProductCat"  name="data[Product][category]" validate="required:true">
        <option selected="selected" value="">Seleccione Categoria</option>
 <?php
 include_once '../init.php';

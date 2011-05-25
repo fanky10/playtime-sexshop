@@ -13,11 +13,12 @@
 
             <!--JS FILES-->
         <script src="../js/jquery-1.5.js" type="text/javascript"></script>
-        <script src="../js/secciones/build.js" type="text/javascript"></script><!--ANCHO COLUMNAS-->
+        <script src="../js/jquery.metadata.js" type="text/javascript" ></script>
+        <script src="../js/jquery.validate.js" type="text/javascript"></script><!--VALIDATION-->
+        <script src="../js/jquery.form.js" type="text/javascript" ></script><!--FILE UPLOAD-->
         
-        <script src="../js/jquery.validate.js" type="text/javascript"></script><!--EMAIL-->
-        <script type="text/javascript" src="../js/jquery.metadata.js"></script>
-        <script src="js/amproducto.js" type="text/javascript"></script><!--PROPIO DEL AM-->
+        <script src="../js/secciones/build.js" type="text/javascript"></script><!--ANCHO COLUMNAS-->
+        <script src="js/amproducto.js" type="text/javascript"></script><!--VALIDA DATOS DE ENTRADA-->
         <!--[if lte IE 7]>
         <script type="text/javascript" src="js/supersleight-min.js"></script>
         <![endif]-->
@@ -34,46 +35,36 @@
                         <h1 class="categoria"><span>Alta Producto</span></h1>
                         <p class="copy">Ingrese los datos de un nuevo producto.</p>
                         
-                        <form id="frmAMProducto">
-                            <fieldset style="display:none;"><input type="hidden" name="_method" value="POST" /></fieldset>
+                        <form id="uploadForm" action="product_handler.php?action=idk" method="POST" enctype="multipart/form-data">
+<!--                            <fieldset style="display:none;"><input type="hidden" name="_method" value="POST" /></fieldset>-->
 
                             <div class="formField">
-                            <label for="ContactName">Nombre Producto:</label>
-                            <input name="data[Product][name]" type="text" class="inputData" maxlength="255" value="" id="ContactName" />                            
+                                <label for="ProductName">Nombre Producto:</label>
+                                <input name="data[Product][name]" type="text" class="inputData" maxlength="255" value="" id="ProductName" />                            
                             </div>
-                            <!--
                             <div class="formField">
-                                <?php
-                                //TODO: ver que onda con el tema de las marcas
-                                //include 'opc_marcas.php';
-                                ?>
+                                <label for="ProductCod">Codigo Producto:</label>
+                                <input name="data[Product][codigo]" type="text" class="inputData" maxlength="255" value="" id="ProductCod" />                            
                             </div>
-                            -->
                             <div class="formField">
                                 <?php
                                 include 'opc_categorias.php';
                                 ?>
                             </div>
-                            <!--
                             <div class="formField">
-                            <label for="ContactPhone">Tel&eacute;fono:</label>
-                            <input name="data[Contact][phone]" type="text" class="inputData" maxlength="255" value="" id="ContactPhone" />
+                                <input name="MAX_FILE_SIZE" value="102400" type="hidden" id="MAX_FILE_SIZE"/>
+                                <label for="ProductImage">Imagen Producto:</label>
+                                <input name="data[Product][imagen]" type="file" class="inputData" id="ProductImage" class="{validate:{required:true,accept:true}}"  />                            
                             </div>
-                            <div class="formField">
-                            <label for="ContactRecipient">E-mail:</label>
-                            <input name="data[Contact][recipient]" type="text" class="inputData " value="" id="ContactRecipient" />
-                            </div>
-                            <div class="formField">
-                            <label for="ContactMessage">Comentario:</label>
-                            <textarea name="data[Contact][message]" cols="5" rows="3" class="textArea" id="ContactMessage" ></textarea>
-                            </div>
-                            -->
+<!--                            <label for="file">Imagen</label>
+                            <input type="file" id="ImgSrc" name="file" class="{validate:{required:true,accept:true}}" />
+                            <input name="MAX_FILE_SIZE" value="102400" type="hidden" id="MAX_FILE_SIZE"/>-->
                             <div class="formButton">
                                 <input type="submit" alt="Guardar" class="formButton" value="Guardar" />
                             </div>
                             <p></p>
                         </form>
-                        <p id="mensaje"><strong>Los cambios se han efectuado correctamente!</strong></p>
+                        <p id="mensaje"><strong>Aqui el mensaje de resultado!</strong></p>
                         
                     </div><!--end contenido_central-->
 

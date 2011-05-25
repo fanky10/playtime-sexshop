@@ -23,8 +23,9 @@ class Data {
         $this->connection = $this->initDB();
     }
     /*
-    DB Initialization method.
-    Returns the connection variable.
+     * DB Initialization method.
+     * Returns the connection variable.
+     * ver de hacerla singleton o algo asi para no consumir tantos recursos y evitar uso indebido
     */
     protected function initDB(){
         //setea en la session la database

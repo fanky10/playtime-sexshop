@@ -14,7 +14,7 @@ include_once ROOT_DIR .'/entidades/producto.php';
  * @author fanky
  */
 class DataProductos extends Data {
-    private $producto;
+    
     public function __construct() {
         parent::__construct();
     }
@@ -204,23 +204,13 @@ class DataProductos extends Data {
     }
     
     
-
-    public function setProducto($producto){
-        $this->producto = $producto;
-    }
-    //antes de agregar el nuevo producto 
-    //primero debe ser seteado correctamente
-    //sino tira exception (una especie de nullpointer exception xD)
-    //
-    public function addProducto($imagen){
-        isset ($this->producto)
-                or new Exception("todo mal producto no instanciado");
+    //metodo para insertar un nuevo producto
+    public function addProducto($product){
+        
         $query = "insert into producto values(";
 
     }
-    //antes de agregar el nuevo producto
-    //primero debe ser seteado correctamente
-    //sino tira exception (una especie de nullpointer exception xD)
+    //metodo para hacer update del producto
     public function updProducto($imagen){
 
     }

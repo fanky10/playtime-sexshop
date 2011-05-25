@@ -1,45 +1,38 @@
 // JavaScript Document
-$().ready(function(){				   
-$("#mensaje").hide();
-/*******************************************************
-*			VALIDAR FORMULARIO CONTACTO				   *
-********************************************************/
-$("#frmAMProducto").validate({
-	event: "blur",
-	rules: {
-	'data[Product][name]': "required"
-        //,'data[Product][recipient]': { required: true, email: true }
-        //,'data[Contact][message]': "required"
-	},
-	messages: {
-	'data[Product][name]': "Por favor ingrese un nombre valido"
-	//,'data[Contact][recipient]': "Ingrese una dirección de e-mail válida"
-	//,'data[Contact][message]': "Por favor, ingrese su mensaje o consulta"
-	},
 	
-	debug: true,
-	errorElement: "label",
-	errorContainer: $("#errores"),
-	submitHandler: function(form){
-	
-	$.ajax({
-	
-		type: "GET",
-		url:"envio.php",
-		contentType: "application/x-www-form-urlencoded",
-		processData: false,
-		data: "nombre="+$('#ContactName').val()+"&email="+$('#ContactRecipient').val()+"&telefono="+$('#ContactPhone').val()+"&comentario="+$('#ContactMessage').val(),
-		success: function(msg){
-		//if(msg==1){
-		$("#mensaje").fadeIn('slow');
-		$('#ContactName').val('');
-		$('#ContactRecipient').val('');
-		$('#ContactPhone').val('');
-		$('#ContactMessage').val('');
-		$('#frmContact').fadeOut('slow');
-		//}
-		}
-	});
-	}
-});
+    /*******************************************************
+    *			VALIDAR FORMULARIO ALTA-MODIFICACION PRODUCTO				   *
+    ********************************************************/
+$().ready(function(){
+    $("#uploadForm").validate({
+            event: "blur",
+            rules: {
+            'data[Product][name]': "required",
+            'data[Product][category]':"required",
+            'data[Product][codigo]':"required",
+            'data[Product][imagen]':"required"
+            },
+            messages: {
+            'data[Product][name]': "Por favor ingrese un nombre válido",
+            'data[Product][category]':"Por favor ingrese una categoria válida",
+            'data[Product][codigo]':"Por favor ingrese un codigo válido",
+            'data[Product][imagen]':"Por favor ingrese una imagen valida"
+            },
+
+            debug: true,
+            errorElement: "label",
+            errorContainer: $("#errores"),
+            submitHandler: function(form){
+                jQuery(form).ajaxSubmit({
+                    beforeSubmit: function(a,f,o) {
+                        o.dataType = "html";//very very important piece of code :)
+                        $('#mensaje').html('Enviando datos...');
+                    },
+                    success: function(data) {
+                        var $out = $('#mensaje');
+                        $out.append('<div><pre>'+ data +'</pre></div>');
+                    }
+                });
+            }
+    });
 });
