@@ -35,7 +35,7 @@
                         <h1 class="categoria"><span>Alta Producto</span></h1>
                         <p class="copy">Ingrese los datos de un nuevo producto.</p>
                         
-                        <form id="uploadForm" action="product_handler.php?action=idk" method="POST" enctype="multipart/form-data">
+                        <form id="uploadForm" action="product_handler.php?action=add" method="POST" enctype="multipart/form-data">
 <!--                            <fieldset style="display:none;"><input type="hidden" name="_method" value="POST" /></fieldset>-->
 
                             <div class="formField">
@@ -47,6 +47,14 @@
                                 <input name="data[Product][codigo]" type="text" class="inputData" maxlength="255" value="" id="ProductCod" />                            
                             </div>
                             <div class="formField">
+                                <label for="ProductPrice">Precio Producto:</label>
+                                <input name="data[Product][price]" type="text" class="inputData" maxlength="255" value="" id="ProductPrice" />                            
+                            </div>
+                            <div class="formField">
+                                <label for="ProductDesc">Descripcion Producto:</label>
+                                <textarea name="data[Product][descrip]" cols="5" rows="3" class="textArea" id="ProductDesc" ></textarea>
+                            </div>
+                            <div class="formField">
                                 <?php
                                 include 'opc_categorias.php';
                                 ?>
@@ -54,7 +62,7 @@
                             <div class="formField">
                                 <input name="MAX_FILE_SIZE" value="102400" type="hidden" id="MAX_FILE_SIZE"/>
                                 <label for="ProductImage">Imagen Producto:</label>
-                                <input name="data[Product][imagen]" type="file" class="inputData" id="ProductImage" class="{validate:{required:true,accept:true}}"  />                            
+                                <input name="file" type="file" class="inputData" id="ProductImage" class="{validate:{required:true,accept:true}}"  />                            
                             </div>
 <!--                            <label for="file">Imagen</label>
                             <input type="file" id="ImgSrc" name="file" class="{validate:{required:true,accept:true}}" />
