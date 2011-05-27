@@ -7,6 +7,7 @@ include_once 'data.php';
 
 include_once '../init.php';
 include_once ROOT_DIR .'/entidades/producto.php';
+include_once ROOT_DIR .'/util/utilidades.php';
 
 /**
  * Description of Productos
@@ -14,9 +15,9 @@ include_once ROOT_DIR .'/entidades/producto.php';
  * @author fanky
  */
 class DataProductos extends Data {
-    
     public function __construct() {
         parent::__construct();
+        
     }
     /**
      * a partir del arreglo que esta guardado en la variable SESSION
@@ -203,13 +204,61 @@ class DataProductos extends Data {
         return $total;
     }
     
-    
-    //metodo para insertar un nuevo producto
-    public function addProducto($product){
-        
-        $query = "insert into producto values(";
-
+    public function getUltimoID(){
+        $query = "select max(id) as ultimo_id from producto";
+        $result = mysql_query($query)
+            or die ("Query Failed ".mysql_error());
+        $id = -1;
+        while($row = mysql_fetch_array($result,MYSQL_ASSOC)){
+            $id = $row['ultimo_id'];
+        }
+        return $id;
     }
+    //metodo para insertar un nuevo producto
+    public function addProducto(Producto $producto){
+        /* @var $producto Producto */
+        $non_query = "insert into producto (nombre,descripcion,informacion,codigo,id_imagen) values(".
+                    Utilidades::db_adapta_string($producto->getNombre()).",".
+                    Utilidades::db_adapta_string($producto->getDescription()).",".
+                    Utilidades::db_adapta_string("").",".
+                    Utilidades::db_adapta_string($producto->getCodigo()).",".
+                    Utilidades::db_adapta_string($producto->getImagen()).                        
+                    ")";
+        //lo insertamos
+        $results = mysql_query($non_query)
+            or die ("Query Failed ".mysql_error());
+        
+        //ultimo id
+        $id = $this->getUltimoID();
+        //nuevo precio
+        $non_query = "insert into precio_producto values(".
+                    Utilidades::db_adapta_string($id).",current_timestamp,".
+                    Utilidades::db_adapta_string(Utilidades::db_number($producto->getPrecio())). 
+                    ")";
+        $result = mysql_query($non_query)
+            or die ("Query Failed ".mysql_error());
+    }
+    //averiguar xq esto ROMPE TODO
+//    public function addProducto(Producto $producto, $data_img){
+//        //with transactions men!
+//        try {
+//            //begin
+//            $this->connection->begin();
+//
+//            // A set of queries ; of one fails, an exception should be thrown
+//            $db->query('first query');
+//            $db->query('second query');
+//            $db->query('third query');
+//
+//            // If we arrive here, it means that no exception was thrown
+//            // i.e. no query has failed ; and we can commit the transaction
+//            $this->connection->commit();
+//        } catch (Exception $e) {
+//            // An exception has been thrown
+//            // We must rollback the transaction
+//            $this->connection->rollback();
+//        }
+//    }
     //metodo para hacer update del producto
     public function updProducto($imagen){
 

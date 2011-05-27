@@ -87,6 +87,13 @@ class DataCategorias extends Data{
         $this->closeDB($connection);
         return $vCategorias;
     }
+    public function addCategoriaProducto($id_categoria, $id_producto){
+        $query = "INSERT INTO categoria_producto ";
+        $query .= "VALUES ($id_producto,$id_categoria)";
+//        echo "<br/>addCatProd: $query";
+        $results = mysql_query($query)
+            or die ("<br/>Query Failed ".mysql_error());
+    }
     
 }
 ?>

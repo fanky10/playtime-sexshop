@@ -10,13 +10,17 @@ $().ready(function(){
             'data[Product][name]': "required",
             'data[Product][category]':"required",
             'data[Product][codigo]':"required",
-            'data[Product][imagen]':"required"
+            'file':"required",
+            'data[Product][price]': "required",
+            'data[Product][descrip]': "required"
             },
             messages: {
             'data[Product][name]': "Por favor ingrese un nombre válido",
             'data[Product][category]':"Por favor ingrese una categoria válida",
             'data[Product][codigo]':"Por favor ingrese un codigo válido",
-            'data[Product][imagen]':"Por favor ingrese una imagen valida"
+            'file':"Por favor ingrese una imagen valida",
+            'data[Product][price]': "Por favor ingrese un precio válido",
+            'data[Product][descrip]': "Por favor ingrese una descripcion válida"
             },
 
             debug: true,
