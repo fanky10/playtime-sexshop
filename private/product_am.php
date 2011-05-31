@@ -44,7 +44,7 @@
                         $action = $_GET["action"];
                         $id_producto = $_GET["id_producto"];
                         //argumentos para el handler
-                        $args = "action=";
+                        $args = "?action=";
                         
                         if($action == "upd" && isset ($id_producto)){
                             $args .=   "$action&id_producto=$id_producto";
@@ -63,7 +63,7 @@
                             <?php
                         }
                         ?>
-                        <form id="uploadForm" action="product_handler.php?<?php echo $args;?>" method="POST" enctype="multipart/form-data">
+                        <form id="uploadForm" action="product_handler.php<?php echo $args;?>" method="POST" enctype="multipart/form-data">
 <!--                            <fieldset style="display:none;"><input type="hidden" name="_method" value="POST" /></fieldset>-->
 
                             <div class="formField">
