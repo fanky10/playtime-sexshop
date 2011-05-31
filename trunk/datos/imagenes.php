@@ -17,7 +17,8 @@ class DataImagenes extends Data {
     public function insertImg($data){
         $query = "INSERT INTO imagen ";
         $query .= "(imagen) VALUES ('$data')";
-        $results = mysql_query($query, $link);
+        $result = mysql_query($query)
+            or die ("Query Failed ".mysql_error());
     }
     public function getUltimoID(){
         $query = "select max(id_imagen) as ultimo_id from imagen";

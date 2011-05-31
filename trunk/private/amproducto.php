@@ -30,29 +30,57 @@
             <div class="contenedor">
                 <div class="contenido">
                     <div id="contenido_central">
-                        <div class="ruta"><a href="index.php">Inicio</a> / <a href="contacto.php">Contacto</a></div>
+                        <div class="ruta"><a href="index.php">Inicio</a> / <a href="#">Admin</a></div>
 
-                        <h1 class="categoria"><span>Alta Producto</span></h1>
-                        <p class="copy">Ingrese los datos de un nuevo producto.</p>
                         
-                        <form id="uploadForm" action="product_handler.php?action=add" method="POST" enctype="multipart/form-data">
+                        <?php
+                        //chequeamos que tenga una accion por get y traemos los datos del producto
+                        include_once '../init.php';
+                        include_once ROOT_DIR .'/datos/productos.php';
+                        include_once ROOT_DIR .'/datos/categorias.php';
+
+                        include_once ROOT_DIR .'/entidades/producto.php';
+                        
+                        $action = $_GET["action"];
+                        $id_producto = $_GET["id_producto"];
+                        //argumentos para el handler
+                        $args = "action=";
+                        
+                        if($action == "upd" && isset ($id_producto)){
+                            $args .=   "$action&id_producto=$id_producto";
+                            $dProd = new DataProductos();
+                            $oProd = $dProd->getProducto($id_producto);
+                            //rearmamos el header
+                            ?>
+                            <h1 class="categoria"><span>Modificacion Producto</span></h1>
+                            <p class="copy">Modifique los datos del producto.</p>
+                            <?php
+                        }else{
+                            $args .= "add";
+                            ?>
+                            <h1 class="categoria"><span>Alta Producto</span></h1>
+                            <p class="copy">Ingrese los datos de un nuevo producto.</p>
+                            <?php
+                        }
+                        ?>
+                        <form id="uploadForm" action="product_handler.php?<?php echo $args;?>" method="POST" enctype="multipart/form-data">
 <!--                            <fieldset style="display:none;"><input type="hidden" name="_method" value="POST" /></fieldset>-->
 
                             <div class="formField">
                                 <label for="ProductName">Nombre Producto:</label>
-                                <input name="data[Product][name]" type="text" class="inputData" maxlength="255" value="" id="ProductName" />                            
+                                <input name="data[Product][name]" type="text" class="inputData" maxlength="255" value="<?php echo (isset($oProd)?$oProd->getNombre():"");?>" id="ProductName" />                            
                             </div>
                             <div class="formField">
                                 <label for="ProductCod">Codigo Producto:</label>
-                                <input name="data[Product][codigo]" type="text" class="inputData" maxlength="255" value="" id="ProductCod" />                            
+                                <input name="data[Product][codigo]" type="text" class="inputData" maxlength="255" value="<?php echo (isset($oProd)?$oProd->getCodigo():"");?>" id="ProductCod" />                            
                             </div>
                             <div class="formField">
                                 <label for="ProductPrice">Precio Producto:</label>
-                                <input name="data[Product][price]" type="text" class="inputData" maxlength="255" value="" id="ProductPrice" />                            
+                                <input name="data[Product][price]" type="text" class="inputData" maxlength="255" value="<?php echo (isset($oProd)?Utilidades::formatero_numero($oProd->getPrecio()):"");?>" id="ProductPrice" />                            
                             </div>
                             <div class="formField">
                                 <label for="ProductDesc">Descripcion Producto:</label>
-                                <textarea name="data[Product][descrip]" cols="5" rows="3" class="textArea" id="ProductDesc" ></textarea>
+                                <textarea name="data[Product][descrip]" cols="5" rows="3" class="textArea" id="ProductDesc"><?php echo (isset($oProd)?$oProd->getDescription():"");?></textarea>
                             </div>
                             <div class="formField">
                                 <?php
@@ -62,11 +90,9 @@
                             <div class="formField">
                                 <input name="MAX_FILE_SIZE" value="102400" type="hidden" id="MAX_FILE_SIZE"/>
                                 <label for="ProductImage">Imagen Producto:</label>
-                                <input name="file" type="file" class="inputData" id="ProductImage" class="{validate:{required:true,accept:true}}"  />                            
+                                <!--si estoy haciendo upd no m interesa validar" -->
+                                <input name="file" type="file" class="inputData" id="ProductImage" <?php echo (isset($oProd)?"": "class=\"{validate:{required:true,accept:true}}\""); ?>/>                            
                             </div>
-<!--                            <label for="file">Imagen</label>
-                            <input type="file" id="ImgSrc" name="file" class="{validate:{required:true,accept:true}}" />
-                            <input name="MAX_FILE_SIZE" value="102400" type="hidden" id="MAX_FILE_SIZE"/>-->
                             <div class="formButton">
                                 <input type="submit" alt="Guardar" class="formButton" value="Guardar" />
                             </div>

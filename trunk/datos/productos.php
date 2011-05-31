@@ -260,8 +260,33 @@ class DataProductos extends Data {
 //        }
 //    }
     //metodo para hacer update del producto
-    public function updProducto($imagen){
-
+    //si el id_imagen es menor o igual a cero no se modifica el id_imagen
+    public function updProducto(Producto $producto){
+        /* @var $producto Producto */
+        $non_query = "update producto set nombre=".
+                    Utilidades::db_adapta_string($producto->getNombre()).
+                    ",descripcion=".
+                    Utilidades::db_adapta_string($producto->getDescription()).",
+                        informacion=".
+                    Utilidades::db_adapta_string("").",
+                        codigo=".
+                    Utilidades::db_adapta_string($producto->getCodigo()).
+                        ($producto->getImagen()<=0?"":",id_imagen=".
+                    Utilidades::db_adapta_string($producto->getImagen())).                      
+                    " where id=".$producto->getId_Producto();
+        //lo insertamos
+        $results = mysql_query($non_query)
+            or die ("Upd: $non_query <br/> Query Failed ".mysql_error());
+        
+        //ultimo id
+        $id = $this->getUltimoID();
+        //nuevo precio
+        $non_query = "insert into precio_producto values(".
+                    Utilidades::db_adapta_string($id).",current_timestamp,".
+                    Utilidades::db_adapta_string(Utilidades::db_number($producto->getPrecio())). 
+                    ")";
+        $result = mysql_query($non_query)
+            or die ("Query Failed ".mysql_error());
     }
 
 }

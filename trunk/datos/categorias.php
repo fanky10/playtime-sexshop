@@ -94,6 +94,13 @@ class DataCategorias extends Data{
         $results = mysql_query($query)
             or die ("<br/>Query Failed ".mysql_error());
     }
+    public function updCategoriaProducto($id_categoria, $id_producto){
+        $query = "UPDATE categoria_producto ";
+        $query .= "set id_categoria=$id_categoria WHERE id_producto= $id_producto";
+//        echo "<br/>addCatProd: $query";
+        $results = mysql_query($query)
+            or die ("<br/>Query Failed ".mysql_error());
+    }
     
 }
 ?>
