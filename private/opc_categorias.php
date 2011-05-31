@@ -1,11 +1,9 @@
 <?php
 //include_once '../init.php';
-//echo "including...root-dir".ROOT_DIR."</br>";
-//echo "including...root-url".ROOT_URL."</br>";
-//
 //include ROOT_DIR.'/datos/data.php';
 //$d = new Data();
 //echo "data instance created!";//everything went right!
+//TODO: seleccionar categoria s/producto
 ?>
 <label>Categoria:</label>
    <select id="ProductCat"  name="data[Product][category]" validate="required:true">

@@ -10,7 +10,7 @@ $().ready(function(){
             'data[Product][name]': "required",
             'data[Product][category]':"required",
             'data[Product][codigo]':"required",
-            'file':"required",
+//            'file':"required",
             'data[Product][price]': "required",
             'data[Product][descrip]': "required"
             },
