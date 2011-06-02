@@ -1,3 +1,39 @@
+<?php
+
+
+/**
+ * este codigo deberia ser incluido 
+ * en todas aquellas paginas que donde estar logueado es una necesidad
+ * 
+ */
+@session_start();
+include_once '../init.php';
+include_once ROOT_DIR .'/entidades/roll.php';
+
+//si la encontramos sin nada redirigimos al toke
+if(!session_is_registered('user')){//si no esta registrado lo redirigimos
+    //TODO: ver como setear externamente el atributo wellcome
+    //voy a usar session que me parece lo mas conveniente
+    $_SESSION['login_wc'] = "Usted debe estar logueado para ver esta pagina";
+    $_SESSION['login_req'] = $_SERVER['PHP_SELF'];
+    $_SESSION['page_roll'] = Roll::$_USER_ADMIN;
+    //pasarlo por post seria lo mejor
+    //podria fijarse en un atributo global
+    //tambien necesario chequear el redirect
+    //y el roll del usuario
+    //todo lo que quieras.. pero esto es MOOOOY CABEZA
+    /**
+     * <form action="http://www.thesite.com/script/" method="post" name="theform">
+        <input type="hidden" name="email" value="<?php echo $email; ?>" />
+        <!-- etc -->
+        <input type="submit" value="Continue" />
+        </form>
+        <script type="text/javascript">document.theform.submit();</script>
+     */
+    header( 'Location: '.USER_LOGIN) ;
+    exit();
+}
+?>
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
