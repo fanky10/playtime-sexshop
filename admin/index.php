@@ -26,7 +26,7 @@ if(!session_is_registered('user')){//si no esta registrado lo redirigimos
     echo "bienvenido administrador! ".$oUser->getNombre();
     ?>
 <br/>
-<a href="product_panel">ver productos</a>
+<a href="product_panel.php">ver productos</a>
 <br/>
 <a href="user_manager.php?action=clear">logout</a>
 
