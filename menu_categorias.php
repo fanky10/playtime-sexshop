@@ -3,8 +3,9 @@
     <ul>
         <?php
             
-            include_once 'init.php';
-            include_once ROOT_DIR .'/datos/categorias.php';
+//            include_once 'init.php';
+//            include_once ROOT_DIR .'/datos/categorias.php';
+            include_once('datos/categorias.php');
             try{
                 $dCateg = new DataCategorias();
                 $catList = $dCateg->getCategoriasHabilitadas();
