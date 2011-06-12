@@ -1,11 +1,8 @@
 <?php
-/* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-include_once 'data.php';
-include_once '../init.php';
-include_once ROOT_DIR .'/entidades/categoria.php';
+@include_once 'data.php';
+@include_once '../init.php';
+@include_once ROOT_DIR .'/entidades/categoria.php';
+
 /**
  * Description of categorias
  *
