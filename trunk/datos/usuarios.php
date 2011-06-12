@@ -1,7 +1,7 @@
 <?php
 include_once 'data.php';
 
-include_once '../init.php';
+@include_once '../init.php';
 include_once ROOT_DIR .'/entidades/roll.php';
 include_once ROOT_DIR .'/entidades/usuario.php';
 

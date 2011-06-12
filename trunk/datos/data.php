@@ -14,8 +14,8 @@
  *
  */
 
-include_once '../init.php';
-include_once ROOT_DIR .'/conf/conf.php';
+@include_once '../init.php';
+@include_once ROOT_DIR .'/conf/conf.php';
 class Data {
     protected $connection;
     public function __construct() {
