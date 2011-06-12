@@ -98,6 +98,9 @@ if(!session_is_registered('user')){//si no esta registrado lo redirigimos
 					<div id="contenido_central">
         	        	<div class="ruta"><a href="index.php">Inicio</a> / <a href="tienda.php">Tienda</a> / Compra</div>
         	            <h1 class="categoria"><span>Carrito de compras</span></h1>
+                            <a href="product_am.php?action=upd" class="formButton">Nuevo Producto</a>
+                            <br/>
+                            <br/>
                             <?php
                             
                                 include_once 'product_list.php';

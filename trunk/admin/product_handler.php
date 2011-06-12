@@ -91,6 +91,12 @@ if($action=="add"){
     $dCateg = new DataCategorias();
     $dCateg->updCategoriaProducto($id_categoria, $id_producto);
     echo "producto modificado correctamente!";
+}else if($action=="del" && isset($id_producto)){
+    //en del solo interesa el id_producto xD
+    $producto->setId_Producto($id_producto);
+    $dProd = new DataProductos();
+    $dProd->delProducto($producto);
+    echo "producto eliminado! </br> <a href=\"product_panel\">volver</a>";
 }else{
     echo "accion unknown! $action";
 }
