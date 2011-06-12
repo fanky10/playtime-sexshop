@@ -45,59 +45,9 @@ if($usuario_hab){//$user == "admin" && $pass == "admin"){
     unset($_SESSION['login_wc']); //ya lo usamos ya fue
     unset($_SESSION['page_roll']);
     unset($_SESSION['login_req']);
-    header( 'Location: '.$redirect ) ;
+    @header( 'Location: '.$redirect ) ;
 }else{
-    header( 'Location: '.USER_LOGIN ) ;
+    @header( 'Location: '.USER_LOGIN ) ;
 }
+//recordar... debajo de esto no debe HABER NADA 
 ?>
-<?php
-
-?>
-<!--Esto es inutil
-    <form action="cart_handler.php?action=add" method="POST" id="formProducto">
-        <div class="formField">
-            <label>IdProducto</label>
-            <input id="cantidad" name="prod_id" class="inputData required number" maxlength="3" value="1"/>
-
-        </div>
-        
-        <div class="formField">
-            <label>Cantidad:</label>
-            <input id="cantidad" name="qty" class="inputData required number" maxlength="3" value="1"/>
-
-        </div>
-        <div class="formButton">
-            <input id="comprar" class="formButton" type="submit" name="action" value="add" />
-        </div>
-    </form>
-
-
-    <form action="cart_handler.php" method="GET" id="formProducto">
-        <div class="formField">
-            <label>IdProducto</label>
-            <input id="cantidad" name="prod_id" class="inputData required number" maxlength="3" value="1"/>
-
-        </div>
-        <div class="formButton">
-            <input id="comprar" class="formButton" type="submit" name="action" value="del" />
-        </div>
-
-    </form>
-    <form action="cart_handler.php" method="GET" id="formProducto">
-        <div class="formField">
-            <label>IdProducto</label>
-            <input id="cantidad" name="prod_id" class="inputData required number" maxlength="3" value="1"/>
-            <label>Cantidad</label>
-            <input id="cantidad" name="qty" class="inputData required number" maxlength="3" value="1"/>
-        </div>
-        <div class="formButton">
-            <input id="comprar" class="formButton" type="submit" name="action" value="upd" />
-        </div>
-    </form>
-    <br>
-    <a href="?action=show_list">show list to me</a>
-    <br>
-    <a href="?action=show_status">show status</a>
-    <br>
-    -->
- 
