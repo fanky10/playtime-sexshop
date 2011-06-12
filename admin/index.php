@@ -28,7 +28,7 @@ if(!session_is_registered('user')){//si no esta registrado lo redirigimos
 <br/>
 <a href="product_panel">ver productos</a>
 <br/>
-<a href="user_manager?action=clear">logout</a>
+<a href="user_manager.php?action=clear">logout</a>
 
 <?php
 }
