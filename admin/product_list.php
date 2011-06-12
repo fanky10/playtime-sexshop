@@ -27,6 +27,7 @@
         echo "<td>".$oProducto->getCodigo()."</td>";
         echo "<td> $ ".Utilidades::formatero_numero($oProducto->getPrecio())."</td>";
         echo "<td>";
+            echo "<a href=\"product_handler.php?action=del&id_producto=".$oProducto->getId_Producto()."\" title=\"Borrar Producto\" alt=\"Borrar Producto\" class=\"tableIcon icn-delete\"></a>";
             echo "<a href=\"product_am.php?action=upd&id_producto=".$oProducto->getId_Producto()."\" title=\"Actualizar Cantidad\" alt=\"Actualizar Cantidad\" class=\"tableIcon icn-update\"></a>";
         echo "</td>";
     }

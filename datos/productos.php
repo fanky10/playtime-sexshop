@@ -281,12 +281,21 @@ class DataProductos extends Data {
         //ultimo id
         $id = $this->getUltimoID();
         //nuevo precio
+        //si no le cambia el precio va a ser un garron pero que mas da xD
         $non_query = "insert into precio_producto values(".
                     Utilidades::db_adapta_string($id).",current_timestamp,".
                     Utilidades::db_adapta_string(Utilidades::db_number($producto->getPrecio())). 
                     ")";
         $result = mysql_query($non_query)
             or die ("Query Failed ".mysql_error());
+    }
+    //si el id_imagen es menor o igual a cero no se modifica el id_imagen
+    public function delProducto(Producto $producto){
+        /* @var $producto Producto */
+        $non_query = "delete from producto where id=".$producto->getId_Producto();
+        //lo insertamos
+        $results = mysql_query($non_query)
+            or die ("Del: $non_query <br/> Query Failed ".mysql_error());
     }
     public function getListaProductos(){
         
