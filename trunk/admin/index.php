@@ -28,6 +28,8 @@ if(!session_is_registered('user')){//si no esta registrado lo redirigimos
 <br/>
 <a href="product_panel.php">ver productos</a>
 <br/>
+<a href="categ_panel.php">ver categorias</a>
+<br/>
 <a href="user_manager.php?action=clear">logout</a>
 
 <?php
