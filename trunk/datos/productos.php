@@ -75,7 +75,7 @@ class DataProductos extends Data {
             " FROM producto p".
             " LEFT JOIN imagen i ON p.id_imagen = i.id_imagen".
             " LEFT JOIN (select * from precio_producto order by fecha_hora desc) pp ON pp.id_producto=p.id ".
-            " INNER JOIN categoria_producto cp ON cp.id_producto = p.id".
+            " LEFT JOIN categoria_producto cp ON cp.id_producto = p.id".//por si no tiene categoria asignada
             " WHERE p.id=$id_producto".
             " GROUP BY p.id".//lo agrupa xq puede tener varios precios que estan ordenados desc -> toma el actual
             " LIMIT 1";//para que no falle :P
