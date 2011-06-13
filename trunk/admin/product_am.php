@@ -38,7 +38,7 @@ if(!session_is_registered('user')){//si no esta registrado lo redirigimos
         <script src="../js/jquery-1.5.js" type="text/javascript"></script>
         <script src="../js/jquery.metadata.js" type="text/javascript" ></script>
         <script src="../js/jquery.validate.js" type="text/javascript"></script><!--VALIDATION-->
-        <script src="../js/jquery.form.js" type="text/javascript" ></script><!--FILE UPLOAD-->
+        <script src="../js/jquery.form.js" type="text/javascript" ></script><!--SEND FORM-->
         
         <script src="../js/secciones/build.js" type="text/javascript"></script><!--ANCHO COLUMNAS-->
         <script src="js/amproducto.js" type="text/javascript"></script><!--VALIDA DATOS DE ENTRADA-->

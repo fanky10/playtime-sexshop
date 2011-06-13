@@ -38,6 +38,7 @@ if(!session_is_registered('user')){//si no esta registrado lo redirigimos
         <script src="../js/jquery-1.5.js" type="text/javascript"></script>
         <script src="../js/jquery.metadata.js" type="text/javascript" ></script>
         <script src="../js/jquery.validate.js" type="text/javascript"></script><!--VALIDATION-->
+        <script src="../js/jquery.form.js" type="text/javascript" ></script><!--SEND FORM-->
         
         <script src="../js/secciones/build.js" type="text/javascript"></script><!--ANCHO COLUMNAS-->
         <script src="js/amcategoria.js" type="text/javascript"></script><!--VALIDA DATOS DE ENTRADA-->
@@ -57,63 +58,36 @@ if(!session_is_registered('user')){//si no esta registrado lo redirigimos
                         
                         <?php
                         //chequeamos que tenga una accion por get y traemos los datos del producto
-                        include_once '../init.php';
-                        include_once ROOT_DIR .'/datos/productos.php';
                         include_once ROOT_DIR .'/datos/categorias.php';
-
-                        include_once ROOT_DIR .'/entidades/producto.php';
+                        include_once ROOT_DIR .'/entidades/categoria.php';
                         
                         $action = $_GET["action"];
-                        $id_producto = $_GET["id_producto"];
+                        $id_categoria = $_GET["id_categoria"];
                         //argumentos para el handler
                         $args = "?action=";
                         
-                        if($action == "upd" && isset ($id_producto)){
-                            $args .=   "$action&id_producto=$id_producto";
-                            $dProd = new DataProductos();
-                            $oProd = $dProd->getProducto($id_producto);
+                        if($action == "upd" && isset ($id_categoria)){
                             //rearmamos el header
+                            $args .=   "$action&id_categoria=$id_categoria";
+                            $dCat = new DataCategorias();
+                            $oCat = $dCat->getCategoria($id_categoria);
                             ?>
-                            <h1 class="categoria"><span>Modificacion Producto</span></h1>
-                            <p class="copy">Modifique los datos del producto.</p>
+                            <h1 class="categoria"><span>Modificacion Categoria</span></h1>
+                            <p class="copy">Modifique los datos de la categoria.</p>
                             <?php
                         }else{
                             $args .= "add";
                             ?>
-                            <h1 class="categoria"><span>Alta Producto</span></h1>
-                            <p class="copy">Ingrese los datos de un nuevo producto.</p>
+                            <h1 class="categoria"><span>Alta Categoria</span></h1>
+                            <p class="copy">Ingrese los datos de una nueva categoria.</p>
                             <?php
                         }
                         ?>
-                        <form id="uploadForm" action="product_handler.php<?php echo $args;?>" method="POST" enctype="multipart/form-data">
-<!--                            <fieldset style="display:none;"><input type="hidden" name="_method" value="POST" /></fieldset>-->
+                        <form id="uploadFormCateg" action="categ_handler.php<?php echo $args;?>" method="POST" >
 
                             <div class="formField">
-                                <label for="ProductName">Nombre Producto:</label>
-                                <input name="data[Product][name]" type="text" class="inputData" maxlength="255" value="<?php echo (isset($oProd)?$oProd->getNombre():"");?>" id="ProductName" />                            
-                            </div>
-                            <div class="formField">
-                                <label for="ProductCod">Codigo Producto:</label>
-                                <input name="data[Product][codigo]" type="text" class="inputData" maxlength="255" value="<?php echo (isset($oProd)?$oProd->getCodigo():"");?>" id="ProductCod" />                            
-                            </div>
-                            <div class="formField">
-                                <label for="ProductPrice">Precio Producto:</label>
-                                <input name="data[Product][price]" type="text" class="inputData" maxlength="255" value="<?php echo (isset($oProd)?Utilidades::formatero_numero($oProd->getPrecio()):"");?>" id="ProductPrice" />                            
-                            </div>
-                            <div class="formField">
-                                <label for="ProductDesc">Descripcion Producto:</label>
-                                <textarea name="data[Product][descrip]" cols="5" rows="3" class="textArea" id="ProductDesc"><?php echo (isset($oProd)?$oProd->getDescription():"");?></textarea>
-                            </div>
-                            <div class="formField">
-                                <?php
-                                include 'opc_categorias.php';
-                                ?>
-                            </div>
-                            <div class="formField">
-                                <input name="MAX_FILE_SIZE" value="102400" type="hidden" id="MAX_FILE_SIZE"/>
-                                <label for="ProductImage">Imagen Producto:</label>
-                                <!--si estoy haciendo upd no m interesa validar" -->
-                                <input name="file" type="file" class="inputData" id="ProductImage" <?php echo (isset($oProd)?"": "class=\"{validate:{required:true,accept:true}}\""); ?>/>                            
+                                <label for="CategName">Nombre:</label>
+                                <input name="data[Categ][name]" type="text" class="inputData" maxlength="255" value="<?php echo (isset($oCat)?$oCat->getNombre():"");?>" id="CategName" />                            
                             </div>
                             <div class="formButton">
                                 <input type="submit" alt="Guardar" class="formButton" value="Guardar" />
@@ -121,7 +95,6 @@ if(!session_is_registered('user')){//si no esta registrado lo redirigimos
                             <p></p>
                         </form>
                         <p id="mensaje"><strong>Aqui el mensaje de resultado!</strong></p>
-                        
                     </div><!--end contenido_central-->
 
                 </div><!--end contenido -->

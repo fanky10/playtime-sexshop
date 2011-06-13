@@ -2,6 +2,7 @@
 @include_once 'data.php';
 @include_once '../init.php';
 @include_once ROOT_DIR .'/entidades/categoria.php';
+@include_once ROOT_DIR .'/util/utilidades.php';
 
 /**
  * Description of categorias
@@ -83,6 +84,25 @@ class DataCategorias extends Data{
         }
         $this->closeDB($connection);
         return $vCategorias;
+    }
+    public function addCategoria(Categoria $categ){
+        $query = "INSERT INTO categoria ";
+        $query .= "VALUES (null,".Utilidades::db_adapta_string($categ->getNombre()).",1)";
+        $results = mysql_query($query)
+            or die ("<br/>Query Failed ".mysql_error());
+    }
+    public function delCategoria(Categoria $categ){
+        $query = "DELETE FROM categoria ";
+        $query .= "WHERE id=".$categ->getId_Categoria();
+        $results = mysql_query($query)
+            or die ("<br/>DelCat: $query <br/> Query Failed coz: ".mysql_error());
+    }
+    public function updCategoria(Categoria $categ){
+        $query = "UPDATE categoria";
+        $query .= " set nombre=".Utilidades::db_adapta_string($categ->getNombre());
+        $query .= " WHERE id=".$categ->getId_Categoria();
+        $results = mysql_query($query)
+            or die ("<br/>DelCat: $query <br/> Query Failed coz: ".mysql_error());
     }
     public function addCategoriaProducto($id_categoria, $id_producto){
         $query = "INSERT INTO categoria_producto ";
