@@ -96,7 +96,7 @@ if($action=="add"){
     $producto->setId_Producto($id_producto);
     $dProd = new DataProductos();
     $dProd->delProducto($producto);
-    echo "producto eliminado! </br> <a href=\"product_panel\">volver</a>";
+    echo "producto eliminado! </br> <a href=\"product_panel.php\">volver</a>";
 }else{
     echo "accion unknown! $action";
 }

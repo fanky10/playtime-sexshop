@@ -4,23 +4,14 @@
     *			VALIDAR FORMULARIO ALTA-MODIFICACION CATEGORIA				   *
     ********************************************************/
 $().ready(function(){
-    $("#uploadForm").validate({
+    $('#mensaje').hide();
+    $("#uploadFormCateg").validate({
             event: "blur",
             rules: {
-            'data[Product][name]': "required",
-            'data[Product][category]':"required",
-            'data[Product][codigo]':"required",
-//            'file':"required",
-            'data[Product][price]': "required",
-            'data[Product][descrip]': "required"
+            'data[Categ][name]': "required"
             },
             messages: {
-            'data[Product][name]': "Por favor ingrese un nombre válido",
-            'data[Product][category]':"Por favor ingrese una categoria válida",
-            'data[Product][codigo]':"Por favor ingrese un codigo válido",
-            'file':"Por favor ingrese una imagen valida",
-            'data[Product][price]': "Por favor ingrese un precio válido",
-            'data[Product][descrip]': "Por favor ingrese una descripcion válida"
+            'data[Categ][name]': "Por favor ingrese un nombre válido"
             },
 
             debug: true,
@@ -28,13 +19,16 @@ $().ready(function(){
             errorContainer: $("#errores"),
             submitHandler: function(form){
                 jQuery(form).ajaxSubmit({
+                    
                     beforeSubmit: function(a,f,o) {
                         o.dataType = "html";//very very important piece of code :)
-                        $('#mensaje').html('Enviando datos...');
+                        $('#mensaje').html('Enviando datos...')
+                        .fadeIn("slow");
                     },
                     success: function(data) {
                         var $out = $('#mensaje');
-                        $out.append('<div><pre>'+ data +'</pre></div>');
+                        $out.html('<div><pre>'+ data +'</pre></div>')
+                        .fadeIn("slow");
                     }
                 });
             }
