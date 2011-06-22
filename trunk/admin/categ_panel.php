@@ -50,6 +50,12 @@ if(!session_is_registered('user')){//si no esta registrado lo redirigimos
         <script src="../js/jquery-1.5.js" type="text/javascript"></script>
         <script src="../js/secciones/build.js" type="text/javascript"></script><!--ANCHO COLUMNAS-->
         <script src="../js/secciones/carrito.js" type="text/javascript"></script><!--PROPIO-->
+        <script type="application/javascript">
+        	$(document).ready(function() {
+  				$("li#help, li#login, #cart_status, .lateral").hide();
+  				$('#contenido_central').css('margin', '0 200px');
+			});
+        </script>
         
         <!--[if lte IE 7]>
         <script type="text/javascript" src="js/supersleight-min.js"></script>
@@ -63,15 +69,15 @@ if(!session_is_registered('user')){//si no esta registrado lo redirigimos
     <body>
 		<div class="wrapper">
 			<div class="cabecera">
-        		<?php
-					include 'cabecera.php';
-				?>
+				<div class="header_login">
+			    	<div class="logo"><a href="#"><img src="../images/logo-playtime.png" alt="" title="Play Time Sex Shop" border="0" /></a></div>
+			    </div>
 			</div><!--end cabecera-->
 			
 			<div class="superior">	
 				<?php
-                                include_once ROOT_DIR .'/superior.php';
-//					include 'superior.php';
+                    include_once ROOT_DIR .'/superior.php';
+					//include 'superior.php';
 				?>
 			</div><!--end superior-->
 			
@@ -96,8 +102,8 @@ if(!session_is_registered('user')){//si no esta registrado lo redirigimos
 				<div class="contenido">
 					
 					<div id="contenido_central">
-        	        	<div class="ruta"><a href="index.php">Inicio</a> / <a href="tienda.php">Tienda</a> / Compra</div>
-        	            <h1 class="categoria"><span>Carrito de compras</span></h1>
+        	        	<div class="ruta"><a href="index.php">Inicio</a> / <a href="index.php">Login</a> / Productos</div>
+        	            <h1 class="categoria"><span>Productos</span></h1>
                             <a href="categ_am.php?action=upd" class="formButton">Nueva Categoria</a>
                             <br/>
                             <br/>
