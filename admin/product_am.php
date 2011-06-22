@@ -46,16 +46,32 @@ if(!session_is_registered('user')){//si no esta registrado lo redirigimos
         <script type="text/javascript" src="js/supersleight-min.js"></script>
         <![endif]-->
         
+        <script type="application/javascript">
+        	$(document).ready(function() {
+  				$("li#help, li#login, #cart_status, .lateral").hide();
+  				$('#contenido_central').css('margin', '0 200px');
+			});
+        </script>
+        
     </head>
     
     <body>
         <div class="wrapper">
+        	<div class="cabecera">
+				<div class="header_login">
+			    	<div class="logo"><a href="#"><img src="../images/logo-playtime.png" alt="" title="Play Time Sex Shop" border="0" /></a></div>
+			    </div>
+			</div><!--end cabecera-->
+			<div class="superior">	
+				<?php
+                    include_once ROOT_DIR .'/superior.php';
+					//include 'superior.php';
+				?>
+			</div><!--end superior-->
             <div class="contenedor">
                 <div class="contenido">
                     <div id="contenido_central">
-                        <div class="ruta"><a href="index.php">Inicio</a> / <a href="#">Admin</a></div>
-
-                        
+						<div class="ruta"><a href="index.php">Inicio</a> / <a href="index.php">Login</a> / Productos</div>                        
                         <?php
                         //chequeamos que tenga una accion por get y traemos los datos del producto
                         include_once '../init.php';

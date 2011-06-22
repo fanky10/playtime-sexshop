@@ -442,3 +442,62 @@ a.icn-delete { background: url(../images/icn-delete.png) no-repeat; }
 	    	#formCheckout02 .confirmationInfo dl { margin: 20px 40px 20px; font-size: 13px; color: #444; }
 		.confirmationInfo dl dt { float: left; font-weight: bold; margin: 0 15px 10px 0; text-align: right; width: 130px; }
 		.confirmationInfo dl dd { overflow: auto; padding-bottom:10px; }
+		
+/*******************************************************
+*						ADMIN      					   *
+********************************************************/
+.form_admin_body { background: url(../images/admin/bg.jpg) no-repeat scroll center top #310B28; color: #0E4354; font-family: Arial,Helvetica,sans-serif; font-size: 12px; margin: 0 auto; padding: 0;}
+#main_container { margin: 20px auto; padding: 0 0; width: 900px;}
+	#main_container h1{ color:#fff;}
+	.header_login { margin: auto; width: 600px; overflow: hidden; }
+		.header_login .logo { float: left;}
+		.header_login .texto_admin { float: left; margin:44px 0 0 10px; width:415px;}
+.login_form { background: url(../images/admin/login_bg.png) no-repeat scroll center top transparent; float: left; height: 250px; margin: 20px 0 0 145px; padding: 0 0 0 0; width: 600px;}
+	.login_form h3 { clear: both; color: #256C89; float: left; font-size: 18px; font-weight: normal; margin: 0; padding: 15px 0 5px 20px;}
+	.login_form a.forgot_pass { background: url(../images/admin/help.png) no-repeat scroll left center transparent; color: #256C89; display: block; float: right; margin: 15px 20px 0 0; padding: 0 0 0 18px; text-decoration: none;}
+	
+	#main_container .login_form, .conteinerPage{ width:600px; height:250px; background:url(../images/admin/login_bg.png) no-repeat center top; margin:0 0 0 145px; float:left; padding:0px 0 0 0px;}
+	#main_container .form{ width:600px; float:left; clear:both;}
+		#main_container	fieldset { border:none; clear:both; padding-top:20px;}
+			#main_container	label {font-size:11px; font-weight:bold; color:#666;}
+				#main_container label.error{ display: block; color:#ff0000;}
+				#main_container	label a{font-size:11px; font-weight:bold; color:#666;}
+			#main_container	dl {clear:both; width:600px; overflow:hidden;}
+				#main_container	dl.submit {clear:both; text-align:center; overflow:hidden; width:120px; margin:0 240px;}
+			#main_container	dt {float:left; text-align:right; width:170px; line-height:34px; padding:0 10px 10px 0;}
+			#main_container dd {float:left; width:400px; margin:0 0 10px 0;}
+			#main_container label.check_label{ padding:0 0 0 10px; line-height:32px;}
+	
+	/*Text inputs*/			
+	.NFText { background: none repeat scroll 0 0 transparent; border: medium none; float: left; font: 12px/15px Arial,Helvetica,sans-serif; vertical-align: middle; padding-top:7px;}
+	.NFTextCenter {height:34px; width:auto; background:url(../images/admin/input.gif) repeat-x 0 0; margin:0; float:left; line-height:34px; border:none;}
+	.NFTextLeft, .NFTextRight {width:10px; height:34px; vertical-align:middle; float:left;}
+	.NFTextLeft {background:url(../images/admin/input-left.gif) no-repeat 0 0;}
+	.NFTextRight {background:url(../images/admin/input-right.gif) no-repeat 0 0;}
+	
+	/*Buttons*/
+	/*===Login===*/
+	.NFButton {width:auto; height:34px; padding:0 15px; font-weight:bold; background:url(../images/admin/bt_blue_center.gif) repeat-x 0 0; cursor:pointer; border:none;color:#FFFFFF; text-shadow:1px 1px #45add8;vertical-align:middle; float:left;}
+	.NFButtonLeft, .NFButtonRight {width:10px; height:34px; vertical-align:middle; float:left;}
+	.NFButtonLeft {background:url(../images/admin/bt_blue_left.gif) no-repeat 0 0;}
+	.NFButtonRight {background:url(../images/admin/bt_blue_right.gif) no-repeat 0 0;}
+	/*===Index===*/
+	a.bt_green { color: #FFFFFF; display: block; line-height: 31px; margin: 10px 5px; text-decoration: none; text-shadow: 1px 1px #8FA42B; overflow: hidden; padding:0 230px;}
+		a.bt_green strong { background: url(../images/admin/bt_green_center.gif) repeat-x scroll center center transparent; display: block; float: left; height: 31px; padding: 0 10px; width: auto;}
+		a.bt_green span.bt_green_lft { background: url(../images/admin/bt_green_left.gif) no-repeat scroll right center transparent; display: block; float: left; height: 31px; width: 10px; }
+		a.bt_green span.bt_green_r { background: url(../images/admin/bt_green_r.gif) no-repeat scroll right center transparent; display: block; float: left; height: 31px; width: 10px; }
+			a.bt_green:hover { text-decoration: underline;}
+
+	a.bt_red { color: #FFFFFF; display: block; line-height: 31px; margin: 10px 20px; text-decoration: none; text-shadow: 1px 1px #C24739; float: right;}
+		a.bt_red strong { background: url(../images/admin/bt_red_center.gif) repeat-x scroll center center transparent; display: block; float: left; height: 31px; padding: 0 10px; width: auto; }
+		a.bt_red span.bt_red_lft { background: url(../images/admin/bt_red_left.gif) no-repeat scroll right center transparent; display: block; float: left; height: 31px; width: 10px; }
+		a.bt_red span.bt_red_r { background: url(../images/admin/bt_red_r.gif) no-repeat scroll right center transparent; display: block; float: left; height: 31px; width: 10px; }
+			a.bt_red:hover { text-decoration: underline;}	
+		
+	/*Footer*/
+	.footer_login{ overflow:hidden; margin-top:65px;}
+	.left_footer_login { color: #A8549B; float: left; font-size: 11px; padding: 15px 0 0 10px; }
+	.right_footer_login { float: right; padding: 15px 10px 0 0; }
+
+	/*Listado*/
+	.cabecera .header_login { margin: auto; width: 960px; overflow: hidden; }
