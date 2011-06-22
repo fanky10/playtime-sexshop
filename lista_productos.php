@@ -1,9 +1,14 @@
 <div id="result">
 <div class="coleccionProductos">
     <?php
-        include_once 'datos/productos.php';
-        include_once 'datos/categorias.php';
-        include_once 'util/utilidades.php';
+    
+        @include_once 'init.php';
+        @include_once ROOT_DIR .'/datos/productos.php';
+        @include_once ROOT_DIR .'/datos/categorias.php';
+        @include_once ROOT_DIR .'/util/utilidades.php';
+//        include_once 'datos/productos.php';
+//        include_once 'datos/categorias.php';
+//        include_once 'util/utilidades.php';
         try{
             //limite por pagina
             $limit = 8; //TODO sacarlo de la configuracion
