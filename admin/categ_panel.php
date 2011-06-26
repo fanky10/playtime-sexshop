@@ -102,8 +102,8 @@ if(!session_is_registered('user')){//si no esta registrado lo redirigimos
 				<div class="contenido">
 					
 					<div id="contenido_central">
-        	        	<div class="ruta"><a href="index.php">Inicio</a> / <a href="index.php">Login</a> / Productos</div>
-        	            <h1 class="categoria"><span>Productos</span></h1>
+        	        	<div class="ruta"><a href="index.php">Inicio</a> / <a href="index.php">Login</a> / Categorias</div>
+        	            <h1 class="categoria"><span>Categorias</span></h1>
                             <a href="categ_am.php?action=upd" class="formButton">Nueva Categoria</a>
                             <br/>
                             <br/>
