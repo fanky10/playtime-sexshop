@@ -14,10 +14,14 @@
 
     include_once ROOT_DIR .'/entidades/producto.php';
     include_once ROOT_DIR .'/util/utilidades.php';
+    //me fijo si hay un filtro
+    if(!isset ($cat_selected)){
+        $cat_selected = $_GET["cat_selected"];
+    }
     //datos new instance
     $dProd = new DataProductos();
     //obtengo el arreglo corresp.
-    $vProds = $dProd->getListaProductos();
+    $vProds = $dProd->getProductosCateg($cat_selected);
     $prod_found = count($vProds);
     //itero y muestro :)
     for($index=0;$index < $prod_found;$index++){
