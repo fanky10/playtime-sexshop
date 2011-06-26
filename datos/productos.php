@@ -335,6 +335,46 @@ class DataProductos extends Data {
         //se devuelve el array
         return $vProductos;
     }
+    public function getProductosCateg($id_categoria){
+        
+        $arrLenght = count($arrItems);
+        $prod_idx = 0;
+        $vProductos;
+        $query = "select p.id as id, p.nombre, pp.precio, p.codigo".
+            " FROM producto p".
+            " LEFT JOIN (select * from precio_producto order by fecha_hora desc) pp ON pp.id_producto=p.id ".
+            " INNER JOIN categoria_producto cp ON cp.id_producto = p.id".            
+            (isset($id_categoria) && $id_categoria>0?" WHERE cp.id_categoria= $id_categoria":" ").
+            " GROUP BY p.id";
+//            echo " query: $query <br>";
+        $result = mysql_query($query)
+            or die ("getListaProductos Query Failed <br/>query: $query <br/>".mysql_error());
+
+
+        while($row = mysql_fetch_array($result,MYSQL_ASSOC)){
+            //objeto producto a agregar en el arreglo a devolver
+            $oProducto = new Producto();
+            $id_prod = $row['id'];
+            $nombre = $row['nombre'];
+            $precio = $row["precio"];
+            $codigo = $row["codigo"];
+
+            $oProducto->setId_Producto($id_prod);
+            $oProducto->setNombre($nombre);
+            $oProducto->setPrecio($precio);
+            $oProducto->setCantidad($current_cant);
+            $oProducto->setCodigo($codigo);
+
+            //y lo agregamos al array
+            $vProductos[$prod_idx]=$oProducto;
+            $prod_idx=$prod_idx+1;//incremento el indice
+        }
+        //se cierra la conex.
+        $this->closeDB();
+        
+        //se devuelve el array
+        return $vProductos;
+    }
 
 }
 

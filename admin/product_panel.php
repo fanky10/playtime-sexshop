@@ -50,6 +50,8 @@ if(!session_is_registered('user')){//si no esta registrado lo redirigimos
         <script src="../js/jquery-1.5.js" type="text/javascript"></script>
         <script src="../js/secciones/build.js" type="text/javascript"></script><!--ANCHO COLUMNAS-->
         <script src="../js/secciones/carrito.js" type="text/javascript"></script><!--PROPIO-->
+        <script src="js/lst_producto.js" type="text/javascript"></script><!--PROPIO-->
+        <script src="../js/jquery.form.js" type="text/javascript" ></script><!--SEND FORM-->
         <script type="application/javascript">
         	$(document).ready(function() {
   				$("li#help, li#login, #cart_status, .lateral").hide();
@@ -60,10 +62,6 @@ if(!session_is_registered('user')){//si no esta registrado lo redirigimos
         <!--[if lte IE 7]>
         <script type="text/javascript" src="js/supersleight-min.js"></script>
         <![endif]-->
-        <?php
-        include_once '../init.php';
-        
-        ?>
     </head>
     
     <body>
@@ -104,102 +102,23 @@ if(!session_is_registered('user')){//si no esta registrado lo redirigimos
 					<div id="contenido_central">
         	        	<div class="ruta"><a href="index.php">Inicio</a> / <a href="index.php">Login</a> / Productos</div>
         	            <h1 class="categoria"><span>Productos</span></h1>
-                            <a href="product_am.php?action=upd" class="formButton">Nuevo Producto</a>
-                            <br/>
-                            <br/>
-                            <?php
+                            <!--
+                            ahora se pueden ordenar s/la categoria
+                            -->
                             
+
+            	            <a href="product_am.php?action=upd" class="formButton">Nuevo Producto</a>
+                            
+                            <br/>
+                            <?php                            
+                                include_once 'categ_select.php';
+                            ?>
+                            <br/>
+                            <div id="prod_rs">
+                            <?php                            
                                 include_once 'product_list.php';
                             ?>
-                            <!--
-                            <form id="formCart" action="">
-                                    
-                                    
-							<table border="0" width="100%" cellpadding="0" cellspacing="0" class="product-table">
-								<tr>
-									<th class="line-left">Detalle</th>
-									<th class="line-left cartSKU">SKU</th>
-									<th class="line-left cartPrecio">Precio</th>
-									<th class="line-left cartCantidad">Cantidad</th>
-									<th class="line-left cartSubtotal">Subtotal</th>
-								</tr>
-								<tr>
-									<td>Pito de goma</td>
-									<td>096RT</td>
-									<td>$ 158.45</td>
-									<td>
-										<input id="cartCantidad" name="cartCantidad" class="inputData required" value="1" />
-										<a href="" title="Delete" class="tableIcon icn-delete"></a>
-										<a href="" title="Update" class="tableIcon icn-update"></a>
-									</td>
-									<td>$ 158.45</td>
-								</tr>
-								<tr class="alternate-row">
-									<td>Pito de goma</td>
-									<td>096RT</td>
-									<td>$ 158.45</td>
-									<td>
-										<input id="cartCantidad" name="cartCantidad" class="inputData required" value="1" />
-										<a href="" title="Delete" class="tableIcon icn-delete"></a>
-										<a href="" title="Update" class="tableIcon icn-update"></a>
-									</td>
-									<td>$ 158.45</td>
-								</tr>
-								<tr>
-									<td>Pito de goma</td>
-									<td>096RT</td>
-									<td>$ 158.45</td>
-									<td>
-										<input id="cartCantidad" name="cartCantidad" class="inputData required" value="1" />
-										<a href="" title="Delete" class="tableIcon icn-delete"></a>
-										<a href="" title="Update" class="tableIcon icn-update"></a>
-									</td>
-									<td>$ 158.45</td>
-								</tr>
-								<tr class="alternate-row">
-									<td>Pito de goma</td>
-									<td>096RT</td>
-									<td>$ 158.45</td>
-									<td>
-										<input id="cartCantidad" name="cartCantidad" class="inputData required" value="1" />
-										<a href="" title="Delete" class="tableIcon icn-delete"></a>
-										<a href="" title="Update" class="tableIcon icn-update"></a>
-									</td>
-									<td>$ 158.45</td>
-								</tr>
-								<tr>
-									<td>Pito de goma</td>
-									<td>096RT</td>
-									<td>$ 158.45</td>
-									<td>
-										<input id="cartCantidad" name="cartCantidad" class="inputData required" value="1" />
-										<a href="" title="Delete" class="tableIcon icn-delete"></a>
-										<a href="" title="Update" class="tableIcon icn-update"></a>
-									</td>
-									<td>$ 158.45</td>
-								</tr>
-								<tr class="alternate-row">
-									<td>Pito de goma</td>
-									<td>096RT</td>
-									<td>$ 158.45</td>
-									<td>
-										<input id="cartCantidad" name="cartCantidad" class="inputData required" value="1" />
-										<a href="" title="Delete" class="tableIcon icn-delete"></a>
-										<a href="" title="Update" class="tableIcon icn-update"></a>
-									</td>
-									<td>$ 158.45</td>
-								</tr>
-								<tr>
-									<td colspan="4" class="cartTotal">Total</td>
-									<td>$ 158.45</td>
-								</tr>
-							</table>
-                                    
-							<div class="formButton">
-                            	<input id="formCheckout" class="formButton" type="submit" name="formCheckout" value="checkout" />
                             </div>
-						</form>
-                                    -->
                         
 					</div><!--end contenido_central-->
 					
