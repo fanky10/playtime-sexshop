@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 
 /**
@@ -75,8 +75,11 @@ if(!session_is_registered('user')){//si no esta registrado lo redirigimos
 			<span class="bt_green_r"></span>
 		</a>
 		<br/>
-		<br/>
-		<br/>
+		<a class="bt_green" href="zone_panel.php">
+			<span class="bt_green_lft"></span>
+			<strong>Zonas</strong>
+			<span class="bt_green_r"></span>
+		</a>
 		<a class="bt_red" href="user_manager.php?action=clear">
 			<span class="bt_red_lft"></span>
 			<strong>Salir</strong>
