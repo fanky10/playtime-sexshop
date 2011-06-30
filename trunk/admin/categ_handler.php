@@ -1,6 +1,6 @@
 <?php
 /**
- * este es el manejador del producto: alta,baja y modificacion
+ * este es el manejador de las categorias: alta,baja y modificacion
  * 
  */
 include_once '../init.php';

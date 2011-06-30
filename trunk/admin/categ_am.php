@@ -73,7 +73,7 @@ if(!session_is_registered('user')){//si no esta registrado lo redirigimos
                     <div id="contenido_central">
                         <div class="ruta"><a href="index.php">Inicio</a> / <a href="index.php">Login</a> / Categor&iacute;as</div>                        
                         <?php
-                        //chequeamos que tenga una accion por get y traemos los datos del producto
+                        //chequeamos que tenga una accion por get y traemos los datos de la categoria
                         include_once ROOT_DIR .'/datos/categorias.php';
                         include_once ROOT_DIR .'/entidades/categoria.php';
                         
