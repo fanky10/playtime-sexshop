@@ -107,7 +107,7 @@ if(!session_is_registered('user')){//si no esta registrado lo redirigimos
                             -->
                             
 
-            	            <a href="product_am.php?action=upd" class="formButton">Nuevo Producto</a>
+            	            <a href="product_am.php" class="formButton">Nuevo Producto</a>
                             
                             <br/>
                             <?php                            
