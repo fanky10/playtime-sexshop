@@ -338,14 +338,14 @@ class DataProductos extends Data {
         return $vProductos;
     }
     public function getProductosCateg($id_categoria){
-        
+        $this->refreshCategorias();
         $arrLenght = count($arrItems);
         $prod_idx = 0;
         $vProductos;
         $query = "select p.id as id, p.nombre, pp.precio, p.codigo".
             " FROM producto p".
             " LEFT JOIN (select * from precio_producto order by fecha_hora desc) pp ON pp.id_producto=p.id ".
-            " INNER JOIN (select * from categoria_producto order by fecha_hora desc) cp ON cp.id_producto = p.id".            
+            " INNER JOIN tt_cats cp ON cp.id_producto = p.id".        
             (isset($id_categoria) && $id_categoria>0?" WHERE cp.id_categoria= $id_categoria":" ").
             " GROUP BY p.id";
 //            echo " query: $query <br>";
