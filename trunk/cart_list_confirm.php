@@ -77,7 +77,7 @@ $arrItems = $oCart->getItems();
         $subtotal = $subtotal +$oProducto->getPrecio_Total();
     }
     $iva = $subtotal * Configuracion::$CONFIGURACION_IVA;//TODO: Constante de configuracion.. por si el dia de mañana CAMBIA
-    $total = $subtotal + $empaque;//$iva + $empaque;
+    $total = $subtotal + $iva + $empaque;
     //subtotal
     echo "<tr ".(($index&1) ? "class=\"alternate-row\"" : "").">
             <td colspan=\"4\" class=\"cartTotal\">Subtotal</td>
@@ -85,11 +85,13 @@ $arrItems = $oCart->getItems();
         </tr>\n";
     $index++;
     //IVA
-//    echo "<tr ".(($index&1) ? "class=\"alternate-row\"" : "").">
-//            <td colspan=\"4\" class=\"cartTotal\">IVA</td>
-//            <td> $ ".Utilidades::formatero_numero($iva)." </td>
-//        </tr>\n";
-//    $index++;
+    if($iva>0){
+        echo "<tr ".(($index&1) ? "class=\"alternate-row\"" : "").">
+                <td colspan=\"4\" class=\"cartTotal\">IVA</td>
+                <td> $ ".Utilidades::formatero_numero($iva)." </td>
+            </tr>\n";
+        $index++;
+    }
     //Manejo y Empaque xD (por codigo de zona)
     echo "<tr ".(($index&1) ? "class=\"alternate-row\"" : "").">
             <td colspan=\"4\" class=\"cartTotal\">Manejo y empaque</td>

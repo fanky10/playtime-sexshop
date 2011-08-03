@@ -46,7 +46,7 @@
             <h4>Play Time Sex Shop</h4>
             <p class="contactInfo">
             <span class="contactTel">(011) - 156777777</span>
-            <span class="contactMSN">ventas@playtimesexshop.coms</span>
+            <span class="contactMSN">ventas@playtimesexshop.com</span>
             <span class="contactMail">info@playtimesexshop.com</span>
     </p>
     </div>
@@ -55,10 +55,10 @@
                         <h3>Informaci&oacute;n del pedido</h3>
                         <dl class="checkoutConfirmData">
                             <dt>Nro. de Orden:</dt>
-                            <dd><span>023499623498586</span></dd>
-
+                            <dd><span>0</span></dd>
+                            
                             <dt>Fecha:</dt>
-                            <dd><span>Sabado 29 de diciembre, 2010</span></dd>
+                            <dd><span><?php echo Utilidades::get_date_spanish(time())?></span></dd>
 
                             <dt>Estado:</dt>
                             <dd><span>Pendiente</span></dd>

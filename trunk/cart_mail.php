@@ -88,11 +88,13 @@ if(count($arrItems)<1){
         </tr>\n";
     $index++;
     //IVA
-    echo "<tr ".(($index&1) ? "class=\"alternate-row\"" : "").">
-            <td colspan=\"4\" class=\"cartTotal\">IVA</td>
-            <td> $ ".Utilidades::formatero_numero($iva)." </td>
-        </tr>\n";
-    $index++;
+    if($iva>0){
+        echo "<tr ".(($index&1) ? "class=\"alternate-row\"" : "").">
+                <td colspan=\"4\" class=\"cartTotal\">IVA</td>
+                <td> $ ".Utilidades::formatero_numero($iva)." </td>
+            </tr>\n";
+        $index++;
+    }
     //Manejo y Empaque xD (por codigo de zona)
     echo "<tr ".(($index&1) ? "class=\"alternate-row\"" : "").">
             <td colspan=\"4\" class=\"cartTotal\">Manejo y empaque</td>
