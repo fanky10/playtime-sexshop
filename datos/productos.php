@@ -71,11 +71,12 @@ class DataProductos extends Data {
         return $vProductos;
     }
     public function getProducto($id_producto){
+        $this->refreshCategorias();
         $query = "SELECT SQL_CALC_FOUND_ROWS p.id as id, p.nombre, i.id_imagen,pp.precio, p.descripcion, p.codigo".
             " FROM producto p".
             " LEFT JOIN imagen i ON p.id_imagen = i.id_imagen".
             " LEFT JOIN (select * from precio_producto order by fecha_hora desc) pp ON pp.id_producto=p.id ".
-            " LEFT JOIN categoria_producto cp ON cp.id_producto = p.id".//por si no tiene categoria asignada
+            " LEFT JOIN tt_cats cp ON cp.id_producto = p.id".//por si no tiene categoria asignada
             " WHERE p.id=$id_producto".
             " GROUP BY p.id".//lo agrupa xq puede tener varios precios que estan ordenados desc -> toma el actual
             " LIMIT 1";//para que no falle :P
@@ -145,19 +146,20 @@ class DataProductos extends Data {
      * @return Producto
      */
     public function getProductosImagen($inicio, $fin, $id_categoria, $orden){
+        $this->refreshCategorias();
         $order_arr = array("p.nombre","pp.precio");
         $query = "SELECT SQL_CALC_FOUND_ROWS p.id as id, p.nombre, i.id_imagen,pp.precio, p.descripcion".
             " FROM producto p".
             " LEFT JOIN imagen i ON p.id_imagen = i.id_imagen".
             " LEFT JOIN (select * from precio_producto order by fecha_hora desc) pp ON pp.id_producto=p.id ".
-            " INNER JOIN categoria_producto cp ON cp.id_producto = p.id".
+            " INNER JOIN tt_cats cp ON cp.id_producto = p.id".
             " WHERE cp.id_categoria=$id_categoria".
             " GROUP BY p.id".
             " ORDER BY ".$order_arr[$orden].
             " LIMIT $inicio , $fin";
         //echo " query: $query <br>";
         $result = mysql_query($query)
-            or die ("Query Failed ".mysql_error());
+            or die ("Query:$query </br> Failed ".mysql_error());
         $prod_idx = 0;
         $vProductos;
         while($row = mysql_fetch_array($result,MYSQL_ASSOC)){
@@ -343,7 +345,7 @@ class DataProductos extends Data {
         $query = "select p.id as id, p.nombre, pp.precio, p.codigo".
             " FROM producto p".
             " LEFT JOIN (select * from precio_producto order by fecha_hora desc) pp ON pp.id_producto=p.id ".
-            " INNER JOIN categoria_producto cp ON cp.id_producto = p.id".            
+            " INNER JOIN (select * from categoria_producto order by fecha_hora desc) cp ON cp.id_producto = p.id".            
             (isset($id_categoria) && $id_categoria>0?" WHERE cp.id_categoria= $id_categoria":" ").
             " GROUP BY p.id";
 //            echo " query: $query <br>";
@@ -374,6 +376,21 @@ class DataProductos extends Data {
         
         //se devuelve el array
         return $vProductos;
+    }
+    /**
+     * esto nos devuelve todas las categorias pertenecientes a un producto en la ultima fecha
+     */
+    private function refreshCategorias(){
+        $query = "DROP TEMPORARY TABLE IF EXISTS tt_cats;";
+        $result = mysql_query($query)
+            or die ("refreshCategorias Query Failed <br/>query: $query <br/>".mysql_error());
+        
+        $query = "CREATE TEMPORARY TABLE  tt_cats (
+                SELECT cp.* FROM (select id_producto,max(fecha_hora) fecha_hora from categoria_producto group by id_producto) fp 
+                INNER JOIN categoria_producto cp ON cp.id_producto = fp.id_producto and fp.fecha_hora = cp.fecha_hora
+                );";
+        $result = mysql_query($query)
+            or die ("refreshCategorias Query Failed <br/>query: $query <br/>".mysql_error());
     }
 
 }

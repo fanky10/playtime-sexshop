@@ -104,19 +104,29 @@ class DataCategorias extends Data{
         $results = mysql_query($query)
             or die ("<br/>DelCat: $query <br/> Query Failed coz: ".mysql_error());
     }
-    public function addCategoriaProducto($id_categoria, $id_producto){
-        $query = "INSERT INTO categoria_producto ";
-        $query .= "VALUES ($id_producto,$id_categoria)";
-//        echo "<br/>addCatProd: $query";
+//    public function addCategoriaProducto($id_categoria, $id_producto){
+//        $query = "INSERT INTO categoria_producto ";
+//        $query .= "VALUES ($id_producto,$id_categoria)";
+////        echo "<br/>addCatProd: $query";
+//        $results = mysql_query($query)
+//            or die ("<br/>Query Failed ".mysql_error());
+//    }
+    public function addCategoriaProducto(Array $catV, $id_producto){
+        $query = "set @fec_hora = current_timestamp ";
         $results = mysql_query($query)
-            or die ("<br/>Query Failed ".mysql_error());
-    }
-    public function updCategoriaProducto($id_categoria, $id_producto){
-        $query = "UPDATE categoria_producto ";
-        $query .= "set id_categoria=$id_categoria WHERE id_producto= $id_producto";
-//        echo "<br/>addCatProd: $query";
-        $results = mysql_query($query)
-            or die ("<br/>Query Failed ".mysql_error());
+            or die ("<br/>Query Failed: $query </br>Because:".mysql_error());
+        //inserto todas - con la misma fec_hora agarrada al principio
+        while (list ($key, $val) = each ($catV)) {
+            $query = "INSERT INTO categoria_producto (id_categoria,id_producto,fecha_hora) VALUES ";
+            $query .= " ($val,$id_producto,@fec_hora)";
+            $results = mysql_query($query)
+                or die ("<br/>Query Failed: $query </br>Because:".mysql_error());
+        }
+//        $query = "UPDATE categoria_producto ";
+//        $query .= "set id_categoria=$id_categoria WHERE id_producto= $id_producto";
+////        echo "<br/>addCatProd: $query";
+//        $results = mysql_query($query)
+//            or die ("<br/>Query Failed ".mysql_error());
     }
     
 }

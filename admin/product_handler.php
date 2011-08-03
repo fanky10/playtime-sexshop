@@ -28,7 +28,8 @@ $producto->setInformacion("");
 $producto->setMarca(-1);
 $producto->setNombre($_POST['data'][Product][name]);
 $producto->setPrecio($_POST['data'][Product][price]);
-$id_categoria = (int) $_POST['data'][Product][category];
+$id_categoria = $_POST['data'][Product][category];
+ 
 //VAR_DUMP FOR DEBUGGING
 //    echo "VAR DUMP $_POST:<p />";
 //    var_dump($_POST);
@@ -38,7 +39,13 @@ $id_categoria = (int) $_POST['data'][Product][category];
 //        if (!$n) continue;
 //        echo "File: $n ($s bytes)";
 //    }
-    
+//if( is_array($id_categoria)){
+//    while (list ($key, $val) = each ($id_categoria)) {
+//    echo "$val <br>";
+//    }
+//}else{
+//    echo "not array";
+//}   
 
 if(isset ($message)){
     echo "<br/> $message";
@@ -89,7 +96,7 @@ if($action=="add"){
     
     //update the product-category
     $dCateg = new DataCategorias();
-    $dCateg->updCategoriaProducto($id_categoria, $id_producto);
+    $dCateg->addCategoriaProducto($id_categoria, $id_producto);
     echo "producto modificado correctamente!";
 }else if($action=="del" && isset($id_producto)){
     //en del solo interesa el id_producto xD
