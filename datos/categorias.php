@@ -14,8 +14,14 @@ class DataCategorias extends Data{
         parent::__construct();
     }
     public function getCategoria($id_categoria){
+        
         $query = "SELECT c.id as id_categoria, nombre FROM categoria c".
-            " WHERE c.habilitada=1 and id=$id_categoria";
+            " WHERE c.habilitada=1";// and id=$id_categoria";
+        if((int)$id_categoria >0){
+            $query.= " AND id=$id_categoria";
+        }else{
+            $query.= " LIMIT 1";//la primera
+        }
         $result = mysql_query($query)
             or die ("getCategorias Query Failed: ".mysql_error()."<br/>");
         $row = mysql_fetch_array($result,MYSQL_ASSOC);

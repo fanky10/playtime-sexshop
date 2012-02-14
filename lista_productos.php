@@ -21,7 +21,7 @@
             }
             $id_categoria = (int) $_GET["id_cat"];
             if($id_categoria <1){
-                $id_categoria = 1;
+                //$id_categoria = 1;
             }
             $order = (int) $_GET["ord"];
             if($order <0){
@@ -33,6 +33,7 @@
             <?php
             $dCateg = new DataCategorias();
             $oCat = $dCateg->getCategoria($id_categoria);
+            $id_categoria = $oCat->getId_Categoria();
             echo "<div class=\"ruta\"><a href=\"index.php\">Inicio</a> / <a href=\"tienda.php\">Tienda</a> / ".ucwords(strtolower($oCat->getNombre()))."</div>";
             echo "<h1><span>".ucwords(strtolower($oCat->getNombre()))."</span></h1>";
             ?>
